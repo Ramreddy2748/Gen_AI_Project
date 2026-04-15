@@ -1,0 +1,35 @@
+{
+  "video_id": "fall_16_cam0",
+  "split": "train",
+  "label": "fall",
+  "frame_count": 2,
+  "pose_frame_count": 2,
+  "frames": [
+    {
+      "frame": "frame_000000.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.9352509379386902,
+        "hip_y": 0.7095914483070374,
+        "shoulder_x": 0.8995844125747681,
+        "shoulder_y": 0.5311585664749146,
+        "nose_x": 0.8577314615249634,
+        "nose_y": 0.49023720622062683,
+        "torso_vertical_diff": 0.1784328818321228
+      }
+    },
+    {
+      "frame": "frame_000030.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.8686311841011047,
+        "hip_y": 0.6632375717163086,
+        "shoulder_x": 0.7988249063491821,
+        "shoulder_y": 0.6051706671714783,
+        "nose_x": 0.7560766935348511,
+        "nose_y": 0.6267735362052917,
+        "torso_vertical_diff": 0.05806690454483032
+      }
+    }
+  ]
+}

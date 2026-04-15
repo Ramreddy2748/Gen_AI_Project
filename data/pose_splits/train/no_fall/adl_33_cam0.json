@@ -1,0 +1,47 @@
+{
+  "video_id": "adl_33_cam0",
+  "split": "train",
+  "label": "no_fall",
+  "frame_count": 5,
+  "pose_frame_count": 2,
+  "frames": [
+    {
+      "frame": "frame_000000.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000045.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.9292305111885071,
+        "hip_y": 0.6180844902992249,
+        "shoulder_x": 0.9276893734931946,
+        "shoulder_y": 0.44849127531051636,
+        "nose_x": 0.8959925770759583,
+        "nose_y": 0.4051177203655243,
+        "torso_vertical_diff": 0.1695932149887085
+      }
+    },
+    {
+      "frame": "frame_000090.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.900128185749054,
+        "hip_y": 0.7730147242546082,
+        "shoulder_x": 0.908089280128479,
+        "shoulder_y": 0.6550977826118469,
+        "nose_x": 0.8824556469917297,
+        "nose_y": 0.6977856159210205,
+        "torso_vertical_diff": 0.11791694164276123
+      }
+    },
+    {
+      "frame": "frame_000135.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000180.jpg",
+      "pose_detected": false
+    }
+  ]
+}

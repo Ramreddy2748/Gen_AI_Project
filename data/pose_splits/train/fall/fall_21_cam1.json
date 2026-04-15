@@ -1,0 +1,26 @@
+{
+  "video_id": "fall_21_cam1",
+  "split": "train",
+  "label": "fall",
+  "frame_count": 2,
+  "pose_frame_count": 1,
+  "frames": [
+    {
+      "frame": "frame_000000.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.5343759059906006,
+        "hip_y": 0.3645056188106537,
+        "shoulder_x": 0.5507727265357971,
+        "shoulder_y": 0.6675435304641724,
+        "nose_x": 0.5681470036506653,
+        "nose_y": 0.7311604619026184,
+        "torso_vertical_diff": 0.3030379116535187
+      }
+    },
+    {
+      "frame": "frame_000030.jpg",
+      "pose_detected": false
+    }
+  ]
+}

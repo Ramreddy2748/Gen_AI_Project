@@ -1,0 +1,38 @@
+{
+  "video_id": "voxel_03-6",
+  "split": "train",
+  "label": "fall",
+  "frame_count": 5,
+  "pose_frame_count": 1,
+  "frames": [
+    {
+      "frame": "frame_000000.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000045.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000090.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000135.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000179.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.2875235080718994,
+        "hip_y": 0.870804488658905,
+        "shoulder_x": 0.2168605625629425,
+        "shoulder_y": 0.7780347466468811,
+        "nose_x": 0.13364943861961365,
+        "nose_y": 0.7816222310066223,
+        "torso_vertical_diff": 0.09276974201202393
+      }
+    }
+  ]
+}

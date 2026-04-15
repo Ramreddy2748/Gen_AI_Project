@@ -1,0 +1,47 @@
+{
+  "video_id": "voxel_02-8",
+  "split": "train",
+  "label": "fall",
+  "frame_count": 5,
+  "pose_frame_count": 2,
+  "frames": [
+    {
+      "frame": "frame_000000.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.38198593258857727,
+        "hip_y": 0.6722673177719116,
+        "shoulder_x": 0.40381330251693726,
+        "shoulder_y": 0.45622968673706055,
+        "nose_x": 0.36263689398765564,
+        "nose_y": 0.3623848259449005,
+        "torso_vertical_diff": 0.21603763103485107
+      }
+    },
+    {
+      "frame": "frame_000045.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.3889119029045105,
+        "hip_y": 0.6411084532737732,
+        "shoulder_x": 0.4434008002281189,
+        "shoulder_y": 0.49773329496383667,
+        "nose_x": 0.42075806856155396,
+        "nose_y": 0.4726734459400177,
+        "torso_vertical_diff": 0.14337515830993652
+      }
+    },
+    {
+      "frame": "frame_000090.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000134.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000179.jpg",
+      "pose_detected": false
+    }
+  ]
+}

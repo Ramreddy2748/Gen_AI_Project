@@ -1,0 +1,52 @@
+{
+  "video_id": "fall_19_cam0",
+  "split": "train",
+  "label": "fall",
+  "frame_count": 4,
+  "pose_frame_count": 3,
+  "frames": [
+    {
+      "frame": "frame_000000.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.5807551145553589,
+        "hip_y": 0.8725489377975464,
+        "shoulder_x": 0.593532919883728,
+        "shoulder_y": 0.7831849455833435,
+        "nose_x": 0.598746120929718,
+        "nose_y": 0.8158143758773804,
+        "torso_vertical_diff": 0.08936399221420288
+      }
+    },
+    {
+      "frame": "frame_000030.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000060.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.5829235315322876,
+        "hip_y": 0.8149945735931396,
+        "shoulder_x": 0.5602278113365173,
+        "shoulder_y": 0.6569546461105347,
+        "nose_x": 0.5467164516448975,
+        "nose_y": 0.6494346261024475,
+        "torso_vertical_diff": 0.15803992748260498
+      }
+    },
+    {
+      "frame": "frame_000090.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.5931809544563293,
+        "hip_y": 0.8287721276283264,
+        "shoulder_x": 0.5671132802963257,
+        "shoulder_y": 0.6883569955825806,
+        "nose_x": 0.5628641843795776,
+        "nose_y": 0.6770414113998413,
+        "torso_vertical_diff": 0.14041513204574585
+      }
+    }
+  ]
+}
