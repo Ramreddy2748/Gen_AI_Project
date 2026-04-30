@@ -35,6 +35,8 @@ data/frame_splits/*/
 # Keep project code trackable.
 !scripts/
 !scripts/**
+scripts/**/__pycache__/
+scripts/**/*.py[cod]
 !pose_extraction/
 !pose_extraction/**
 
@@ -48,3 +50,7 @@ data/frame_splits/*/
 !data/upload_windows/
 !data/upload_windows/**
 results/**
+
+
+!requirements.txt
+!README.md
