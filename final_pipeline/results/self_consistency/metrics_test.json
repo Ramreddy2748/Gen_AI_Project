@@ -1,0 +1,59 @@
+{
+  "window_level": {
+    "confusion_matrix": {
+      "TP": 54,
+      "TN": 126,
+      "FP": 28,
+      "FN": 64
+    },
+    "fall": {
+      "precision": 0.6585,
+      "recall": 0.4576,
+      "f1": 0.54,
+      "support": 118
+    },
+    "no_fall": {
+      "precision": 0.6632,
+      "recall": 0.8182,
+      "f1": 0.7326,
+      "support": 154
+    },
+    "overall": {
+      "accuracy": 0.6618,
+      "macro_f1": 0.6363,
+      "total_samples": 272
+    }
+  },
+  "video_level": {
+    "confusion_matrix": {
+      "TP": 10,
+      "TN": 30,
+      "FP": 3,
+      "FN": 14
+    },
+    "fall": {
+      "precision": 0.7692,
+      "recall": 0.4167,
+      "f1": 0.5405,
+      "support": 24
+    },
+    "no_fall": {
+      "precision": 0.6818,
+      "recall": 0.9091,
+      "f1": 0.7792,
+      "support": 33
+    },
+    "overall": {
+      "accuracy": 0.7018,
+      "macro_f1": 0.6599,
+      "total_samples": 57
+    }
+  },
+  "config": {
+    "model": "gpt-4o-mini",
+    "split": "test",
+    "num_samples": 5,
+    "temperature": 0.7,
+    "aggregation": "majority"
+  }
+}

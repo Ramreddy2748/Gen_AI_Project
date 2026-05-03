@@ -1,0 +1,122 @@
+{
+  "window_id": "gmncsa24_gmncsa_fall_056_w0038",
+  "video_id": "gmncsa24_gmncsa_fall_056",
+  "dataset": "gmncsa24",
+  "label": "fall",
+  "split": "train",
+  "window_index": 38,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 190,
+      "frame_name": "frame_000190.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_056/frame_000190.jpg",
+      "timestamp_seconds": 6.3703,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.259537,
+        "nose_y": 0.550798,
+        "shoulder_x": 0.294314,
+        "shoulder_y": 0.509147,
+        "hip_x": 0.399391,
+        "hip_y": 0.496884,
+        "torso_vertical_diff": 0.012263,
+        "body_center_y": 0.503015,
+        "body_angle_degrees": 6.66
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.018731,
+        "velocity_shoulder_y": -0.003102,
+        "velocity_magnitude": 0.018986,
+        "acceleration_hip_y": 0.291715,
+        "acceleration_magnitude": 0.291715,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_2": {
+      "frame_index": 195,
+      "frame_name": "frame_000195.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_056/frame_000195.jpg",
+      "timestamp_seconds": 6.5379,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.257914,
+        "nose_y": 0.550352,
+        "shoulder_x": 0.293059,
+        "shoulder_y": 0.511599,
+        "hip_x": 0.396984,
+        "hip_y": 0.495791,
+        "torso_vertical_diff": 0.015808,
+        "body_center_y": 0.503695,
+        "body_angle_degrees": 8.65
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.00652,
+        "velocity_shoulder_y": 0.014627,
+        "velocity_magnitude": 0.016014,
+        "acceleration_hip_y": -0.150626,
+        "acceleration_magnitude": 0.150626,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_3": {
+      "frame_index": 200,
+      "frame_name": "frame_000200.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_056/frame_000200.jpg",
+      "timestamp_seconds": 6.7056,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.256362,
+        "nose_y": 0.551504,
+        "shoulder_x": 0.292651,
+        "shoulder_y": 0.509697,
+        "hip_x": 0.398207,
+        "hip_y": 0.495958,
+        "torso_vertical_diff": 0.013739,
+        "body_center_y": 0.502828,
+        "body_angle_degrees": 7.42
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.000996,
+        "velocity_shoulder_y": -0.011346,
+        "velocity_magnitude": 0.011389,
+        "acceleration_hip_y": 0.044835,
+        "acceleration_magnitude": 0.044835,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": false
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 3,
+    "pose_detection_rate": 1.0,
+    "hip_delta": -0.000926,
+    "max_velocity": 0.018986,
+    "trajectory_direction": "stable",
+    "has_velocity_spike": false,
+    "start_posture": "transitioning",
+    "end_posture": "transitioning",
+    "fall_likelihood_score": 0.15
+  },
+  "llm_descriptions": {
+    "frame_descriptions": [
+      "Frame 1: transitioning, vel=0.019",
+      "Frame 2: transitioning, vel=-0.007",
+      "Frame 3: transitioning, vel=0.001"
+    ],
+    "fall_assessment": "Score: 15%"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "window_id": "gmncsa24_gmncsa_fall_056_w0041",
+  "video_id": "gmncsa24_gmncsa_fall_056",
+  "dataset": "gmncsa24",
+  "label": "fall",
+  "split": "train",
+  "window_index": 41,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 205,
+      "frame_name": "frame_000205.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_056/frame_000205.jpg",
+      "timestamp_seconds": 6.8732,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.256464,
+        "nose_y": 0.550559,
+        "shoulder_x": 0.292666,
+        "shoulder_y": 0.504192,
+        "hip_x": 0.396437,
+        "hip_y": 0.497472,
+        "torso_vertical_diff": 0.00672,
+        "body_center_y": 0.500832,
+        "body_angle_degrees": 3.71
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.009031,
+        "velocity_shoulder_y": -0.032838,
+        "velocity_magnitude": 0.034058,
+        "acceleration_hip_y": 0.047931,
+        "acceleration_magnitude": 0.047931,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": false
+      }
+    },
+    "frame_2": {
+      "frame_index": 210,
+      "frame_name": "frame_000210.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_056/frame_000210.jpg",
+      "timestamp_seconds": 7.0408,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.253984,
+        "nose_y": 0.549291,
+        "shoulder_x": 0.294092,
+        "shoulder_y": 0.512662,
+        "hip_x": 0.398884,
+        "hip_y": 0.497373,
+        "torso_vertical_diff": 0.015289,
+        "body_center_y": 0.505017,
+        "body_angle_degrees": 8.3
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.000591,
+        "velocity_shoulder_y": 0.050525,
+        "velocity_magnitude": 0.050529,
+        "acceleration_hip_y": -0.057397,
+        "acceleration_magnitude": 0.057397,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": false
+      }
+    },
+    "frame_3": {
+      "frame_index": 215,
+      "frame_name": "frame_000215.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_056/frame_000215.jpg",
+      "timestamp_seconds": 7.2085,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.254634,
+        "nose_y": 0.549157,
+        "shoulder_x": 0.29556,
+        "shoulder_y": 0.510094,
+        "hip_x": 0.398828,
+        "hip_y": 0.496611,
+        "torso_vertical_diff": 0.013483,
+        "body_center_y": 0.503352,
+        "body_angle_degrees": 7.44
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.004545,
+        "velocity_shoulder_y": -0.015319,
+        "velocity_magnitude": 0.015979,
+        "acceleration_hip_y": -0.023592,
+        "acceleration_magnitude": 0.023592,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": false
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 3,
+    "pose_detection_rate": 1.0,
+    "hip_delta": -0.000861,
+    "max_velocity": 0.050529,
+    "trajectory_direction": "stable",
+    "has_velocity_spike": false,
+    "start_posture": "transitioning",
+    "end_posture": "transitioning",
+    "fall_likelihood_score": 0.15
+  },
+  "llm_descriptions": {
+    "frame_descriptions": [
+      "Frame 1: transitioning, vel=0.009",
+      "Frame 2: transitioning, vel=-0.001",
+      "Frame 3: transitioning, vel=-0.005"
+    ],
+    "fall_assessment": "Score: 15%"
+  }
+}

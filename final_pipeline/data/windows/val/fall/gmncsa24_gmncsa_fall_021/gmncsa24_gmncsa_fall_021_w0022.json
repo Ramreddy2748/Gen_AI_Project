@@ -1,0 +1,122 @@
+{
+  "window_id": "gmncsa24_gmncsa_fall_021_w0022",
+  "video_id": "gmncsa24_gmncsa_fall_021",
+  "dataset": "gmncsa24",
+  "label": "fall",
+  "split": "val",
+  "window_index": 22,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 110,
+      "frame_name": "frame_000110.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/val/fall/gmncsa24_gmncsa_fall_021/frame_000110.jpg",
+      "timestamp_seconds": 3.6822,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.38666,
+        "nose_y": 0.305361,
+        "shoulder_x": 0.38019,
+        "shoulder_y": 0.342318,
+        "hip_x": 0.35103,
+        "hip_y": 0.541319,
+        "torso_vertical_diff": 0.199,
+        "body_center_y": 0.441819,
+        "body_angle_degrees": 81.66
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.200393,
+        "velocity_shoulder_y": 0.263086,
+        "velocity_magnitude": 0.330714,
+        "acceleration_hip_y": 0.497839,
+        "acceleration_magnitude": 0.497839,
+        "jerk": 0.0,
+        "posture_state": "upright",
+        "is_rapid_descent": true,
+        "is_on_ground": false,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_2": {
+      "frame_index": 115,
+      "frame_name": "frame_000115.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/val/fall/gmncsa24_gmncsa_fall_021/frame_000115.jpg",
+      "timestamp_seconds": 3.8495,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.399948,
+        "nose_y": 0.365872,
+        "shoulder_x": 0.39478,
+        "shoulder_y": 0.401913,
+        "hip_x": 0.353428,
+        "hip_y": 0.596204,
+        "torso_vertical_diff": 0.194291,
+        "body_center_y": 0.499058,
+        "body_angle_degrees": 77.98
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.327924,
+        "velocity_shoulder_y": 0.356065,
+        "velocity_magnitude": 0.484063,
+        "acceleration_hip_y": 0.761966,
+        "acceleration_magnitude": 0.761966,
+        "jerk": 0.0,
+        "posture_state": "upright",
+        "is_rapid_descent": true,
+        "is_on_ground": false,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_3": {
+      "frame_index": 120,
+      "frame_name": "frame_000120.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/val/fall/gmncsa24_gmncsa_fall_021/frame_000120.jpg",
+      "timestamp_seconds": 4.0169,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.406928,
+        "nose_y": 0.431508,
+        "shoulder_x": 0.415387,
+        "shoulder_y": 0.459757,
+        "hip_x": 0.359302,
+        "hip_y": 0.622643,
+        "torso_vertical_diff": 0.162886,
+        "body_center_y": 0.5412,
+        "body_angle_degrees": 71.0
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.157966,
+        "velocity_shoulder_y": 0.345603,
+        "velocity_magnitude": 0.379994,
+        "acceleration_hip_y": -1.015455,
+        "acceleration_magnitude": 1.015455,
+        "jerk": 0.0,
+        "posture_state": "upright",
+        "is_rapid_descent": true,
+        "is_on_ground": false,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 3,
+    "pose_detection_rate": 1.0,
+    "hip_delta": 0.081324,
+    "max_velocity": 0.484063,
+    "trajectory_direction": "descending",
+    "has_velocity_spike": true,
+    "start_posture": "upright",
+    "end_posture": "upright",
+    "fall_likelihood_score": 0.25
+  },
+  "llm_descriptions": {
+    "frame_descriptions": [
+      "Frame 1: upright, vel=0.200",
+      "Frame 2: upright, vel=0.328",
+      "Frame 3: upright, vel=0.158"
+    ],
+    "fall_assessment": "Score: 25%"
+  }
+}

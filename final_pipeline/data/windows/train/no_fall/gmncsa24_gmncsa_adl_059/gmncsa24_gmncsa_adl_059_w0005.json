@@ -1,0 +1,122 @@
+{
+  "window_id": "gmncsa24_gmncsa_adl_059_w0005",
+  "video_id": "gmncsa24_gmncsa_adl_059",
+  "dataset": "gmncsa24",
+  "label": "no_fall",
+  "split": "train",
+  "window_index": 5,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 225,
+      "frame_name": "frame_000225.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/no_fall/gmncsa24_gmncsa_adl_059/frame_000225.jpg",
+      "timestamp_seconds": 7.5385,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.386573,
+        "nose_y": 0.660285,
+        "shoulder_x": 0.397709,
+        "shoulder_y": 0.652431,
+        "hip_x": 0.399863,
+        "hip_y": 0.760271,
+        "torso_vertical_diff": 0.10784,
+        "body_center_y": 0.706351,
+        "body_angle_degrees": 88.86
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.018019,
+        "velocity_shoulder_y": -0.000866,
+        "velocity_magnitude": 0.01804,
+        "acceleration_hip_y": 0.033044,
+        "acceleration_magnitude": 0.033044,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": false
+      }
+    },
+    "frame_2": {
+      "frame_index": 240,
+      "frame_name": "frame_000240.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/no_fall/gmncsa24_gmncsa_adl_059/frame_000240.jpg",
+      "timestamp_seconds": 8.0411,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.390731,
+        "nose_y": 0.653329,
+        "shoulder_x": 0.392141,
+        "shoulder_y": 0.649791,
+        "hip_x": 0.395124,
+        "hip_y": 0.748576,
+        "torso_vertical_diff": 0.098784,
+        "body_center_y": 0.699183,
+        "body_angle_degrees": 88.27
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.02327,
+        "velocity_shoulder_y": -0.005253,
+        "velocity_magnitude": 0.023856,
+        "acceleration_hip_y": -0.082158,
+        "acceleration_magnitude": 0.082158,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": false
+      }
+    },
+    "frame_3": {
+      "frame_index": 255,
+      "frame_name": "frame_000255.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/no_fall/gmncsa24_gmncsa_adl_059/frame_000255.jpg",
+      "timestamp_seconds": 8.5437,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.394058,
+        "nose_y": 0.613191,
+        "shoulder_x": 0.397351,
+        "shoulder_y": 0.63347,
+        "hip_x": 0.403799,
+        "hip_y": 0.742581,
+        "torso_vertical_diff": 0.109111,
+        "body_center_y": 0.688025,
+        "body_angle_degrees": 86.62
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.011929,
+        "velocity_shoulder_y": -0.032475,
+        "velocity_magnitude": 0.034597,
+        "acceleration_hip_y": 0.022568,
+        "acceleration_magnitude": 0.022568,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": false
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 3,
+    "pose_detection_rate": 1.0,
+    "hip_delta": -0.01769,
+    "max_velocity": 0.034597,
+    "trajectory_direction": "stable",
+    "has_velocity_spike": false,
+    "start_posture": "transitioning",
+    "end_posture": "transitioning",
+    "fall_likelihood_score": 0.0
+  },
+  "llm_descriptions": {
+    "frame_descriptions": [
+      "Frame 1: transitioning, vel=0.018",
+      "Frame 2: transitioning, vel=-0.023",
+      "Frame 3: transitioning, vel=-0.012"
+    ],
+    "fall_assessment": "Score: 0%"
+  }
+}

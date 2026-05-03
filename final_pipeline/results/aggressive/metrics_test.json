@@ -1,0 +1,57 @@
+{
+  "window": {
+    "confusion_matrix": {
+      "TP": 22,
+      "TN": 45,
+      "FP": 2,
+      "FN": 31
+    },
+    "fall": {
+      "precision": 0.9167,
+      "recall": 0.4151,
+      "f1": 0.5714,
+      "support": 53
+    },
+    "no_fall": {
+      "precision": 0.5921,
+      "recall": 0.9574,
+      "f1": 0.7317,
+      "support": 47
+    },
+    "overall": {
+      "accuracy": 0.67,
+      "macro_f1": 0.6516,
+      "total_samples": 100
+    }
+  },
+  "video": {
+    "confusion_matrix": {
+      "TP": 5,
+      "TN": 23,
+      "FP": 1,
+      "FN": 14
+    },
+    "fall": {
+      "precision": 0.8333,
+      "recall": 0.2632,
+      "f1": 0.4,
+      "support": 19
+    },
+    "no_fall": {
+      "precision": 0.6216,
+      "recall": 0.9583,
+      "f1": 0.7541,
+      "support": 24
+    },
+    "overall": {
+      "accuracy": 0.6512,
+      "macro_f1": 0.577,
+      "total_samples": 43
+    }
+  },
+  "methods": {
+    "rule": 48,
+    "rule_high_severity": 24,
+    "llm_filter": 28
+  }
+}

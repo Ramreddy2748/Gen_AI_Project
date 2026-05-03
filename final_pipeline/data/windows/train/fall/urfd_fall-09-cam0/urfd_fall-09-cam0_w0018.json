@@ -1,0 +1,122 @@
+{
+  "window_id": "urfd_fall-09-cam0_w0018",
+  "video_id": "urfd_fall-09-cam0",
+  "dataset": "urfd",
+  "label": "fall",
+  "split": "train",
+  "window_index": 18,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 90,
+      "frame_name": "frame_000090.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/urfd_fall-09-cam0/frame_000090.jpg",
+      "timestamp_seconds": 3.0,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.723251,
+        "nose_y": 0.118439,
+        "shoulder_x": 0.762885,
+        "shoulder_y": 0.200457,
+        "hip_x": 0.75557,
+        "hip_y": 0.462944,
+        "torso_vertical_diff": 0.262487,
+        "body_center_y": 0.331701,
+        "body_angle_degrees": 88.4
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.075816,
+        "velocity_shoulder_y": -0.013254,
+        "velocity_magnitude": 0.076966,
+        "acceleration_hip_y": -0.756072,
+        "acceleration_magnitude": 0.756072,
+        "jerk": 0.0,
+        "posture_state": "upright",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_2": {
+      "frame_index": 95,
+      "frame_name": "frame_000095.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/urfd_fall-09-cam0/frame_000095.jpg",
+      "timestamp_seconds": 3.1667,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.726071,
+        "nose_y": 0.115449,
+        "shoulder_x": 0.770794,
+        "shoulder_y": 0.193986,
+        "hip_x": 0.769779,
+        "hip_y": 0.469336,
+        "torso_vertical_diff": 0.27535,
+        "body_center_y": 0.331661,
+        "body_angle_degrees": 89.79
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.038352,
+        "velocity_shoulder_y": -0.038826,
+        "velocity_magnitude": 0.054574,
+        "acceleration_hip_y": 0.685008,
+        "acceleration_magnitude": 0.685008,
+        "jerk": 0.0,
+        "posture_state": "upright",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_3": {
+      "frame_index": 100,
+      "frame_name": "frame_000100.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/urfd_fall-09-cam0/frame_000100.jpg",
+      "timestamp_seconds": 3.3333,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.734686,
+        "nose_y": 0.108324,
+        "shoulder_x": 0.769092,
+        "shoulder_y": 0.187939,
+        "hip_x": 0.781511,
+        "hip_y": 0.422231,
+        "torso_vertical_diff": 0.234292,
+        "body_center_y": 0.305085,
+        "body_angle_degrees": 86.97
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.28263,
+        "velocity_shoulder_y": -0.036282,
+        "velocity_magnitude": 0.284949,
+        "acceleration_hip_y": -1.925892,
+        "acceleration_magnitude": 1.925892,
+        "jerk": 0.0,
+        "posture_state": "upright",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 3,
+    "pose_detection_rate": 1.0,
+    "hip_delta": -0.040713,
+    "max_velocity": 0.284949,
+    "trajectory_direction": "stable",
+    "has_velocity_spike": false,
+    "start_posture": "upright",
+    "end_posture": "upright",
+    "fall_likelihood_score": 0.0
+  },
+  "llm_descriptions": {
+    "frame_descriptions": [
+      "Frame 1: upright, vel=-0.076",
+      "Frame 2: upright, vel=0.038",
+      "Frame 3: upright, vel=-0.283"
+    ],
+    "fall_assessment": "Score: 0%"
+  }
+}

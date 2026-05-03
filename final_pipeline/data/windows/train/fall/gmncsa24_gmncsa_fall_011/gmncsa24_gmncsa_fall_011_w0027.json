@@ -1,0 +1,122 @@
+{
+  "window_id": "gmncsa24_gmncsa_fall_011_w0027",
+  "video_id": "gmncsa24_gmncsa_fall_011",
+  "dataset": "gmncsa24",
+  "label": "fall",
+  "split": "train",
+  "window_index": 27,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 135,
+      "frame_name": "frame_000135.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_011/frame_000135.jpg",
+      "timestamp_seconds": 4.5214,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.762057,
+        "nose_y": 1.026398,
+        "shoulder_x": 0.739873,
+        "shoulder_y": 0.927475,
+        "hip_x": 0.579742,
+        "hip_y": 0.830428,
+        "torso_vertical_diff": 0.097048,
+        "body_center_y": 0.878951,
+        "body_angle_degrees": 31.22
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.028556,
+        "velocity_shoulder_y": -0.04726,
+        "velocity_magnitude": 0.055217,
+        "acceleration_hip_y": -0.308678,
+        "acceleration_magnitude": 0.308678,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_2": {
+      "frame_index": 140,
+      "frame_name": "frame_000140.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_011/frame_000140.jpg",
+      "timestamp_seconds": 4.6888,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.770039,
+        "nose_y": 1.026353,
+        "shoulder_x": 0.723393,
+        "shoulder_y": 0.926173,
+        "hip_x": 0.569456,
+        "hip_y": 0.828648,
+        "torso_vertical_diff": 0.097525,
+        "body_center_y": 0.877411,
+        "body_angle_degrees": 32.36
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.01063,
+        "velocity_shoulder_y": -0.007775,
+        "velocity_magnitude": 0.01317,
+        "acceleration_hip_y": 0.107053,
+        "acceleration_magnitude": 0.107053,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_3": {
+      "frame_index": 145,
+      "frame_name": "frame_000145.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_011/frame_000145.jpg",
+      "timestamp_seconds": 4.8563,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.761793,
+        "nose_y": 1.038829,
+        "shoulder_x": 0.728569,
+        "shoulder_y": 0.930851,
+        "hip_x": 0.57021,
+        "hip_y": 0.824909,
+        "torso_vertical_diff": 0.105942,
+        "body_center_y": 0.87788,
+        "body_angle_degrees": 33.78
+      },
+      "enhanced": {
+        "velocity_hip_y": -0.022328,
+        "velocity_shoulder_y": 0.027935,
+        "velocity_magnitude": 0.035762,
+        "acceleration_hip_y": -0.069859,
+        "acceleration_magnitude": 0.069859,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": false
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 3,
+    "pose_detection_rate": 1.0,
+    "hip_delta": -0.005519,
+    "max_velocity": 0.055217,
+    "trajectory_direction": "stable",
+    "has_velocity_spike": false,
+    "start_posture": "transitioning",
+    "end_posture": "transitioning",
+    "fall_likelihood_score": 0.0
+  },
+  "llm_descriptions": {
+    "frame_descriptions": [
+      "Frame 1: transitioning, vel=-0.029",
+      "Frame 2: transitioning, vel=-0.011",
+      "Frame 3: transitioning, vel=-0.022"
+    ],
+    "fall_assessment": "Score: 0%"
+  }
+}

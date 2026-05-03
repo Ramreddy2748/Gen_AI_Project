@@ -1,58 +1,51 @@
-# Python / local environment
-.venv/
-.venv*/
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
 
-# OS / editor noise
-.DS_Store
+# IDE
 .idea/
 .vscode/
+*.swp
+*.swo
+.DS_Store
 
-# Runtime caches
-.mplconfig/
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
 
-# Raw and bulky datasets
-data/urfd_videos/
-data/voxel_huggingface_data/
-data/splits/video_data/
-data/hf_fall_detection/
+# Environment
+.env
+.env.local
+*.log
 
-# Sampled frame images are large; keep only frame manifests.
-data/frame_splits/*/
-!data/frame_splits/*_frame_manifest.csv
+# Large data files (regeneratable) - frames and videos
+final_pipeline/data/frames/
+final_pipeline/data/videos/
+final_pipeline/data/raw/
+*.mp4
+*.avi
+*.mov
+*.mkv
 
-# Model weights can be re-downloaded, except the project pose landmarker.
-*.task
-!pose_landmarker_lite.task
+# RAG index (regeneratable from training data ~8MB)
+final_pipeline/rag_index/
 
-# Keep project code trackable.
-!scripts/
-!scripts/**
-scripts/**/__pycache__/
-scripts/**/*.py[cod]
-!pose_extraction/
-!pose_extraction/**
-pose_extraction/**/__pycache__/
-pose_extraction/**/*.py[cod]
+# Balanced windows (duplicate of windows/)
+final_pipeline/data/windows_balanced/
 
-# Keep generated pre-LLM window artifacts trackable.
-!data/window_splits/
-!data/window_splits/**
-!data/window_pose_splits/
-!data/window_pose_splits/**
-!data/window_pose_splits_readable/
-!data/window_pose_splits_readable/**
-!data/upload_windows/
-!data/upload_windows/**
-results/**
+# Temporary files
+*.tmp
+*.temp
+.cache/
 
-
-!requirements.txt
-!README.md
+# OpenAI training files
+*.jsonl

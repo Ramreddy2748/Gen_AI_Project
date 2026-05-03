@@ -1,0 +1,272 @@
+[
+  {
+    "prompt": "expert",
+    "aggregation": "majority",
+    "window": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "no_fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "overall": {
+        "accuracy": 0,
+        "macro_f1": 0.0,
+        "total_samples": 0
+      }
+    },
+    "video": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 21,
+        "FP": 0,
+        "FN": 19
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 19
+      },
+      "no_fall": {
+        "precision": 0.525,
+        "recall": 1.0,
+        "f1": 0.6885,
+        "support": 21
+      },
+      "overall": {
+        "accuracy": 0.525,
+        "macro_f1": 0.3443,
+        "total_samples": 40
+      }
+    }
+  },
+  {
+    "prompt": "expert",
+    "aggregation": "any",
+    "window": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "no_fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "overall": {
+        "accuracy": 0,
+        "macro_f1": 0.0,
+        "total_samples": 0
+      }
+    },
+    "video": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 21,
+        "FP": 0,
+        "FN": 19
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 19
+      },
+      "no_fall": {
+        "precision": 0.525,
+        "recall": 1.0,
+        "f1": 0.6885,
+        "support": 21
+      },
+      "overall": {
+        "accuracy": 0.525,
+        "macro_f1": 0.3443,
+        "total_samples": 40
+      }
+    }
+  },
+  {
+    "prompt": "expert",
+    "aggregation": "consecutive2",
+    "window": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "no_fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "overall": {
+        "accuracy": 0,
+        "macro_f1": 0.0,
+        "total_samples": 0
+      }
+    },
+    "video": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 21,
+        "FP": 0,
+        "FN": 19
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 19
+      },
+      "no_fall": {
+        "precision": 0.525,
+        "recall": 1.0,
+        "f1": 0.6885,
+        "support": 21
+      },
+      "overall": {
+        "accuracy": 0.525,
+        "macro_f1": 0.3443,
+        "total_samples": 40
+      }
+    }
+  },
+  {
+    "prompt": "expert",
+    "aggregation": "threshold30",
+    "window": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "no_fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "overall": {
+        "accuracy": 0,
+        "macro_f1": 0.0,
+        "total_samples": 0
+      }
+    },
+    "video": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 21,
+        "FP": 0,
+        "FN": 19
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 19
+      },
+      "no_fall": {
+        "precision": 0.525,
+        "recall": 1.0,
+        "f1": 0.6885,
+        "support": 21
+      },
+      "overall": {
+        "accuracy": 0.525,
+        "macro_f1": 0.3443,
+        "total_samples": 40
+      }
+    }
+  },
+  {
+    "prompt": "expert",
+    "aggregation": "threshold20",
+    "window": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "no_fall": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      "overall": {
+        "accuracy": 0,
+        "macro_f1": 0.0,
+        "total_samples": 0
+      }
+    },
+    "video": {
+      "confusion_matrix": {
+        "TP": 0,
+        "TN": 21,
+        "FP": 0,
+        "FN": 19
+      },
+      "fall": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 19
+      },
+      "no_fall": {
+        "precision": 0.525,
+        "recall": 1.0,
+        "f1": 0.6885,
+        "support": 21
+      },
+      "overall": {
+        "accuracy": 0.525,
+        "macro_f1": 0.3443,
+        "total_samples": 40
+      }
+    }
+  }
+]

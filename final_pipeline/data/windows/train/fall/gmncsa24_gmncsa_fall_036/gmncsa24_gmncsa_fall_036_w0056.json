@@ -1,0 +1,122 @@
+{
+  "window_id": "gmncsa24_gmncsa_fall_036_w0056",
+  "video_id": "gmncsa24_gmncsa_fall_036",
+  "dataset": "gmncsa24",
+  "label": "fall",
+  "split": "train",
+  "window_index": 56,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 280,
+      "frame_name": "frame_000280.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_036/frame_000280.jpg",
+      "timestamp_seconds": 9.3885,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.435709,
+        "nose_y": 0.887716,
+        "shoulder_x": 0.444994,
+        "shoulder_y": 0.875438,
+        "hip_x": 0.385805,
+        "hip_y": 0.773416,
+        "torso_vertical_diff": 0.102022,
+        "body_center_y": 0.824427,
+        "body_angle_degrees": 59.88
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.224031,
+        "velocity_shoulder_y": 0.098478,
+        "velocity_magnitude": 0.24472,
+        "acceleration_hip_y": 6.026805,
+        "acceleration_magnitude": 6.026805,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": true,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_2": {
+      "frame_index": 285,
+      "frame_name": "frame_000285.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_036/frame_000285.jpg",
+      "timestamp_seconds": 9.5561,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.454987,
+        "nose_y": 0.903388,
+        "shoulder_x": 0.460768,
+        "shoulder_y": 0.911526,
+        "hip_x": 0.379349,
+        "hip_y": 0.802857,
+        "torso_vertical_diff": 0.108669,
+        "body_center_y": 0.857191,
+        "body_angle_degrees": 53.16
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.175609,
+        "velocity_shoulder_y": 0.215256,
+        "velocity_magnitude": 0.277802,
+        "acceleration_hip_y": -0.288826,
+        "acceleration_magnitude": 0.288826,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": true,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_3": {
+      "frame_index": 290,
+      "frame_name": "frame_000290.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/train/fall/gmncsa24_gmncsa_fall_036/frame_000290.jpg",
+      "timestamp_seconds": 9.7238,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.468637,
+        "nose_y": 0.91678,
+        "shoulder_x": 0.467815,
+        "shoulder_y": 0.925223,
+        "hip_x": 0.382355,
+        "hip_y": 0.805264,
+        "torso_vertical_diff": 0.119959,
+        "body_center_y": 0.865243,
+        "body_angle_degrees": 54.53
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.014357,
+        "velocity_shoulder_y": 0.081699,
+        "velocity_magnitude": 0.082951,
+        "acceleration_hip_y": -0.961827,
+        "acceleration_magnitude": 0.961827,
+        "jerk": 0.0,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": false,
+        "is_high_acceleration": true
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 3,
+    "pose_detection_rate": 1.0,
+    "hip_delta": 0.031848,
+    "max_velocity": 0.277802,
+    "trajectory_direction": "stable",
+    "has_velocity_spike": true,
+    "start_posture": "transitioning",
+    "end_posture": "transitioning",
+    "fall_likelihood_score": 0.25
+  },
+  "llm_descriptions": {
+    "frame_descriptions": [
+      "Frame 1: transitioning, vel=0.224",
+      "Frame 2: transitioning, vel=0.176",
+      "Frame 3: transitioning, vel=0.014"
+    ],
+    "fall_assessment": "Score: 25%"
+  }
+}
