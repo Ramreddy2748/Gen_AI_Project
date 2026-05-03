@@ -1,0 +1,262 @@
+{
+  "zero_shot": {
+    "window_metrics": {
+      "confusion_matrix": {
+        "TP": 86,
+        "TN": 274,
+        "FP": 22,
+        "FN": 195
+      },
+      "fall": {
+        "precision": 0.7963,
+        "recall": 0.306,
+        "f1": 0.4422,
+        "support": 281
+      },
+      "no_fall": {
+        "precision": 0.5842,
+        "recall": 0.9257,
+        "f1": 0.7163,
+        "support": 296
+      },
+      "overall": {
+        "accuracy": 0.6239,
+        "macro_f1": 0.5792,
+        "total_samples": 577
+      }
+    },
+    "video_metrics": {
+      "confusion_matrix": {
+        "TP": 26,
+        "TN": 56,
+        "FP": 11,
+        "FN": 22
+      },
+      "fall": {
+        "precision": 0.7027,
+        "recall": 0.5417,
+        "f1": 0.6118,
+        "support": 48
+      },
+      "no_fall": {
+        "precision": 0.7179,
+        "recall": 0.8358,
+        "f1": 0.7724,
+        "support": 67
+      },
+      "overall": {
+        "accuracy": 0.713,
+        "macro_f1": 0.6921,
+        "total_samples": 115
+      }
+    }
+  },
+  "few_shot": {
+    "window_metrics": {
+      "confusion_matrix": {
+        "TP": 168,
+        "TN": 226,
+        "FP": 70,
+        "FN": 113
+      },
+      "fall": {
+        "precision": 0.7059,
+        "recall": 0.5979,
+        "f1": 0.6474,
+        "support": 281
+      },
+      "no_fall": {
+        "precision": 0.6667,
+        "recall": 0.7635,
+        "f1": 0.7118,
+        "support": 296
+      },
+      "overall": {
+        "accuracy": 0.6828,
+        "macro_f1": 0.6796,
+        "total_samples": 577
+      }
+    },
+    "video_metrics": {
+      "confusion_matrix": {
+        "TP": 39,
+        "TN": 38,
+        "FP": 29,
+        "FN": 9
+      },
+      "fall": {
+        "precision": 0.5735,
+        "recall": 0.8125,
+        "f1": 0.6724,
+        "support": 48
+      },
+      "no_fall": {
+        "precision": 0.8085,
+        "recall": 0.5672,
+        "f1": 0.6667,
+        "support": 67
+      },
+      "overall": {
+        "accuracy": 0.6696,
+        "macro_f1": 0.6695,
+        "total_samples": 115
+      }
+    }
+  },
+  "cot": {
+    "window_metrics": {
+      "confusion_matrix": {
+        "TP": 207,
+        "TN": 104,
+        "FP": 192,
+        "FN": 74
+      },
+      "fall": {
+        "precision": 0.5188,
+        "recall": 0.7367,
+        "f1": 0.6088,
+        "support": 281
+      },
+      "no_fall": {
+        "precision": 0.5843,
+        "recall": 0.3514,
+        "f1": 0.4388,
+        "support": 296
+      },
+      "overall": {
+        "accuracy": 0.539,
+        "macro_f1": 0.5238,
+        "total_samples": 577
+      }
+    },
+    "video_metrics": {
+      "confusion_matrix": {
+        "TP": 37,
+        "TN": 19,
+        "FP": 48,
+        "FN": 11
+      },
+      "fall": {
+        "precision": 0.4353,
+        "recall": 0.7708,
+        "f1": 0.5564,
+        "support": 48
+      },
+      "no_fall": {
+        "precision": 0.6333,
+        "recall": 0.2836,
+        "f1": 0.3918,
+        "support": 67
+      },
+      "overall": {
+        "accuracy": 0.487,
+        "macro_f1": 0.4741,
+        "total_samples": 115
+      }
+    }
+  },
+  "self_consistency": {
+    "window_metrics": {
+      "confusion_matrix": {
+        "TP": 87,
+        "TN": 276,
+        "FP": 20,
+        "FN": 194
+      },
+      "fall": {
+        "precision": 0.8131,
+        "recall": 0.3096,
+        "f1": 0.4485,
+        "support": 281
+      },
+      "no_fall": {
+        "precision": 0.5872,
+        "recall": 0.9324,
+        "f1": 0.7206,
+        "support": 296
+      },
+      "overall": {
+        "accuracy": 0.6291,
+        "macro_f1": 0.5845,
+        "total_samples": 577
+      }
+    },
+    "video_metrics": {
+      "confusion_matrix": {
+        "TP": 27,
+        "TN": 57,
+        "FP": 10,
+        "FN": 21
+      },
+      "fall": {
+        "precision": 0.7297,
+        "recall": 0.5625,
+        "f1": 0.6353,
+        "support": 48
+      },
+      "no_fall": {
+        "precision": 0.7308,
+        "recall": 0.8507,
+        "f1": 0.7862,
+        "support": 67
+      },
+      "overall": {
+        "accuracy": 0.7304,
+        "macro_f1": 0.7108,
+        "total_samples": 115
+      }
+    }
+  },
+  "safety_first": {
+    "window_metrics": {
+      "confusion_matrix": {
+        "TP": 252,
+        "TN": 91,
+        "FP": 205,
+        "FN": 29
+      },
+      "fall": {
+        "precision": 0.5514,
+        "recall": 0.8968,
+        "f1": 0.6829,
+        "support": 281
+      },
+      "no_fall": {
+        "precision": 0.7583,
+        "recall": 0.3074,
+        "f1": 0.4375,
+        "support": 296
+      },
+      "overall": {
+        "accuracy": 0.5945,
+        "macro_f1": 0.5602,
+        "total_samples": 577
+      }
+    },
+    "video_metrics": {
+      "confusion_matrix": {
+        "TP": 48,
+        "TN": 7,
+        "FP": 60,
+        "FN": 0
+      },
+      "fall": {
+        "precision": 0.4444,
+        "recall": 1.0,
+        "f1": 0.6154,
+        "support": 48
+      },
+      "no_fall": {
+        "precision": 1.0,
+        "recall": 0.1045,
+        "f1": 0.1892,
+        "support": 67
+      },
+      "overall": {
+        "accuracy": 0.4783,
+        "macro_f1": 0.4023,
+        "total_samples": 115
+      }
+    }
+  }
+}
