@@ -1,0 +1,69 @@
+{
+  "window_id": "voxel_09-4_w0008",
+  "video_id": "voxel_09-4",
+  "split": "train",
+  "label": "fall",
+  "target": 1,
+  "source_video_path": "data/raw/voxel_huggingface_data/Fall/09-4.mp4",
+  "video_start_time_seconds": 0.0,
+  "video_end_time_seconds": 6.2242,
+  "window_start_time_seconds": 5.3542,
+  "window_end_time_seconds": 6.0235,
+  "window_index": 8,
+  "window_start_position": 16,
+  "window_size": 3,
+  "pose_frame_count": 3,
+  "frames": [
+    {
+      "position": 0,
+      "frame": "frame_000160.jpg",
+      "frame_index": 160,
+      "timestamp_seconds": 5.3542,
+      "frame_path": "data/processed/frames/train/fall/voxel_09-4/frame_000160.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.3562557101249695,
+        "hip_y": 0.7038977742195129,
+        "shoulder_x": 0.22364084422588348,
+        "shoulder_y": 0.8215729594230652,
+        "nose_x": 0.19361865520477295,
+        "nose_y": 0.8345220685005188,
+        "torso_vertical_diff": 0.11767518520355225
+      }
+    },
+    {
+      "position": 1,
+      "frame": "frame_000170.jpg",
+      "frame_index": 170,
+      "timestamp_seconds": 5.6888,
+      "frame_path": "data/processed/frames/train/fall/voxel_09-4/frame_000170.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.3429834246635437,
+        "hip_y": 0.6995049715042114,
+        "shoulder_x": 0.20745468139648438,
+        "shoulder_y": 0.8101234436035156,
+        "nose_x": 0.19694337248802185,
+        "nose_y": 0.8307887315750122,
+        "torso_vertical_diff": 0.1106184720993042
+      }
+    },
+    {
+      "position": 2,
+      "frame": "frame_000180.jpg",
+      "frame_index": 180,
+      "timestamp_seconds": 6.0235,
+      "frame_path": "data/processed/frames/train/fall/voxel_09-4/frame_000180.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.3542017638683319,
+        "hip_y": 0.6937540769577026,
+        "shoulder_x": 0.2190277874469757,
+        "shoulder_y": 0.8047605752944946,
+        "nose_x": 0.19421011209487915,
+        "nose_y": 0.8382719159126282,
+        "torso_vertical_diff": 0.11100649833679199
+      }
+    }
+  ]
+}

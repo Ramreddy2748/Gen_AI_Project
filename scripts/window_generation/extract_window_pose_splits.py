@@ -5,8 +5,8 @@ from pathlib import Path
 from typing import Dict, Iterable, List
 
 
-DEFAULT_WINDOW_JSONL = Path("data/window_splits/train/train_llm_windows.jsonl")
-DEFAULT_OUTPUT_ROOT = Path("data/window_pose_splits")
+DEFAULT_WINDOW_JSONL = Path("data/processed/windows/train/train_llm_windows.jsonl")
+DEFAULT_OUTPUT_ROOT = Path("data/processed/window_poses")
 
 
 def safe_name(value: object) -> str:

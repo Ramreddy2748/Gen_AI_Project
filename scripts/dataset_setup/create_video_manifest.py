@@ -6,8 +6,8 @@ from pathlib import Path
 from typing import Dict, List
 
 
-VOXEL_ROOT = Path("data/voxel_huggingface_data")
-URFD_ROOT = Path("data/urfd_videos")
+VOXEL_ROOT = Path("data/raw/voxel_huggingface_data")
+URFD_ROOT = Path("data/raw/urfd_videos")
 OUTPUT_CSV = Path("data/manifests/video_manifest.csv")
 VIDEO_EXTENSIONS = {".mp4", ".avi", ".mov", ".mkv", ".webm", ".mpeg", ".mpg", ".m4v"}
 DEFAULT_SPLIT_STRATEGY = "grouped-stratified-by-label"

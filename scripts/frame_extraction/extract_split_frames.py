@@ -7,11 +7,10 @@ import cv2
 
 
 DEFAULT_MANIFEST_CANDIDATES = [
-    Path("data/meta_data/video_manifest.csv"),
     Path("data/manifests/video_manifest.csv"),
 ]
-DEFAULT_SPLIT_ROOT = Path("data/splits/video_data")
-DEFAULT_OUTPUT_ROOT = Path("data/frame_splits")
+DEFAULT_SPLIT_ROOT = Path("data/splits/videos")
+DEFAULT_OUTPUT_ROOT = Path("data/processed/frames")
 SPLIT_DIR_NAME = {"train": "train", "val": "valid", "test": "test"}
 
 

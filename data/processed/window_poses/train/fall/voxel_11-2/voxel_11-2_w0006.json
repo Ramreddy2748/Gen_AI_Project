@@ -1,0 +1,61 @@
+{
+  "window_id": "voxel_11-2_w0006",
+  "video_id": "voxel_11-2",
+  "split": "train",
+  "label": "fall",
+  "target": 1,
+  "source_video_path": "data/raw/voxel_huggingface_data/Fall/11-2.mp4",
+  "video_start_time_seconds": 0.0,
+  "video_end_time_seconds": 10.5933,
+  "window_start_time_seconds": 4.0641,
+  "window_end_time_seconds": 4.7304,
+  "window_index": 6,
+  "window_start_position": 12,
+  "window_size": 3,
+  "pose_frame_count": 2,
+  "frames": [
+    {
+      "position": 0,
+      "frame": "frame_000061.jpg",
+      "frame_index": 61,
+      "timestamp_seconds": 4.0641,
+      "frame_path": "data/processed/frames/train/fall/voxel_11-2/frame_000061.jpg",
+      "pose_detected": false,
+      "features": {}
+    },
+    {
+      "position": 1,
+      "frame": "frame_000066.jpg",
+      "frame_index": 66,
+      "timestamp_seconds": 4.3972,
+      "frame_path": "data/processed/frames/train/fall/voxel_11-2/frame_000066.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.49781444668769836,
+        "hip_y": 0.4882042407989502,
+        "shoulder_x": 0.6056662797927856,
+        "shoulder_y": 0.4141192138195038,
+        "nose_x": 0.6536253094673157,
+        "nose_y": 0.4533374607563019,
+        "torso_vertical_diff": 0.07408502697944641
+      }
+    },
+    {
+      "position": 2,
+      "frame": "frame_000071.jpg",
+      "frame_index": 71,
+      "timestamp_seconds": 4.7304,
+      "frame_path": "data/processed/frames/train/fall/voxel_11-2/frame_000071.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.4932417869567871,
+        "hip_y": 0.48878705501556396,
+        "shoulder_x": 0.6088412404060364,
+        "shoulder_y": 0.41851934790611267,
+        "nose_x": 0.6593847870826721,
+        "nose_y": 0.4467804431915283,
+        "torso_vertical_diff": 0.0702677071094513
+      }
+    }
+  ]
+}

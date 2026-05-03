@@ -19,14 +19,14 @@ htmlcov/
 .mplconfig/
 
 # Raw and bulky datasets
-data/urfd_videos/
-data/voxel_huggingface_data/
-data/splits/video_data/
+data/raw/urfd_videos/
+data/raw/voxel_huggingface_data/
+data/splits/videos/
 data/hf_fall_detection/
 
 # Sampled frame images are large; keep only frame manifests.
-data/frame_splits/*/
-!data/frame_splits/*_frame_manifest.csv
+data/processed/frames/*/
+!data/processed/frames/*_frame_manifest.csv
 
 # Model weights can be re-downloaded, except the project pose landmarker.
 *.task
@@ -43,14 +43,16 @@ pose_extraction/**/__pycache__/
 pose_extraction/**/*.py[cod]
 
 # Keep generated pre-LLM window artifacts trackable.
-!data/window_splits/
-!data/window_splits/**
-!data/window_pose_splits/
-!data/window_pose_splits/**
-!data/window_pose_splits_readable/
-!data/window_pose_splits_readable/**
-!data/upload_windows/
-!data/upload_windows/**
+!data/processed/poses/
+!data/processed/poses/**
+!data/processed/windows/
+!data/processed/windows/**
+!data/processed/window_poses/
+!data/processed/window_poses/**
+!data/processed/window_poses_readable/
+!data/processed/window_poses_readable/**
+!data/uploads/windows/
+!data/uploads/windows/**
 results/**
 
 

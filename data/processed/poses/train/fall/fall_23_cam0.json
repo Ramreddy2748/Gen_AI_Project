@@ -1,0 +1,77 @@
+{
+  "video_id": "fall_23_cam0",
+  "split": "train",
+  "label": "fall",
+  "frame_count": 8,
+  "pose_frame_count": 4,
+  "frames": [
+    {
+      "frame": "frame_000000.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000010.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000020.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000030.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.705217182636261,
+        "hip_y": 0.6237225532531738,
+        "shoulder_x": 0.7499698996543884,
+        "shoulder_y": 0.5451875329017639,
+        "nose_x": 0.7477356195449829,
+        "nose_y": 0.4929860234260559,
+        "torso_vertical_diff": 0.07853502035140991
+      }
+    },
+    {
+      "frame": "frame_000040.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.7235711812973022,
+        "hip_y": 0.6865160465240479,
+        "shoulder_x": 0.7630579471588135,
+        "shoulder_y": 0.6085898876190186,
+        "nose_x": 0.746308445930481,
+        "nose_y": 0.5789483785629272,
+        "torso_vertical_diff": 0.0779261589050293
+      }
+    },
+    {
+      "frame": "frame_000050.jpg",
+      "pose_detected": false
+    },
+    {
+      "frame": "frame_000060.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.5743849873542786,
+        "hip_y": 0.8120049834251404,
+        "shoulder_x": 0.5606391429901123,
+        "shoulder_y": 0.6552587747573853,
+        "nose_x": 0.5599962472915649,
+        "nose_y": 0.654596745967865,
+        "torso_vertical_diff": 0.15674620866775513
+      }
+    },
+    {
+      "frame": "frame_000070.jpg",
+      "pose_detected": true,
+      "features": {
+        "hip_x": 0.5569454431533813,
+        "hip_y": 0.8958630561828613,
+        "shoulder_x": 0.5498124957084656,
+        "shoulder_y": 0.7291214466094971,
+        "nose_x": 0.5490067601203918,
+        "nose_y": 0.7287426590919495,
+        "torso_vertical_diff": 0.16674160957336426
+      }
+    }
+  ]
+}

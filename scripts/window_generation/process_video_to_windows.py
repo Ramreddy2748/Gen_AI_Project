@@ -13,7 +13,7 @@ from mediapipe.tasks import python as mp_tasks
 from mediapipe.tasks.python import vision as mp_vision
 
 
-DEFAULT_OUTPUT_ROOT = Path("data/upload_windows")
+DEFAULT_OUTPUT_ROOT = Path("data/uploads/windows")
 DEFAULT_MODEL_PATH = Path("pose_landmarker_lite.task")
 
 

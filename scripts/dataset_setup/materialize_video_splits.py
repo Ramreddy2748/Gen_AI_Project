@@ -7,13 +7,20 @@ from typing import Dict, List
 
 
 DEFAULT_MANIFEST = Path("data/manifests/video_manifest.csv")
-DEFAULT_OUTPUT_ROOT = Path("data/splits/video_data")
+DEFAULT_OUTPUT_ROOT = Path("data/splits/videos")
 SPLIT_NAME_MAP = {"train": "train", "val": "valid", "test": "test"}
 
 
 def load_manifest(path: Path) -> List[Dict[str, str]]:
     with open(path, "r", newline="", encoding="utf-8") as file_obj:
-        return list(csv.DictReader(file_obj))
+        return [
+            {
+                str(key).strip(): str(value).strip()
+                for key, value in row.items()
+                if key is not None
+            }
+            for row in csv.DictReader(file_obj)
+        ]
 
 
 def ensure_clean_dir(path: Path) -> None:

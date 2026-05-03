@@ -5,9 +5,9 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
 
-DEFAULT_POSE_MANIFEST = Path("data/pose_splits/train_pose_manifest.csv")
-DEFAULT_FRAME_MANIFEST = Path("data/frame_splits/train_frame_manifest.csv")
-DEFAULT_OUTPUT_ROOT = Path("data/window_splits")
+DEFAULT_POSE_MANIFEST = Path("data/processed/poses/train_pose_manifest.csv")
+DEFAULT_FRAME_MANIFEST = Path("data/processed/frames/train_frame_manifest.csv")
+DEFAULT_OUTPUT_ROOT = Path("data/processed/windows")
 SPLIT_DIR_NAME = {"train": "train", "val": "valid", "test": "test"}
 
 

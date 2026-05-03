@@ -1,0 +1,12 @@
+{
+  "pose_manifest": "data/processed/poses/train_pose_manifest.csv",
+  "frame_manifest": "data/processed/frames/train_frame_manifest.csv",
+  "output_root": "data/processed/windows",
+  "split": "train",
+  "window_size": 3,
+  "stride": 2,
+  "video_count": 180,
+  "window_count": 1818,
+  "csv_path": "data/processed/windows/train/train_window_manifest.csv",
+  "jsonl_path": "data/processed/windows/train/train_llm_windows.jsonl"
+}

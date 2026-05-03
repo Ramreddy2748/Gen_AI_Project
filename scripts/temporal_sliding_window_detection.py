@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
 
-DEFAULT_POSE_MANIFEST = Path("data/pose_splits/train_pose_manifest.csv")
+DEFAULT_POSE_MANIFEST = Path("data/processed/poses/train_pose_manifest.csv")
 DEFAULT_OUTPUT_ROOT = Path("results/sliding_window_temporal")
 
 

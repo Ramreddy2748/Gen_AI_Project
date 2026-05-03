@@ -13,8 +13,8 @@ from mediapipe.tasks import python as mp_tasks
 from mediapipe.tasks.python import vision as mp_vision
 
 
-DEFAULT_FRAMES_ROOT = Path("data/frame_splits")
-DEFAULT_OUTPUT_ROOT = Path("data/pose_splits")
+DEFAULT_FRAMES_ROOT = Path("data/processed/frames")
+DEFAULT_OUTPUT_ROOT = Path("data/processed/poses")
 DEFAULT_MODEL_PATH = Path("pose_landmarker_lite.task")
 SPLIT_DIR_NAME = {"train": "train", "val": "valid", "test": "test"}
 

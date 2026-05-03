@@ -21,7 +21,7 @@ CHUNK_SIZE = 1024 * 64
 DEFAULT_LIMIT = 0
 
 IMAGE_OUTPUT_ROOT = Path("data")
-VIDEO_OUTPUT_ROOT = Path("data/urfd_videos")
+VIDEO_OUTPUT_ROOT = Path("data/raw/urfd_videos")
 
 
 def build_session() -> requests.Session:
