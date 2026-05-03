@@ -1,0 +1,221 @@
+
+============================================================
+Window: gmncsa24_gmncsa_adl_020_w0002
+True: no_fall | Predicted: fall
+Confidence: high
+
+Analysis:  The sequence shows a descending trajectory with the hip height increasing slightly but remaining below typical standing height. The body angle decreases significantly, indicating a more horizontal orientation. The velocity is consistently above the threshold for rapid descent, and the posture is marked as transitioning throughout, suggesting instability.
+
+Indicators:
+  - Body angle decreases from 62.5° to 31.0°, indicating a horizontal orientation.
+  - Velocity remains above 0.05, with a maximum of 0.4016.
+  - Posture is consistently "transitioning."
+  - Hip height remains below 0.5, indicating a low position.
+
+Reason: The combination of low hip height, horizontal body angle, and consistent transitioning posture strongly indicates a fall.
+
+============================================================
+Window: gmncsa24_gmncsa_fall_073_w0010
+True: fall | Predicted: fall
+Confidence: high
+
+Analysis:  The sequence shows a consistent increase in hip_y values, indicating the person is low to the ground. The body angle decreases towards a more horizontal position, and the velocity is notably high, especially in Frame 2, suggesting rapid movement. The presence of multiple fall-related flags, such as ON_GROUND and RAPID_DESCENT, further supports the likelihood of a fall.
+
+Indicators:
+  - hip_y consistently above 0.65, indicating low position.
+  - body_angle decreases towards horizontal (52.0° in Frame 3).
+  - velocity exceeds 0.05, with a spike in Frame 2.
+  - ON_GROUND and RAPID_DESCENT flags are triggered.
+
+Reason: Multiple strong fall indicators, including high hip_y, low body angle, and rapid descent flags, confirm a likely fall.
+
+============================================================
+Window: urfd_fall-16-cam0_w0006
+True: fall | Predicted: fall
+Confidence: high
+
+Analysis:  The sequence shows a consistent pattern of indicators that strongly suggest a fall. The hip height remains above 0.65, indicating the person is low to the ground. The body angle decreases significantly, reaching as low as 6.0°, which is indicative of a horizontal orientation. Additionally, the velocity is high, particularly in Frame 3, and the posture is marked as "fallen" with multiple fall-related flags triggered.
+
+Indicators:
+  - hip_y consistently > 0.65
+  - body_angle drops to 6.0°
+  - velocity spikes to 0.2403
+  - FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT
+
+Reason: Multiple strong fall indicators are present, including low hip height, horizontal body angle, high velocity, and fall-related flags.
+
+============================================================
+Window: gmncsa24_gmncsa_fall_006_w0049
+True: fall | Predicted: fall
+Confidence: high
+
+Analysis:  The sequence shows a descending trajectory with a significant velocity spike, indicating rapid movement. The body angle decreases from 89.1° to 59.9°, suggesting a transition from upright to a more horizontal position. The presence of the "RAPID_DESCENT" flag throughout the frames further supports the likelihood of a fall.
+
+Indicators:
+  - Velocity spike with max velocity of 0.5675.
+  - Body angle decreased to 59.9°.
+  - Posture changed to "transitioning."
+  - "RAPID_DESCENT" flag present in all frames.
+
+Reason: The combination of rapid descent, decreasing body angle, and transitioning posture strongly indicates a fall.
+
+============================================================
+Window: gmncsa24_gmncsa_adl_073_w0000
+True: no_fall | Predicted: no_fall
+Confidence: high
+
+Analysis:  The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70°, indicating a stable and upright position. The hip_y values remain around 0.5, suggesting the person is at standing height. The velocity remains low throughout, with no significant spikes, indicating no rapid descent.
+
+Indicators:
+  - Body angle consistently above 70° (upright posture)
+  - Hip_y around 0.5 (standing height)
+  - Low velocity with no spikes
+  - Stable trajectory
+
+Reason: The person maintains an upright posture with stable position and no fall indicators triggered.
+
+============================================================
+Window: le2i_CR01_video_41_adl_w0000
+True: no_fall | Predicted: no_fall
+Confidence: medium
+
+Analysis:  The pose sequence shows a gradual decrease in hip height and body angle, with the velocity indicating a downward movement. However, the body angle remains above 70°, suggesting an upright posture throughout the sequence. The maximum velocity recorded is 0.0971, which is slightly above the threshold for rapid descent, but there are no fall flags triggered, and the trajectory is stable.
+
+Indicators:
+  - Body angle remains above 70° (upright posture).
+  - Maximum velocity is 0.0971 (slightly above threshold).
+  - No fall flags triggered.
+  - Hip height decreases but remains above 0.37.
+
+Reason: Despite a slight increase in velocity, the upright posture and lack of fall indicators suggest no fall occurred.
+
+============================================================
+Window: le2i_CR01_video_25_adl_w0001
+True: no_fall | Predicted: no_fall
+Confidence: medium
+
+Analysis:  The sequence begins with a transitioning posture and a significant negative velocity, indicating a rapid descent. However, the subsequent frames show the individual regaining an upright posture with a stable trajectory and reduced velocity. The hip height remains relatively low throughout, but the body angle improves significantly, suggesting recovery.
+
+Indicators:
+  - Initial velocity of -0.0692 and transitioning posture.
+  - Hip_y decreases to 0.387 but body angle improves to 84.4°.
+  - Max velocity recorded is 0.3438, but no velocity spike detected.
+
+Reason: Despite initial signs of a fall, the individual quickly regains an upright posture and stability, indicating recovery rather than a fall.
+
+============================================================
+Window: urfd_adl-34-cam0_w0002
+True: no_fall | Predicted: no_fall
+Confidence: low
+
+Analysis:  The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.
+
+Indicators:
+  - Pose not detected in any frame
+  - Trajectory unknown
+  - Max Velocity: 0.0000
+
+Reason: The absence of pose data prevents any reliable fall detection analysis.
+
+============================================================
+Window: gmncsa24_gmncsa_adl_081_w0000
+True: no_fall | Predicted: no_fall
+Confidence: high
+
+Analysis:  The pose sequence shows a consistently upright posture with body angles close to 90°, indicating a vertical orientation. The hip_y values remain stable and below the threshold for a fall, and the velocity is low throughout, suggesting no rapid descent. No fall flags are triggered in the window summary.
+
+Indicators:
+  - Body angle consistently > 70° (upright posture)
+  - Hip_y < 0.5 (standing height)
+  - Low velocity (no rapid descent)
+  - No fall flags triggered
+
+Reason: The individual maintains an upright posture with stable hip height and low velocity, indicating no fall.
+
+============================================================
+Window: gmncsa24_gmncsa_adl_005_w0005
+True: no_fall | Predicted: fall
+Confidence: high
+
+Analysis:  The pose sequence shows a consistently low body angle, indicating a horizontal orientation throughout the frames. The hip height remains around 0.5, which is relatively low, and the posture is consistently marked as "transitioning." Although the velocity is low and stable, the combination of these factors suggests a potential fall.
+
+Indicators:
+  - Consistently low body angle (around 35°)
+  - Hip height around 0.5
+  - Posture marked as "transitioning"
+  - No significant velocity spike
+
+Reason: The low body angle and transitioning posture strongly suggest a fall, despite the stable velocity.
+
+============================================================
+Window: le2i_CR01_video_41_adl_w0003
+True: no_fall | Predicted: no_fall
+Confidence: medium
+
+Analysis:  The sequence shows a gradual descent with increasing hip height and decreasing body angle, indicating a potential transition from an upright position. The velocity is slightly above the threshold, but there is no significant spike, and the posture remains upright throughout.
+
+Indicators:
+  - hip_y increases from 0.471 to 0.567
+  - body_angle decreases from 85.8° to 82.3°
+  - velocity peaks at 0.0963
+  - posture remains upright
+
+Reason: Despite the descent and slight increase in velocity, the posture remains upright, and no strong fall indicators are present.
+
+============================================================
+Window: gmncsa24_gmncsa_fall_071_w0016
+True: fall | Predicted: fall
+Confidence: medium
+
+Analysis:  The sequence shows a gradual decrease in hip height and body angle, with the posture transitioning from upright to transitioning. The velocity in Frame 3 exceeds the threshold for rapid descent, indicating a potential fall. However, the trajectory is stable, and there is no velocity spike.
+
+Indicators:
+  - Frame 3 velocity = -0.0679 (exceeds rapid descent threshold)
+  - Body angle decreases from 63.0° to 56.5°
+  - Posture changes to transitioning in Frame 3
+
+Reason: The presence of a rapid descent and transitioning posture suggests a likely fall, despite the stable trajectory.
+
+============================================================
+Window: gmncsa24_gmncsa_fall_073_w0016
+True: fall | Predicted: fall
+Confidence: high
+
+Analysis:  The pose sequence shows consistently low hip_y values above 0.8, indicating the person is close to the ground. The body angle remains below 20°, suggesting a horizontal orientation. The posture is consistently marked as "fallen," and flags for being on the ground and horizontal are active throughout the frames.
+
+Indicators:
+  - hip_y consistently > 0.8
+  - body_angle consistently < 20°
+  - posture marked as "fallen"
+  - FLAGS: ON_GROUND, HORIZONTAL active
+
+Reason: Multiple strong fall indicators are present, including low hip_y, horizontal body angle, and "fallen" posture, confirming a fall scenario.
+
+============================================================
+Window: urfd_adl-18-cam0_w0003
+True: no_fall | Predicted: no_fall
+Confidence: medium
+
+Analysis:  The sequence begins with a missing pose detection, followed by an upright posture with a slight increase in hip height and a stable body angle. The velocity increases significantly in Frame 3, indicating a rapid movement, but the body remains upright. The trajectory is descending, but there is no velocity spike, and the body angle remains well above the horizontal threshold.
+
+Indicators:
+  - Frame 2: hip_y=0.453, body_angle=88.3°, velocity=0.0
+  - Frame 3: hip_y=0.525, body_angle=85.9°, velocity=0.1452
+  - Trajectory: descending, Max Velocity: 0.1812
+
+Reason: Despite the descending trajectory and increased velocity, the upright posture and body angle suggest stability.
+
+============================================================
+Window: gmncsa24_gmncsa_fall_002_w0011
+True: fall | Predicted: fall
+Confidence: high
+
+Analysis:  The pose sequence shows a person in a transitioning posture with a body angle consistently around 55°, indicating a moderately horizontal orientation. The hip height remains low, around 0.35, which is below typical standing height. Although the velocity is not high, the posture and hip height suggest a potential fall.
+
+Indicators:
+  - hip_y remains low at approximately 0.35
+  - body_angle is consistently around 54°, indicating a horizontal orientation
+  - posture is "transitioning" throughout the sequence
+  - Max Velocity is 0.0447, below the rapid descent threshold
+
+Reason: The combination of low hip height, horizontal body angle, and transitioning posture strongly indicates a fall.

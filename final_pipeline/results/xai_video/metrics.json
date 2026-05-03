@@ -1,0 +1,33 @@
+{
+  "metrics": {
+    "confusion_matrix": {
+      "TP": 21,
+      "TN": 20,
+      "FP": 5,
+      "FN": 4
+    },
+    "fall": {
+      "precision": 0.8077,
+      "recall": 0.84,
+      "f1": 0.8235,
+      "support": 25
+    },
+    "no_fall": {
+      "precision": 0.8333,
+      "recall": 0.8,
+      "f1": 0.8163,
+      "support": 25
+    },
+    "overall": {
+      "accuracy": 0.82,
+      "macro_f1": 0.8199,
+      "total_samples": 50
+    }
+  },
+  "confidence_distribution": {
+    "medium": 10,
+    "high": 34,
+    "low": 6
+  },
+  "num_videos": 50
+}

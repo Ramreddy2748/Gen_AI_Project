@@ -1,0 +1,1466 @@
+[
+  {
+    "window_id": "gmncsa24_gmncsa_adl_020_w0002",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a descending trajectory with the hip height increasing slightly but remaining below typical standing height. The body angle decreases significantly, indicating a more horizontal orientation. The velocity is consistently above the threshold for rapid descent, and the posture is marked as transitioning throughout, suggesting instability.",
+    "indicators": [
+      "Body angle decreases from 62.5\u00b0 to 31.0\u00b0, indicating a horizontal orientation.",
+      "Velocity remains above 0.05, with a maximum of 0.4016.",
+      "Posture is consistently \"transitioning.\"",
+      "Hip height remains below 0.5, indicating a low position."
+    ],
+    "reason": "The combination of low hip height, horizontal body angle, and consistent transitioning posture strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a descending trajectory with the hip height increasing slightly but remaining below typical standing height. The body angle decreases significantly, indicating a more horizontal orientation. The velocity is consistently above the threshold for rapid descent, and the posture is marked as transitioning throughout, suggesting instability.\n\nINDICATORS:\n- Body angle decreases from 62.5\u00b0 to 31.0\u00b0, indicating a horizontal orientation.\n- Velocity remains above 0.05, with a maximum of 0.4016.\n- Posture is consistently \"transitioning.\"\n- Hip height remains below 0.5, indicating a low position.\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of low hip height, horizontal body angle, and consistent transitioning posture strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0010",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a consistent increase in hip_y values, indicating the person is low to the ground. The body angle decreases towards a more horizontal position, and the velocity is notably high, especially in Frame 2, suggesting rapid movement. The presence of multiple fall-related flags, such as ON_GROUND and RAPID_DESCENT, further supports the likelihood of a fall.",
+    "indicators": [
+      "hip_y consistently above 0.65, indicating low position.",
+      "body_angle decreases towards horizontal (52.0\u00b0 in Frame 3).",
+      "velocity exceeds 0.05, with a spike in Frame 2.",
+      "ON_GROUND and RAPID_DESCENT flags are triggered."
+    ],
+    "reason": "Multiple strong fall indicators, including high hip_y, low body angle, and rapid descent flags, confirm a likely fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a consistent increase in hip_y values, indicating the person is low to the ground. The body angle decreases towards a more horizontal position, and the velocity is notably high, especially in Frame 2, suggesting rapid movement. The presence of multiple fall-related flags, such as ON_GROUND and RAPID_DESCENT, further supports the likelihood of a fall.\n\nINDICATORS:\n- hip_y consistently above 0.65, indicating low position.\n- body_angle decreases towards horizontal (52.0\u00b0 in Frame 3).\n- velocity exceeds 0.05, with a spike in Frame 2.\n- ON_GROUND and RAPID_DESCENT flags are triggered.\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators, including high hip_y, low body angle, and rapid descent flags, confirm a likely fall."
+  },
+  {
+    "window_id": "urfd_fall-16-cam0_w0006",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a consistent pattern of indicators that strongly suggest a fall. The hip height remains above 0.65, indicating the person is low to the ground. The body angle decreases significantly, reaching as low as 6.0\u00b0, which is indicative of a horizontal orientation. Additionally, the velocity is high, particularly in Frame 3, and the posture is marked as \"fallen\" with multiple fall-related flags triggered.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle drops to 6.0\u00b0",
+      "velocity spikes to 0.2403",
+      "FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip height, horizontal body angle, high velocity, and fall-related flags.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a consistent pattern of indicators that strongly suggest a fall. The hip height remains above 0.65, indicating the person is low to the ground. The body angle decreases significantly, reaching as low as 6.0\u00b0, which is indicative of a horizontal orientation. Additionally, the velocity is high, particularly in Frame 3, and the posture is marked as \"fallen\" with multiple fall-related flags triggered.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle drops to 6.0\u00b0\n- velocity spikes to 0.2403\n- FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip height, horizontal body angle, high velocity, and fall-related flags."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0049",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a descending trajectory with a significant velocity spike, indicating rapid movement. The body angle decreases from 89.1\u00b0 to 59.9\u00b0, suggesting a transition from upright to a more horizontal position. The presence of the \"RAPID_DESCENT\" flag throughout the frames further supports the likelihood of a fall.",
+    "indicators": [
+      "Velocity spike with max velocity of 0.5675.",
+      "Body angle decreased to 59.9\u00b0.",
+      "Posture changed to \"transitioning.\"",
+      "\"RAPID_DESCENT\" flag present in all frames."
+    ],
+    "reason": "The combination of rapid descent, decreasing body angle, and transitioning posture strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a descending trajectory with a significant velocity spike, indicating rapid movement. The body angle decreases from 89.1\u00b0 to 59.9\u00b0, suggesting a transition from upright to a more horizontal position. The presence of the \"RAPID_DESCENT\" flag throughout the frames further supports the likelihood of a fall.\n\nINDICATORS:\n- Velocity spike with max velocity of 0.5675.\n- Body angle decreased to 59.9\u00b0.\n- Posture changed to \"transitioning.\"\n- \"RAPID_DESCENT\" flag present in all frames.\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of rapid descent, decreasing body angle, and transitioning posture strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_073_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain around 0.5, suggesting the person is at standing height. The velocity remains low throughout, with no significant spikes, indicating no rapid descent.",
+    "indicators": [
+      "Body angle consistently above 70\u00b0 (upright posture)",
+      "Hip_y around 0.5 (standing height)",
+      "Low velocity with no spikes",
+      "Stable trajectory"
+    ],
+    "reason": "The person maintains an upright posture with stable position and no fall indicators triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain around 0.5, suggesting the person is at standing height. The velocity remains low throughout, with no significant spikes, indicating no rapid descent.\n\nINDICATORS:\n- Body angle consistently above 70\u00b0 (upright posture)\n- Hip_y around 0.5 (standing height)\n- Low velocity with no spikes\n- Stable trajectory\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable position and no fall indicators triggered."
+  },
+  {
+    "window_id": "le2i_CR01_video_41_adl_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a gradual decrease in hip height and body angle, with the velocity indicating a downward movement. However, the body angle remains above 70\u00b0, suggesting an upright posture throughout the sequence. The maximum velocity recorded is 0.0971, which is slightly above the threshold for rapid descent, but there are no fall flags triggered, and the trajectory is stable.",
+    "indicators": [
+      "Body angle remains above 70\u00b0 (upright posture).",
+      "Maximum velocity is 0.0971 (slightly above threshold).",
+      "No fall flags triggered.",
+      "Hip height decreases but remains above 0.37."
+    ],
+    "reason": "Despite a slight increase in velocity, the upright posture and lack of fall indicators suggest no fall occurred.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a gradual decrease in hip height and body angle, with the velocity indicating a downward movement. However, the body angle remains above 70\u00b0, suggesting an upright posture throughout the sequence. The maximum velocity recorded is 0.0971, which is slightly above the threshold for rapid descent, but there are no fall flags triggered, and the trajectory is stable.\n\nINDICATORS:\n- Body angle remains above 70\u00b0 (upright posture).\n- Maximum velocity is 0.0971 (slightly above threshold).\n- No fall flags triggered.\n- Hip height decreases but remains above 0.37.\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: Despite a slight increase in velocity, the upright posture and lack of fall indicators suggest no fall occurred."
+  },
+  {
+    "window_id": "le2i_CR01_video_25_adl_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence begins with a transitioning posture and a significant negative velocity, indicating a rapid descent. However, the subsequent frames show the individual regaining an upright posture with a stable trajectory and reduced velocity. The hip height remains relatively low throughout, but the body angle improves significantly, suggesting recovery.",
+    "indicators": [
+      "Initial velocity of -0.0692 and transitioning posture.",
+      "Hip_y decreases to 0.387 but body angle improves to 84.4\u00b0.",
+      "Max velocity recorded is 0.3438, but no velocity spike detected."
+    ],
+    "reason": "Despite initial signs of a fall, the individual quickly regains an upright posture and stability, indicating recovery rather than a fall.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence begins with a transitioning posture and a significant negative velocity, indicating a rapid descent. However, the subsequent frames show the individual regaining an upright posture with a stable trajectory and reduced velocity. The hip height remains relatively low throughout, but the body angle improves significantly, suggesting recovery.\n\nINDICATORS:\n- Initial velocity of -0.0692 and transitioning posture.\n- Hip_y decreases to 0.387 but body angle improves to 84.4\u00b0.\n- Max velocity recorded is 0.3438, but no velocity spike detected.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: MEDIUM  \nREASON: Despite initial signs of a fall, the individual quickly regains an upright posture and stability, indicating recovery rather than a fall."
+  },
+  {
+    "window_id": "urfd_adl-34-cam0_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_081_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a consistently upright posture with body angles close to 90\u00b0, indicating a vertical orientation. The hip_y values remain stable and below the threshold for a fall, and the velocity is low throughout, suggesting no rapid descent. No fall flags are triggered in the window summary.",
+    "indicators": [
+      "Body angle consistently > 70\u00b0 (upright posture)",
+      "Hip_y < 0.5 (standing height)",
+      "Low velocity (no rapid descent)",
+      "No fall flags triggered"
+    ],
+    "reason": "The individual maintains an upright posture with stable hip height and low velocity, indicating no fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently upright posture with body angles close to 90\u00b0, indicating a vertical orientation. The hip_y values remain stable and below the threshold for a fall, and the velocity is low throughout, suggesting no rapid descent. No fall flags are triggered in the window summary.\n\nINDICATORS:\n- Body angle consistently > 70\u00b0 (upright posture)\n- Hip_y < 0.5 (standing height)\n- Low velocity (no rapid descent)\n- No fall flags triggered\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable hip height and low velocity, indicating no fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_005_w0005",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows a consistently low body angle, indicating a horizontal orientation throughout the frames. The hip height remains around 0.5, which is relatively low, and the posture is consistently marked as \"transitioning.\" Although the velocity is low and stable, the combination of these factors suggests a potential fall.",
+    "indicators": [
+      "Consistently low body angle (around 35\u00b0)",
+      "Hip height around 0.5",
+      "Posture marked as \"transitioning\"",
+      "No significant velocity spike"
+    ],
+    "reason": "The low body angle and transitioning posture strongly suggest a fall, despite the stable velocity.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently low body angle, indicating a horizontal orientation throughout the frames. The hip height remains around 0.5, which is relatively low, and the posture is consistently marked as \"transitioning.\" Although the velocity is low and stable, the combination of these factors suggests a potential fall.\n\nINDICATORS:\n- Consistently low body angle (around 35\u00b0)\n- Hip height around 0.5\n- Posture marked as \"transitioning\"\n- No significant velocity spike\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The low body angle and transitioning posture strongly suggest a fall, despite the stable velocity."
+  },
+  {
+    "window_id": "le2i_CR01_video_41_adl_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence shows a gradual descent with increasing hip height and decreasing body angle, indicating a potential transition from an upright position. The velocity is slightly above the threshold, but there is no significant spike, and the posture remains upright throughout.",
+    "indicators": [
+      "hip_y increases from 0.471 to 0.567",
+      "body_angle decreases from 85.8\u00b0 to 82.3\u00b0",
+      "velocity peaks at 0.0963",
+      "posture remains upright"
+    ],
+    "reason": "Despite the descent and slight increase in velocity, the posture remains upright, and no strong fall indicators are present.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence shows a gradual descent with increasing hip height and decreasing body angle, indicating a potential transition from an upright position. The velocity is slightly above the threshold, but there is no significant spike, and the posture remains upright throughout.\n\nINDICATORS:\n- hip_y increases from 0.471 to 0.567\n- body_angle decreases from 85.8\u00b0 to 82.3\u00b0\n- velocity peaks at 0.0963\n- posture remains upright\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: Despite the descent and slight increase in velocity, the posture remains upright, and no strong fall indicators are present."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_071_w0016",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a gradual decrease in hip height and body angle, with the posture transitioning from upright to transitioning. The velocity in Frame 3 exceeds the threshold for rapid descent, indicating a potential fall. However, the trajectory is stable, and there is no velocity spike.",
+    "indicators": [
+      "Frame 3 velocity = -0.0679 (exceeds rapid descent threshold)",
+      "Body angle decreases from 63.0\u00b0 to 56.5\u00b0",
+      "Posture changes to transitioning in Frame 3"
+    ],
+    "reason": "The presence of a rapid descent and transitioning posture suggests a likely fall, despite the stable trajectory.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence shows a gradual decrease in hip height and body angle, with the posture transitioning from upright to transitioning. The velocity in Frame 3 exceeds the threshold for rapid descent, indicating a potential fall. However, the trajectory is stable, and there is no velocity spike.\n\nINDICATORS:\n- Frame 3 velocity = -0.0679 (exceeds rapid descent threshold)\n- Body angle decreases from 63.0\u00b0 to 56.5\u00b0\n- Posture changes to transitioning in Frame 3\n\nCLASSIFICATION: FALL\nCONFIDENCE: MEDIUM\nREASON: The presence of a rapid descent and transitioning posture suggests a likely fall, despite the stable trajectory."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0016",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently low hip_y values above 0.8, indicating the person is close to the ground. The body angle remains below 20\u00b0, suggesting a horizontal orientation. The posture is consistently marked as \"fallen,\" and flags for being on the ground and horizontal are active throughout the frames.",
+    "indicators": [
+      "hip_y consistently > 0.8",
+      "body_angle consistently < 20\u00b0",
+      "posture marked as \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL active"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip_y, horizontal body angle, and \"fallen\" posture, confirming a fall scenario.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently low hip_y values above 0.8, indicating the person is close to the ground. The body angle remains below 20\u00b0, suggesting a horizontal orientation. The posture is consistently marked as \"fallen,\" and flags for being on the ground and horizontal are active throughout the frames.\n\nINDICATORS:\n- hip_y consistently > 0.8\n- body_angle consistently < 20\u00b0\n- posture marked as \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL active\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip_y, horizontal body angle, and \"fallen\" posture, confirming a fall scenario."
+  },
+  {
+    "window_id": "urfd_adl-18-cam0_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence begins with a missing pose detection, followed by an upright posture with a slight increase in hip height and a stable body angle. The velocity increases significantly in Frame 3, indicating a rapid movement, but the body remains upright. The trajectory is descending, but there is no velocity spike, and the body angle remains well above the horizontal threshold.",
+    "indicators": [
+      "Frame 2: hip_y=0.453, body_angle=88.3\u00b0, velocity=0.0",
+      "Frame 3: hip_y=0.525, body_angle=85.9\u00b0, velocity=0.1452",
+      "Trajectory: descending, Max Velocity: 0.1812"
+    ],
+    "reason": "Despite the descending trajectory and increased velocity, the upright posture and body angle suggest stability.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence begins with a missing pose detection, followed by an upright posture with a slight increase in hip height and a stable body angle. The velocity increases significantly in Frame 3, indicating a rapid movement, but the body remains upright. The trajectory is descending, but there is no velocity spike, and the body angle remains well above the horizontal threshold.\n\nINDICATORS:\n- Frame 2: hip_y=0.453, body_angle=88.3\u00b0, velocity=0.0\n- Frame 3: hip_y=0.525, body_angle=85.9\u00b0, velocity=0.1452\n- Trajectory: descending, Max Velocity: 0.1812\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: Despite the descending trajectory and increased velocity, the upright posture and body angle suggest stability."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0011",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows a person in a transitioning posture with a body angle consistently around 55\u00b0, indicating a moderately horizontal orientation. The hip height remains low, around 0.35, which is below typical standing height. Although the velocity is not high, the posture and hip height suggest a potential fall.",
+    "indicators": [
+      "hip_y remains low at approximately 0.35",
+      "body_angle is consistently around 54\u00b0, indicating a horizontal orientation",
+      "posture is \"transitioning\" throughout the sequence",
+      "Max Velocity is 0.0447, below the rapid descent threshold"
+    ],
+    "reason": "The combination of low hip height, horizontal body angle, and transitioning posture strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person in a transitioning posture with a body angle consistently around 55\u00b0, indicating a moderately horizontal orientation. The hip height remains low, around 0.35, which is below typical standing height. Although the velocity is not high, the posture and hip height suggest a potential fall.\n\nINDICATORS:\n- hip_y remains low at approximately 0.35\n- body_angle is consistently around 54\u00b0, indicating a horizontal orientation\n- posture is \"transitioning\" throughout the sequence\n- Max Velocity is 0.0447, below the rapid descent threshold\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of low hip height, horizontal body angle, and transitioning posture strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_061_w0007",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a transition from an upright posture to a more horizontal orientation, with the body angle decreasing significantly. The velocity indicates a rapid descent in Frame 3, and the posture is noted as transitioning, which suggests instability. Although the hip height remains relatively stable, the combination of these factors suggests a potential fall.",
+    "indicators": [
+      "Frame 3 body_angle=48.9\u00b0 (horizontal orientation)",
+      "Frame 3 velocity=-0.1288 (rapid descent)",
+      "Posture transitioning in Frames 2 and 3"
+    ],
+    "reason": "The horizontal body angle and rapid descent in Frame 3 are strong indicators of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a transition from an upright posture to a more horizontal orientation, with the body angle decreasing significantly. The velocity indicates a rapid descent in Frame 3, and the posture is noted as transitioning, which suggests instability. Although the hip height remains relatively stable, the combination of these factors suggests a potential fall.\n\nINDICATORS:\n- Frame 3 body_angle=48.9\u00b0 (horizontal orientation)\n- Frame 3 velocity=-0.1288 (rapid descent)\n- Posture transitioning in Frames 2 and 3\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The horizontal body angle and rapid descent in Frame 3 are strong indicators of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_060_w0003",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a person transitioning with a significant velocity spike initially, indicating rapid movement. The body angle decreases to 28.7\u00b0 in Frame 3, suggesting a horizontal orientation. The presence of the \"transitioning\" posture and the \"HORIZONTAL\" flag further supports the likelihood of a fall.",
+    "indicators": [
+      "Frame 1: velocity=0.1718, posture=transitioning, FLAGS: RAPID_DESCENT",
+      "Frame 3: body_angle=28.7\u00b0, FLAGS: HORIZONTAL",
+      "Max Velocity: 0.3226"
+    ],
+    "reason": "The combination of rapid descent, horizontal orientation, and transitioning posture strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a person transitioning with a significant velocity spike initially, indicating rapid movement. The body angle decreases to 28.7\u00b0 in Frame 3, suggesting a horizontal orientation. The presence of the \"transitioning\" posture and the \"HORIZONTAL\" flag further supports the likelihood of a fall.\n\nINDICATORS:\n- Frame 1: velocity=0.1718, posture=transitioning, FLAGS: RAPID_DESCENT\n- Frame 3: body_angle=28.7\u00b0, FLAGS: HORIZONTAL\n- Max Velocity: 0.3226\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of rapid descent, horizontal orientation, and transitioning posture strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_048_w0005",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a stable trajectory with minimal changes in hip height and body angle, indicating an upright posture throughout. The velocity remains low, with no significant spikes, suggesting no rapid movement or descent. All frames maintain a body angle well above the threshold for horizontal orientation.",
+    "indicators": [
+      "Hip height remains around 0.53, indicating standing height.",
+      "Body angle consistently above 88\u00b0, indicating upright posture.",
+      "Velocity is low and stable, with no rapid descent.",
+      "No fall flags or indicators are triggered."
+    ],
+    "reason": "The individual maintains an upright posture with stable velocity and no fall indicators triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a stable trajectory with minimal changes in hip height and body angle, indicating an upright posture throughout. The velocity remains low, with no significant spikes, suggesting no rapid movement or descent. All frames maintain a body angle well above the threshold for horizontal orientation.\n\nINDICATORS:\n- Hip height remains around 0.53, indicating standing height.\n- Body angle consistently above 88\u00b0, indicating upright posture.\n- Velocity is low and stable, with no rapid descent.\n- No fall flags or indicators are triggered.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable velocity and no fall indicators triggered."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_071_w0038",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_003_w0030",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the person's position, orientation, or movement. Without any pose data, it is impossible to determine if a fall has occurred or not. The trajectory and velocity information are also unknown, further limiting the analysis.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents a reliable fall detection analysis, but no indicators of a fall are present.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the person's position, orientation, or movement. Without any pose data, it is impossible to determine if a fall has occurred or not. The trajectory and velocity information are also unknown, further limiting the analysis.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents a reliable fall detection analysis, but no indicators of a fall are present."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_038_w0001",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a clear progression from a relatively upright position to a more horizontal orientation, with the hip height consistently above 0.65 in the latter frames. The presence of rapid descent and on-ground flags, along with a significant velocity spike, strongly suggests a fall. The body angle drops below 50\u00b0, indicating a horizontal orientation.",
+    "indicators": [
+      "Frame 2: hip_y=0.699, body_angle=71.3\u00b0, velocity=0.6222",
+      "Frame 3: hip_y=0.665, body_angle=37.5\u00b0, velocity=-0.2057",
+      "Flags: ON_GROUND, RAPID_DESCENT",
+      "Trajectory: descending with a velocity spike"
+    ],
+    "reason": "Multiple strong fall indicators are present, including high hip_y, low body angle, rapid descent, and on-ground status.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a clear progression from a relatively upright position to a more horizontal orientation, with the hip height consistently above 0.65 in the latter frames. The presence of rapid descent and on-ground flags, along with a significant velocity spike, strongly suggests a fall. The body angle drops below 50\u00b0, indicating a horizontal orientation.\n\nINDICATORS:\n- Frame 2: hip_y=0.699, body_angle=71.3\u00b0, velocity=0.6222\n- Frame 3: hip_y=0.665, body_angle=37.5\u00b0, velocity=-0.2057\n- Flags: ON_GROUND, RAPID_DESCENT\n- Trajectory: descending with a velocity spike\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including high hip_y, low body angle, rapid descent, and on-ground status."
+  },
+  {
+    "window_id": "le2i_CR02_video_50_fall_w0030",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows the person with a consistently high hip_y value above 0.65, indicating a low position close to the ground. Despite the upright posture and stable trajectory, the presence of the ON_GROUND flag in all frames suggests the person is on the ground. The velocity in Frame 2 indicates a rapid descent, which is a strong fall indicator.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "ON_GROUND flag present in all frames",
+      "Frame 2 velocity = -0.0624 (rapid descent)",
+      "Upright posture but low position"
+    ],
+    "reason": "The combination of high hip_y, ON_GROUND flag, and rapid descent in Frame 2 strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows the person with a consistently high hip_y value above 0.65, indicating a low position close to the ground. Despite the upright posture and stable trajectory, the presence of the ON_GROUND flag in all frames suggests the person is on the ground. The velocity in Frame 2 indicates a rapid descent, which is a strong fall indicator.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- ON_GROUND flag present in all frames\n- Frame 2 velocity = -0.0624 (rapid descent)\n- Upright posture but low position\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of high hip_y, ON_GROUND flag, and rapid descent in Frame 2 strongly indicates a fall."
+  },
+  {
+    "window_id": "le2i_H01_video_8_adl_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the subject's position, orientation, or movement. Without pose data, it is impossible to determine if any fall indicators are present or absent.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000 (no movement detected)",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the subject's position, orientation, or movement. Without pose data, it is impossible to determine if any fall indicators are present or absent.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000 (no movement detected)\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_071_w0031",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, making it difficult to determine any potential fall.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents a reliable fall assessment, but no indicators of a fall are present.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, making it difficult to determine any potential fall.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents a reliable fall assessment, but no indicators of a fall are present."
+  },
+  {
+    "window_id": "le2i_H01_video_9_adl_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0002",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows the individual maintaining an upright posture with a body angle consistently above 85\u00b0, indicating a stable and upright position. Although there is a brief increase in velocity in Frame 2, it does not exceed the threshold for rapid descent, and the overall trajectory is stable with no significant velocity spikes.",
+    "indicators": [
+      "Body angle remains above 85\u00b0 (upright posture).",
+      "Maximum velocity is 0.0961, with no rapid descent.",
+      "Hip_y remains below 0.5, indicating standing height.",
+      "No fall flags triggered."
+    ],
+    "reason": "The individual maintains an upright posture with stable velocity and no fall indicators triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows the individual maintaining an upright posture with a body angle consistently above 85\u00b0, indicating a stable and upright position. Although there is a brief increase in velocity in Frame 2, it does not exceed the threshold for rapid descent, and the overall trajectory is stable with no significant velocity spikes.\n\nINDICATORS:\n- Body angle remains above 85\u00b0 (upright posture).\n- Maximum velocity is 0.0961, with no rapid descent.\n- Hip_y remains below 0.5, indicating standing height.\n- No fall flags triggered.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable velocity and no fall indicators triggered."
+  },
+  {
+    "window_id": "urfd_fall-14-cam0_w0008",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a person initially in a very low position with a horizontal orientation and high velocity, indicating a strong likelihood of a fall. Although the body angle increases in subsequent frames, the hip height remains high, and the person is flagged as on the ground throughout. The presence of rapid descent and horizontal flags further supports the fall classification.",
+    "indicators": [
+      "Frame 1: hip_y=0.754, body_angle=8.3\u00b0, velocity=0.4931",
+      "Frame 1: FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT",
+      "Frame 2: posture=transitioning, FLAGS: ON_GROUND, RAPID_DESCENT"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip height, horizontal orientation, and rapid descent.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a person initially in a very low position with a horizontal orientation and high velocity, indicating a strong likelihood of a fall. Although the body angle increases in subsequent frames, the hip height remains high, and the person is flagged as on the ground throughout. The presence of rapid descent and horizontal flags further supports the fall classification.\n\nINDICATORS:\n- Frame 1: hip_y=0.754, body_angle=8.3\u00b0, velocity=0.4931\n- Frame 1: FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT\n- Frame 2: posture=transitioning, FLAGS: ON_GROUND, RAPID_DESCENT\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip height, horizontal orientation, and rapid descent."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_074_w0005",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain around 0.5, suggesting the person is standing. The velocity is low, with no significant spikes, indicating no rapid descent.",
+    "indicators": [
+      "Body angle consistently above 87\u00b0.",
+      "Hip_y values around 0.5, indicating standing height.",
+      "Low velocity with no spikes."
+    ],
+    "reason": "The indicators show an upright and stable posture with no signs of rapid descent or fall flags triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain around 0.5, suggesting the person is standing. The velocity is low, with no significant spikes, indicating no rapid descent.\n\nINDICATORS:\n- Body angle consistently above 87\u00b0.\n- Hip_y values around 0.5, indicating standing height.\n- Low velocity with no spikes.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The indicators show an upright and stable posture with no signs of rapid descent or fall flags triggered."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_048_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence begins with a high velocity and a rapid descent flag, suggesting a potential fall. However, the body angle remains upright throughout, and the hip height is consistently above the threshold for being on the ground. The subsequent frames show a significant reduction in velocity, indicating stabilization.",
+    "indicators": [
+      "Initial velocity of 0.1994 with a rapid descent flag.",
+      "Consistent upright body angle around 89\u00b0.",
+      "Hip height remains above 0.5 in all frames."
+    ],
+    "reason": "Despite the initial rapid descent, the upright posture and stable hip height suggest recovery without a fall.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence begins with a high velocity and a rapid descent flag, suggesting a potential fall. However, the body angle remains upright throughout, and the hip height is consistently above the threshold for being on the ground. The subsequent frames show a significant reduction in velocity, indicating stabilization.\n\nINDICATORS:\n- Initial velocity of 0.1994 with a rapid descent flag.\n- Consistent upright body angle around 89\u00b0.\n- Hip height remains above 0.5 in all frames.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: MEDIUM  \nREASON: Despite the initial rapid descent, the upright posture and stable hip height suggest recovery without a fall."
+  },
+  {
+    "window_id": "urfd_adl-18-cam0_w0005",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the subject's position, orientation, or movement. Without pose data, it is impossible to determine any indicators of a fall or a stable posture.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the subject's position, orientation, or movement. Without pose data, it is impossible to determine any indicators of a fall or a stable posture.\n\nINDICATORS:\n- Pose not detected in any frame\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "urfd_adl-18-cam0_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the subject's position or movement. Without trajectory or velocity information, it is challenging to determine any changes in posture or movement that might indicate a fall.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents a reliable fall assessment, but no indicators suggest a fall occurred.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the subject's position or movement. Without trajectory or velocity information, it is challenging to determine any changes in posture or movement that might indicate a fall.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents a reliable fall assessment, but no indicators suggest a fall occurred."
+  },
+  {
+    "window_id": "urfd_fall-17-cam0_w0001",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, making it difficult to determine any movement patterns.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents a reliable fall assessment, but no indicators of a fall are present.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, making it difficult to determine any movement patterns.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents a reliable fall assessment, but no indicators of a fall are present."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_021_w0001",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and does not indicate rapid descent, and there are no fall flags triggered.",
+    "indicators": [
+      "Body angle consistently above 70\u00b0 (upright posture)",
+      "Hip_y values below 0.5 (standing height)",
+      "Low velocity with no rapid descent",
+      "No fall flags triggered"
+    ],
+    "reason": "The person maintains an upright posture with stable position and no indicators of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and does not indicate rapid descent, and there are no fall flags triggered.\n\nINDICATORS:\n- Body angle consistently above 70\u00b0 (upright posture)\n- Hip_y values below 0.5 (standing height)\n- Low velocity with no rapid descent\n- No fall flags triggered\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable position and no indicators of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_005_w0006",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a transition from a low body angle and transitioning posture in Frame 1 to an upright posture with a high body angle in Frame 3. However, Frame 2 indicates a rapid descent with a velocity of 0.0691, which is above the threshold for a strong fall indicator. The hip_y values remain above 0.5, suggesting the person is not on the ground.",
+    "indicators": [
+      "Frame 1: body_angle=31.4\u00b0, posture=transitioning",
+      "Frame 2: velocity=0.0691 (rapid descent)",
+      "Frame 3: body_angle=88.2\u00b0 (upright posture)"
+    ],
+    "reason": "The rapid descent in Frame 2 and transitioning posture in Frame 1 suggest a potential fall, despite the recovery to an upright posture in Frame 3.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence shows a transition from a low body angle and transitioning posture in Frame 1 to an upright posture with a high body angle in Frame 3. However, Frame 2 indicates a rapid descent with a velocity of 0.0691, which is above the threshold for a strong fall indicator. The hip_y values remain above 0.5, suggesting the person is not on the ground.\n\nINDICATORS:\n- Frame 1: body_angle=31.4\u00b0, posture=transitioning\n- Frame 2: velocity=0.0691 (rapid descent)\n- Frame 3: body_angle=88.2\u00b0 (upright posture)\n\nCLASSIFICATION: FALL\nCONFIDENCE: MEDIUM\nREASON: The rapid descent in Frame 2 and transitioning posture in Frame 1 suggest a potential fall, despite the recovery to an upright posture in Frame 3."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_025_w0005",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a gradual decrease in body angle from 87.9\u00b0 to 58.0\u00b0, indicating a transition from an upright to a more horizontal posture. The hip height remains relatively stable around 0.47-0.48, which is below the threshold for a strong fall indicator. The velocity is low, with a maximum of 0.0687, and there is no significant velocity spike.",
+    "indicators": [
+      "Body angle decreased from 87.9\u00b0 to 58.0\u00b0.",
+      "Hip height remained stable around 0.47-0.48.",
+      "Maximum velocity was 0.0687, with no spike.",
+      "Posture changed to \"transitioning.\""
+    ],
+    "reason": "Despite the transitioning posture and decreasing body angle, the stable hip height and low velocity suggest no fall occurred.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a gradual decrease in body angle from 87.9\u00b0 to 58.0\u00b0, indicating a transition from an upright to a more horizontal posture. The hip height remains relatively stable around 0.47-0.48, which is below the threshold for a strong fall indicator. The velocity is low, with a maximum of 0.0687, and there is no significant velocity spike.\n\nINDICATORS:\n- Body angle decreased from 87.9\u00b0 to 58.0\u00b0.\n- Hip height remained stable around 0.47-0.48.\n- Maximum velocity was 0.0687, with no spike.\n- Posture changed to \"transitioning.\"\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: Despite the transitioning posture and decreasing body angle, the stable hip height and low velocity suggest no fall occurred."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0029",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation throughout the sequence. The posture is consistently reported as \"fallen,\" and the flags for being on the ground and horizontal are active in all frames. Although the velocity is low, the combination of these indicators strongly suggests a fall.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle consistently < 50\u00b0",
+      "posture = \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip height, horizontal body angle, and \"fallen\" posture.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation throughout the sequence. The posture is consistently reported as \"fallen,\" and the flags for being on the ground and horizontal are active in all frames. Although the velocity is low, the combination of these indicators strongly suggests a fall.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle consistently < 50\u00b0\n- posture = \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip height, horizontal body angle, and \"fallen\" posture."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_021_w0057",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation throughout the frames. The posture is consistently marked as \"fallen,\" and the flags for being on the ground and horizontal are active in all frames.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle consistently < 50\u00b0",
+      "posture marked as \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip position, horizontal body angle, and \"fallen\" posture.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation throughout the frames. The posture is consistently marked as \"fallen,\" and the flags for being on the ground and horizontal are active in all frames.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle consistently < 50\u00b0\n- posture marked as \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip position, horizontal body angle, and \"fallen\" posture."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_056_w0001",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a consistent decrease in hip height and body angle, indicating a transition towards a horizontal position. The body angle remains significantly low across frames, and the posture is consistently marked as transitioning. The presence of the HORIZONTAL flag further supports the likelihood of a fall.",
+    "indicators": [
+      "Body angle consistently below 50\u00b0 (as low as 1.0\u00b0)",
+      "Posture marked as transitioning in all frames",
+      "HORIZONTAL flag present in multiple frames",
+      "Max velocity recorded at 0.0950, indicating rapid descent"
+    ],
+    "reason": "The combination of low body angle, transitioning posture, and horizontal flag strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a consistent decrease in hip height and body angle, indicating a transition towards a horizontal position. The body angle remains significantly low across frames, and the posture is consistently marked as transitioning. The presence of the HORIZONTAL flag further supports the likelihood of a fall.\n\nINDICATORS:\n- Body angle consistently below 50\u00b0 (as low as 1.0\u00b0)\n- Posture marked as transitioning in all frames\n- HORIZONTAL flag present in multiple frames\n- Max velocity recorded at 0.0950, indicating rapid descent\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of low body angle, transitioning posture, and horizontal flag strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_050_w0006",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "le2i_CR02_video_59_adl_w0000",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a descending trajectory with a hip height that increases slightly but remains below the threshold for a strong fall indicator. The body angle remains upright throughout, and the velocity is generally low, except for a brief spike. However, the presence of the ON_GROUND flag in Frame 3 is a strong fall indicator.",
+    "indicators": [
+      "hip_y remains below 0.65 but increases slightly.",
+      "body_angle remains above 70\u00b0, indicating an upright posture.",
+      "ON_GROUND flag is present in Frame 3.",
+      "Max velocity is 0.0787, indicating a brief rapid movement."
+    ],
+    "reason": "The ON_GROUND flag suggests a fall, despite the upright posture and low velocity.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence shows a descending trajectory with a hip height that increases slightly but remains below the threshold for a strong fall indicator. The body angle remains upright throughout, and the velocity is generally low, except for a brief spike. However, the presence of the ON_GROUND flag in Frame 3 is a strong fall indicator.\n\nINDICATORS:\n- hip_y remains below 0.65 but increases slightly.\n- body_angle remains above 70\u00b0, indicating an upright posture.\n- ON_GROUND flag is present in Frame 3.\n- Max velocity is 0.0787, indicating a brief rapid movement.\n\nCLASSIFICATION: FALL\nCONFIDENCE: MEDIUM\nREASON: The ON_GROUND flag suggests a fall, despite the upright posture and low velocity."
+  },
+  {
+    "window_id": "urfd_adl-20-cam0_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0029",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently strong indicators of a fall across all frames. The hip height remains above 0.65, indicating the person is low to the ground. The body angle is consistently below 50\u00b0, suggesting a horizontal orientation. Additionally, the velocity is above the threshold for rapid descent, and the posture is marked as \"fallen\" with flags indicating the person is on the ground and horizontal.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle consistently < 50\u00b0",
+      "velocity > 0.05",
+      "posture = \"fallen\" with ON_GROUND and HORIZONTAL flags"
+    ],
+    "reason": "Multiple strong fall indicators are present, confirming a likely fall scenario.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently strong indicators of a fall across all frames. The hip height remains above 0.65, indicating the person is low to the ground. The body angle is consistently below 50\u00b0, suggesting a horizontal orientation. Additionally, the velocity is above the threshold for rapid descent, and the posture is marked as \"fallen\" with flags indicating the person is on the ground and horizontal.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle consistently < 50\u00b0\n- velocity > 0.05\n- posture = \"fallen\" with ON_GROUND and HORIZONTAL flags\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, confirming a likely fall scenario."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0021",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows a person initially in an upright posture with a stable position. However, there is a significant increase in velocity from Frame 1 to Frame 3, indicating a rapid descent. The presence of the \"RAPID_DESCENT\" flag in Frames 2 and 3 further supports this observation. Despite the upright posture and body angle remaining above 70\u00b0, the rapid increase in velocity and descent trajectory are concerning.",
+    "indicators": [
+      "Velocity increased from 0.0078 to 0.2654.",
+      "\"RAPID_DESCENT\" flag triggered in Frames 2 and 3.",
+      "Trajectory indicates descending motion.",
+      "Max velocity recorded at 0.4057."
+    ],
+    "reason": "The rapid increase in velocity and the \"RAPID_DESCENT\" flags strongly indicate a fall, despite the upright posture and body angle.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person initially in an upright posture with a stable position. However, there is a significant increase in velocity from Frame 1 to Frame 3, indicating a rapid descent. The presence of the \"RAPID_DESCENT\" flag in Frames 2 and 3 further supports this observation. Despite the upright posture and body angle remaining above 70\u00b0, the rapid increase in velocity and descent trajectory are concerning.\n\nINDICATORS:\n- Velocity increased from 0.0078 to 0.2654.\n- \"RAPID_DESCENT\" flag triggered in Frames 2 and 3.\n- Trajectory indicates descending motion.\n- Max velocity recorded at 0.4057.\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The rapid increase in velocity and the \"RAPID_DESCENT\" flags strongly indicate a fall, despite the upright posture and body angle."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_048_w0032",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose data from Frame 1 shows a very low body angle of 5.5\u00b0, indicating a nearly horizontal orientation, which is a strong fall indicator. The hip_y value of 0.539 suggests the person is not at a typical standing height, and the posture is marked as \"transitioning,\" which could imply a change in position consistent with a fall. Additionally, the HORIZONTAL flag is triggered, reinforcing the likelihood of a fall.",
+    "indicators": [
+      "body_angle=5.5\u00b0 (horizontal orientation)",
+      "posture=transitioning",
+      "FLAGS: HORIZONTAL",
+      "hip_y=0.539 (below typical standing height)"
+    ],
+    "reason": "The combination of a horizontal body angle, transitioning posture, and the HORIZONTAL flag strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose data from Frame 1 shows a very low body angle of 5.5\u00b0, indicating a nearly horizontal orientation, which is a strong fall indicator. The hip_y value of 0.539 suggests the person is not at a typical standing height, and the posture is marked as \"transitioning,\" which could imply a change in position consistent with a fall. Additionally, the HORIZONTAL flag is triggered, reinforcing the likelihood of a fall.\n\nINDICATORS:\n- body_angle=5.5\u00b0 (horizontal orientation)\n- posture=transitioning\n- FLAGS: HORIZONTAL\n- hip_y=0.539 (below typical standing height)\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of a horizontal body angle, transitioning posture, and the HORIZONTAL flag strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_059_w0015",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation. The posture is consistently reported as \"fallen,\" and the flags for being on the ground and horizontal are active throughout the sequence.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle consistently < 50\u00b0",
+      "posture = \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip height, horizontal body angle, and \"fallen\" posture.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation. The posture is consistently reported as \"fallen,\" and the flags for being on the ground and horizontal are active throughout the sequence.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle consistently < 50\u00b0\n- posture = \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip height, horizontal body angle, and \"fallen\" posture."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_020_w0000",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The available data from Frame 1 indicates an upright posture with a body angle of 89.6\u00b0, suggesting the person is standing. The hip height is 0.444, which is consistent with a standing position. There is no detected velocity, indicating stability. However, the absence of data in Frames 2 and 3 creates uncertainty about any changes in posture or position.",
+    "indicators": [
+      "Frame 1: hip_y=0.444, body_angle=89.6\u00b0",
+      "Frame 1: velocity=0.0, posture=upright",
+      "Frames 2 and 3: Pose not detected"
+    ],
+    "reason": "The initial frame shows a stable, upright posture with no fall indicators, but missing data in subsequent frames reduces certainty.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe available data from Frame 1 indicates an upright posture with a body angle of 89.6\u00b0, suggesting the person is standing. The hip height is 0.444, which is consistent with a standing position. There is no detected velocity, indicating stability. However, the absence of data in Frames 2 and 3 creates uncertainty about any changes in posture or position.\n\nINDICATORS:\n- Frame 1: hip_y=0.444, body_angle=89.6\u00b0\n- Frame 1: velocity=0.0, posture=upright\n- Frames 2 and 3: Pose not detected\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: The initial frame shows a stable, upright posture with no fall indicators, but missing data in subsequent frames reduces certainty."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_020_w0003",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a consistently low body angle, indicating a horizontal orientation throughout all frames. The hip height remains relatively stable but is above the threshold for being on the ground. The posture is marked as transitioning, and the horizontal flag is consistently triggered, suggesting a potential fall.",
+    "indicators": [
+      "body_angle consistently below 50\u00b0 (horizontal orientation)",
+      "posture marked as \"transitioning\"",
+      "FLAGS: HORIZONTAL in all frames",
+      "hip_y remains above 0.5 but close to the ground threshold"
+    ],
+    "reason": "The persistent horizontal orientation and transitioning posture strongly indicate a fall, despite the stable trajectory and moderate hip height.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a consistently low body angle, indicating a horizontal orientation throughout all frames. The hip height remains relatively stable but is above the threshold for being on the ground. The posture is marked as transitioning, and the horizontal flag is consistently triggered, suggesting a potential fall.\n\nINDICATORS:\n- body_angle consistently below 50\u00b0 (horizontal orientation)\n- posture marked as \"transitioning\"\n- FLAGS: HORIZONTAL in all frames\n- hip_y remains above 0.5 but close to the ground threshold\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The persistent horizontal orientation and transitioning posture strongly indicate a fall, despite the stable trajectory and moderate hip height."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0012",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a consistent low hip position, indicating proximity to the ground. The body angle decreases significantly, suggesting a horizontal orientation. The posture transitions from \"transitioning\" to \"fallen,\" and the \"ON_GROUND\" flag is consistently triggered, reinforcing the likelihood of a fall.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle decreases to 24.2\u00b0",
+      "posture transitions to \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL"
+    ],
+    "reason": "Multiple strong fall indicators, including low hip position, horizontal body angle, and \"fallen\" posture, confirm a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a consistent low hip position, indicating proximity to the ground. The body angle decreases significantly, suggesting a horizontal orientation. The posture transitions from \"transitioning\" to \"fallen,\" and the \"ON_GROUND\" flag is consistently triggered, reinforcing the likelihood of a fall.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle decreases to 24.2\u00b0\n- posture transitions to \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators, including low hip position, horizontal body angle, and \"fallen\" posture, confirm a fall."
+  },
+  {
+    "window_id": "urfd_adl-04-cam0_w0000",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " In Frame 3, the hip_y value is significantly high at 0.781, indicating the person is likely on the ground. The body angle of 36.3\u00b0 suggests a horizontal orientation, which is a strong indicator of a fall. The posture is noted as \"transitioning,\" and the ON_GROUND flag is active, further supporting the likelihood of a fall.",
+    "indicators": [
+      "hip_y=0.781 (person low/on ground)",
+      "body_angle=36.3\u00b0 (horizontal orientation)",
+      "posture=transitioning",
+      "FLAGS: ON_GROUND"
+    ],
+    "reason": "Multiple strong fall indicators are present, including hip_y, body angle, posture, and ON_GROUND flag.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nIn Frame 3, the hip_y value is significantly high at 0.781, indicating the person is likely on the ground. The body angle of 36.3\u00b0 suggests a horizontal orientation, which is a strong indicator of a fall. The posture is noted as \"transitioning,\" and the ON_GROUND flag is active, further supporting the likelihood of a fall.\n\nINDICATORS:\n- hip_y=0.781 (person low/on ground)\n- body_angle=36.3\u00b0 (horizontal orientation)\n- posture=transitioning\n- FLAGS: ON_GROUND\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including hip_y, body angle, posture, and ON_GROUND flag."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_003_w0006",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The initial frame shows a high velocity and a transitioning posture, which are concerning indicators. The presence of the RAPID_DESCENT flag further suggests a potential fall. However, the hip height and body angle in Frame 1 do not strongly indicate a fall, and subsequent frames lack data to confirm a fall trajectory or position.",
+    "indicators": [
+      "Frame 1 velocity = 0.5452 (high)",
+      "Frame 1 posture = transitioning",
+      "Frame 1 FLAGS: RAPID_DESCENT",
+      "Frame 1 body_angle = 85.5\u00b0 (upright)"
+    ],
+    "reason": "The high velocity and RAPID_DESCENT flag in Frame 1 suggest a fall, despite the lack of data in subsequent frames.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe initial frame shows a high velocity and a transitioning posture, which are concerning indicators. The presence of the RAPID_DESCENT flag further suggests a potential fall. However, the hip height and body angle in Frame 1 do not strongly indicate a fall, and subsequent frames lack data to confirm a fall trajectory or position.\n\nINDICATORS:\n- Frame 1 velocity = 0.5452 (high)\n- Frame 1 posture = transitioning\n- Frame 1 FLAGS: RAPID_DESCENT\n- Frame 1 body_angle = 85.5\u00b0 (upright)\n\nCLASSIFICATION: FALL\nCONFIDENCE: MEDIUM\nREASON: The high velocity and RAPID_DESCENT flag in Frame 1 suggest a fall, despite the lack of data in subsequent frames."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0032",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain low, suggesting a standing height, and the velocity remains minimal, with no significant spikes indicating rapid movement or descent.",
+    "indicators": [
+      "Body angles: 85.8\u00b0, 87.1\u00b0, 88.5\u00b0 (all > 70\u00b0)",
+      "Velocity: -0.0017 to -0.0457 (stable, no rapid descent)",
+      "Hip_y: consistently around 0.37 (standing height)",
+      "Trajectory: stable, no velocity spike"
+    ],
+    "reason": "The individual maintains an upright posture with stable velocity and no fall indicators triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain low, suggesting a standing height, and the velocity remains minimal, with no significant spikes indicating rapid movement or descent.\n\nINDICATORS:\n- Body angles: 85.8\u00b0, 87.1\u00b0, 88.5\u00b0 (all > 70\u00b0)\n- Velocity: -0.0017 to -0.0457 (stable, no rapid descent)\n- Hip_y: consistently around 0.37 (standing height)\n- Trajectory: stable, no velocity spike\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable velocity and no fall indicators triggered."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_061_w0023",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose data from Frame 2 and Frame 3 strongly indicate a fall. The hip height is significantly low, suggesting the person is on the ground. The body angle is extremely horizontal, and the velocity indicates a rapid descent. Additionally, the posture is marked as \"fallen,\" and multiple fall flags are triggered.",
+    "indicators": [
+      "hip_y=0.832 and 0.806 (low position)",
+      "body_angle=9.0\u00b0 and 5.7\u00b0 (horizontal orientation)",
+      "velocity=0.2412 and -0.1548 (rapid descent)",
+      "FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip height, horizontal body angle, rapid descent, and fall flags.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose data from Frame 2 and Frame 3 strongly indicate a fall. The hip height is significantly low, suggesting the person is on the ground. The body angle is extremely horizontal, and the velocity indicates a rapid descent. Additionally, the posture is marked as \"fallen,\" and multiple fall flags are triggered.\n\nINDICATORS:\n- hip_y=0.832 and 0.806 (low position)\n- body_angle=9.0\u00b0 and 5.7\u00b0 (horizontal orientation)\n- velocity=0.2412 and -0.1548 (rapid descent)\n- FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip height, horizontal body angle, rapid descent, and fall flags."
+  },
+  {
+    "window_id": "le2i_H01_video_15_adl_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "le2i_CR01_video_43_adl_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and does not indicate rapid descent, and no fall flags are triggered.",
+    "indicators": [
+      "Body angle consistently above 70\u00b0 (upright posture)",
+      "Hip_y values below 0.5 (standing height)",
+      "Low velocity with no rapid descent",
+      "No fall flags triggered"
+    ],
+    "reason": "The person maintains an upright posture with stable position and no indicators of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and does not indicate rapid descent, and no fall flags are triggered.\n\nINDICATORS:\n- Body angle consistently above 70\u00b0 (upright posture)\n- Hip_y values below 0.5 (standing height)\n- Low velocity with no rapid descent\n- No fall flags triggered\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable position and no indicators of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_021_w0048",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently low hip_y values around 0.849, indicating the person is close to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation. The posture is consistently reported as \"fallen,\" and the flags for being on the ground and horizontal are active throughout the frames.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle consistently < 50\u00b0",
+      "posture consistently \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL active"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip_y, horizontal body angle, and \"fallen\" posture, confirming a fall scenario.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently low hip_y values around 0.849, indicating the person is close to the ground. The body angle remains well below 50\u00b0, suggesting a horizontal orientation. The posture is consistently reported as \"fallen,\" and the flags for being on the ground and horizontal are active throughout the frames.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle consistently < 50\u00b0\n- posture consistently \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL active\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip_y, horizontal body angle, and \"fallen\" posture, confirming a fall scenario."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_042_w0005",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a noted maximum velocity of 0.1193, the absence of a velocity spike and the low velocities in individual frames suggest no rapid descent.",
+    "indicators": [
+      "Body angle remains above 70\u00b0 in all frames.",
+      "Hip_y values are consistently below 0.5.",
+      "No velocity spike detected.",
+      "Maximum velocity is noted but not sustained."
+    ],
+    "reason": "The person maintains an upright posture with no significant indicators of a fall, such as rapid descent or low hip position.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a noted maximum velocity of 0.1193, the absence of a velocity spike and the low velocities in individual frames suggest no rapid descent.\n\nINDICATORS:\n- Body angle remains above 70\u00b0 in all frames.\n- Hip_y values are consistently below 0.5.\n- No velocity spike detected.\n- Maximum velocity is noted but not sustained.\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: HIGH\nREASON: The person maintains an upright posture with no significant indicators of a fall, such as rapid descent or low hip position."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_010_w0006",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a transition from an upright posture to a more horizontal orientation, with the body angle dropping significantly in Frame 3. The hip height remains above the critical threshold, and the velocity is moderate but not indicative of a rapid descent. The posture change to \"transitioning\" suggests movement, but not necessarily a fall.",
+    "indicators": [
+      "Frame 3 body_angle=37.6\u00b0 (horizontal orientation)",
+      "Frame 3 posture=transitioning",
+      "Max Velocity=0.1197 (below rapid descent threshold)",
+      "hip_y remains above 0.5"
+    ],
+    "reason": "The horizontal body angle and transitioning posture suggest a fall, despite the moderate velocity and stable hip height.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence shows a transition from an upright posture to a more horizontal orientation, with the body angle dropping significantly in Frame 3. The hip height remains above the critical threshold, and the velocity is moderate but not indicative of a rapid descent. The posture change to \"transitioning\" suggests movement, but not necessarily a fall.\n\nINDICATORS:\n- Frame 3 body_angle=37.6\u00b0 (horizontal orientation)\n- Frame 3 posture=transitioning\n- Max Velocity=0.1197 (below rapid descent threshold)\n- hip_y remains above 0.5\n\nCLASSIFICATION: FALL\nCONFIDENCE: MEDIUM\nREASON: The horizontal body angle and transitioning posture suggest a fall, despite the moderate velocity and stable hip height."
+  },
+  {
+    "window_id": "le2i_CR01_video_44_fall_w0001",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a significant drop in body angle from 80.9\u00b0 to 48.4\u00b0, indicating a transition from an upright to a more horizontal position. The hip_y values consistently remain above 0.65, suggesting the person is low to the ground. Additionally, the presence of flags such as ON_GROUND and RAPID_DESCENT, along with a high initial velocity, strongly indicate a fall.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle drops to 48.4\u00b0",
+      "Initial velocity of 1.228 with RAPID_DESCENT flag",
+      "ON_GROUND flag present throughout"
+    ],
+    "reason": "Multiple strong fall indicators, including low hip position, horizontal orientation, and rapid descent, confirm a fall event.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a significant drop in body angle from 80.9\u00b0 to 48.4\u00b0, indicating a transition from an upright to a more horizontal position. The hip_y values consistently remain above 0.65, suggesting the person is low to the ground. Additionally, the presence of flags such as ON_GROUND and RAPID_DESCENT, along with a high initial velocity, strongly indicate a fall.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle drops to 48.4\u00b0\n- Initial velocity of 1.228 with RAPID_DESCENT flag\n- ON_GROUND flag present throughout\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators, including low hip position, horizontal orientation, and rapid descent, confirm a fall event."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_037_w0009",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the person's position, orientation, or movement. Without any trajectory or velocity information, it is challenging to determine if a fall has occurred.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents a reliable fall assessment, but no indicators suggest a fall.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the person's position, orientation, or movement. Without any trajectory or velocity information, it is challenging to determine if a fall has occurred.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents a reliable fall assessment, but no indicators suggest a fall."
+  },
+  {
+    "window_id": "urfd_adl-20-cam0_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, making it difficult to determine any movement patterns.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents a reliable fall assessment, but no indicators of a fall are present.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, making it difficult to determine any movement patterns.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents a reliable fall assessment, but no indicators of a fall are present."
+  },
+  {
+    "window_id": "urfd_adl-23-cam0_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_010_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating stability. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a brief increase in velocity, it does not exceed the threshold for rapid descent, and no fall flags are triggered.",
+    "indicators": [
+      "Body angle remains above 70\u00b0.",
+      "Hip_y values are consistently below 0.5.",
+      "Velocity does not exceed 0.05.",
+      "No fall flags are triggered."
+    ],
+    "reason": "The person maintains an upright posture with stable position and no indicators of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating stability. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a brief increase in velocity, it does not exceed the threshold for rapid descent, and no fall flags are triggered.\n\nINDICATORS:\n- Body angle remains above 70\u00b0.\n- Hip_y values are consistently below 0.5.\n- Velocity does not exceed 0.05.\n- No fall flags are triggered.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable position and no indicators of a fall."
+  },
+  {
+    "window_id": "urfd_adl-06-cam0_w0004",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence begins with a transitioning posture and a body angle slightly below the upright threshold, indicating a potential fall. However, subsequent frames show an upright posture with increasing body angles and a stable trajectory. The initial velocity was low, and although there was a brief increase, it did not sustain a rapid descent.",
+    "indicators": [
+      "Frame 1: hip_y=0.515, body_angle=54.9\u00b0, posture=transitioning",
+      "Frame 2: body_angle=71.9\u00b0, posture=upright",
+      "Frame 3: body_angle=80.8\u00b0, velocity=0.0853"
+    ],
+    "reason": "Despite initial indicators of a fall, the subject quickly returned to an upright posture with stable conditions, suggesting no fall occurred.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence begins with a transitioning posture and a body angle slightly below the upright threshold, indicating a potential fall. However, subsequent frames show an upright posture with increasing body angles and a stable trajectory. The initial velocity was low, and although there was a brief increase, it did not sustain a rapid descent.\n\nINDICATORS:\n- Frame 1: hip_y=0.515, body_angle=54.9\u00b0, posture=transitioning\n- Frame 2: body_angle=71.9\u00b0, posture=upright\n- Frame 3: body_angle=80.8\u00b0, velocity=0.0853\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: Despite initial indicators of a fall, the subject quickly returned to an upright posture with stable conditions, suggesting no fall occurred."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0006",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a descending trajectory with increasing velocity, indicating a rapid descent. By Frame 3, the hip_y exceeds 0.65, and the body angle decreases significantly, suggesting a horizontal orientation. The presence of the ON_GROUND and RAPID_DESCENT flags further supports the likelihood of a fall.",
+    "indicators": [
+      "Frame 3 hip_y=0.652 (low position)",
+      "Frame 3 body_angle=71.1\u00b0 (approaching horizontal)",
+      "RAPID_DESCENT and ON_GROUND flags triggered",
+      "Max Velocity: 0.9776 (high velocity)"
+    ],
+    "reason": "The combination of low hip position, rapid descent, and fall-related flags strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a descending trajectory with increasing velocity, indicating a rapid descent. By Frame 3, the hip_y exceeds 0.65, and the body angle decreases significantly, suggesting a horizontal orientation. The presence of the ON_GROUND and RAPID_DESCENT flags further supports the likelihood of a fall.\n\nINDICATORS:\n- Frame 3 hip_y=0.652 (low position)\n- Frame 3 body_angle=71.1\u00b0 (approaching horizontal)\n- RAPID_DESCENT and ON_GROUND flags triggered\n- Max Velocity: 0.9776 (high velocity)\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of low hip position, rapid descent, and fall-related flags strongly indicates a fall."
+  },
+  {
+    "window_id": "urfd_adl-07-cam0_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the person's position, orientation, or movement. Without pose data, it is impossible to determine any indicators of a fall or a stable posture.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection, but no indicators suggest a fall.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose sequence does not provide any detected poses across the frames, resulting in a lack of data to analyze the person's position, orientation, or movement. Without pose data, it is impossible to determine any indicators of a fall or a stable posture.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection, but no indicators suggest a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_023_w0006",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows the individual maintaining an upright posture with body angles consistently above 70\u00b0, indicating a stable and upright position. Although there is a brief increase in velocity in Frame 2, it does not exceed the threshold for rapid descent, and the hip height remains above the standing threshold throughout.",
+    "indicators": [
+      "Body angle remains above 70\u00b0 in all frames.",
+      "Maximum velocity is 0.1238, with no significant velocity spike.",
+      "Hip height is consistently above 0.45."
+    ],
+    "reason": "The individual maintains an upright posture with stable velocity and no fall indicators triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows the individual maintaining an upright posture with body angles consistently above 70\u00b0, indicating a stable and upright position. Although there is a brief increase in velocity in Frame 2, it does not exceed the threshold for rapid descent, and the hip height remains above the standing threshold throughout.\n\nINDICATORS:\n- Body angle remains above 70\u00b0 in all frames.\n- Maximum velocity is 0.1238, with no significant velocity spike.\n- Hip height is consistently above 0.45.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable velocity and no fall indicators triggered."
+  },
+  {
+    "window_id": "urfd_adl-20-cam0_w0004",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The available data from Frame 2 indicates an upright posture with a body angle of 87.9\u00b0, which is consistent with a stable, standing position. The hip height is at 0.518, suggesting the person is not on the ground. The velocity is low at 0.0201, indicating no rapid movement. However, the lack of data in Frames 1 and 3 limits the ability to fully assess the trajectory and continuity of the pose.",
+    "indicators": [
+      "hip_y=0.518 (above ground level)",
+      "body_angle=87.9\u00b0 (upright posture)",
+      "velocity=0.0201 (low velocity)",
+      "Pose not detected in Frames 1 and 3"
+    ],
+    "reason": "The indicators from Frame 2 suggest a stable, upright position, but the absence of data in other frames reduces overall confidence.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe available data from Frame 2 indicates an upright posture with a body angle of 87.9\u00b0, which is consistent with a stable, standing position. The hip height is at 0.518, suggesting the person is not on the ground. The velocity is low at 0.0201, indicating no rapid movement. However, the lack of data in Frames 1 and 3 limits the ability to fully assess the trajectory and continuity of the pose.\n\nINDICATORS:\n- hip_y=0.518 (above ground level)\n- body_angle=87.9\u00b0 (upright posture)\n- velocity=0.0201 (low velocity)\n- Pose not detected in Frames 1 and 3\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: The indicators from Frame 2 suggest a stable, upright position, but the absence of data in other frames reduces overall confidence."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_038_w0007",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " In Frame 3, the pose data indicates a strong likelihood of a fall. The hip_y value is significantly high at 0.79, suggesting the person is low to the ground. The body angle of 27.9\u00b0 indicates a horizontal orientation, and the velocity of 0.0758 suggests a rapid descent. Additionally, the posture is marked as \"fallen,\" and both ON_GROUND and HORIZONTAL flags are triggered.",
+    "indicators": [
+      "hip_y=0.79 (person low/on ground)",
+      "body_angle=27.9\u00b0 (horizontal orientation)",
+      "velocity=0.0758 (rapid descent)",
+      "FLAGS: ON_GROUND, HORIZONTAL"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip position, horizontal body angle, rapid descent, and fall-related flags.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nIn Frame 3, the pose data indicates a strong likelihood of a fall. The hip_y value is significantly high at 0.79, suggesting the person is low to the ground. The body angle of 27.9\u00b0 indicates a horizontal orientation, and the velocity of 0.0758 suggests a rapid descent. Additionally, the posture is marked as \"fallen,\" and both ON_GROUND and HORIZONTAL flags are triggered.\n\nINDICATORS:\n- hip_y=0.79 (person low/on ground)\n- body_angle=27.9\u00b0 (horizontal orientation)\n- velocity=0.0758 (rapid descent)\n- FLAGS: ON_GROUND, HORIZONTAL\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip position, horizontal body angle, rapid descent, and fall-related flags."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_004_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating stability. Although there is a notable velocity in Frame 3, the overall trajectory is stable, and no fall flags are triggered. The hip_y values remain above 0.4, suggesting the person is not on the ground.",
+    "indicators": [
+      "Body angle consistently above 70\u00b0 (upright posture).",
+      "Hip_y remains above 0.4 (not on ground).",
+      "No fall flags triggered.",
+      "Stable trajectory with no velocity spike."
+    ],
+    "reason": "The person maintains an upright posture with stable indicators and no fall flags triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating stability. Although there is a notable velocity in Frame 3, the overall trajectory is stable, and no fall flags are triggered. The hip_y values remain above 0.4, suggesting the person is not on the ground.\n\nINDICATORS:\n- Body angle consistently above 70\u00b0 (upright posture).\n- Hip_y remains above 0.4 (not on ground).\n- No fall flags triggered.\n- Stable trajectory with no velocity spike.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable indicators and no fall flags triggered."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_025_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 80\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and stable, with no significant spikes, indicating no rapid descent.",
+    "indicators": [
+      "Body angle consistently above 80\u00b0.",
+      "Hip_y values below 0.5.",
+      "Low and stable velocity.",
+      "No fall flags triggered."
+    ],
+    "reason": "The person maintains an upright posture with stable velocity and no fall indicators present.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 80\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and stable, with no significant spikes, indicating no rapid descent.\n\nINDICATORS:\n- Body angle consistently above 80\u00b0.\n- Hip_y values below 0.5.\n- Low and stable velocity.\n- No fall flags triggered.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable velocity and no fall indicators present."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_048_w0004",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a consistently upright posture with a body angle close to 90\u00b0, indicating a vertical orientation. The hip height remains stable and above the threshold for a fall, and the velocity is low, suggesting no rapid movement or descent. There are no indicators of a fall, such as a significant drop in hip height or a horizontal body angle.",
+    "indicators": [
+      "Body angle consistently around 89\u00b0 (upright posture)",
+      "Hip height stable around 0.52",
+      "Low velocity with no spikes",
+      "No fall flags triggered"
+    ],
+    "reason": "The individual maintains an upright posture with stable hip height and low velocity, indicating no signs of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently upright posture with a body angle close to 90\u00b0, indicating a vertical orientation. The hip height remains stable and above the threshold for a fall, and the velocity is low, suggesting no rapid movement or descent. There are no indicators of a fall, such as a significant drop in hip height or a horizontal body angle.\n\nINDICATORS:\n- Body angle consistently around 89\u00b0 (upright posture)\n- Hip height stable around 0.52\n- Low velocity with no spikes\n- No fall flags triggered\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable hip height and low velocity, indicating no signs of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_046_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person with a hip height consistently above 0.5, indicating they are not on the ground. The body angle remains above 70\u00b0, suggesting an upright posture. The velocity is low and stable, with no rapid descent detected. The posture is marked as \"transitioning,\" but no strong fall indicators are present.",
+    "indicators": [
+      "Hip height consistently above 0.5",
+      "Body angle consistently above 70\u00b0",
+      "Low and stable velocity",
+      "Posture marked as \"transitioning\""
+    ],
+    "reason": "The person maintains an upright posture with stable, low velocity, and no fall indicators are triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person with a hip height consistently above 0.5, indicating they are not on the ground. The body angle remains above 70\u00b0, suggesting an upright posture. The velocity is low and stable, with no rapid descent detected. The posture is marked as \"transitioning,\" but no strong fall indicators are present.\n\nINDICATORS:\n- Hip height consistently above 0.5\n- Body angle consistently above 70\u00b0\n- Low and stable velocity\n- Posture marked as \"transitioning\"\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable, low velocity, and no fall indicators are triggered."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_017_w0027",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0 across all frames, suggesting a horizontal orientation. Additionally, the posture is consistently marked as \"fallen,\" and the flags for being on the ground and horizontal are active throughout.",
+    "indicators": [
+      "hip_y consistently > 0.65",
+      "body_angle consistently < 50\u00b0",
+      "posture marked as \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip position, horizontal body angle, and \"fallen\" posture.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently high hip_y values above 0.65, indicating the person is low to the ground. The body angle remains well below 50\u00b0 across all frames, suggesting a horizontal orientation. Additionally, the posture is consistently marked as \"fallen,\" and the flags for being on the ground and horizontal are active throughout.\n\nINDICATORS:\n- hip_y consistently > 0.65\n- body_angle consistently < 50\u00b0\n- posture marked as \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip position, horizontal body angle, and \"fallen\" posture."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0035",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and stable, with no rapid descent or significant movement detected.",
+    "indicators": [
+      "Body angles: 86.5\u00b0 to 88.2\u00b0 (upright)",
+      "Hip_y consistently below 0.5",
+      "Low and stable velocity (max 0.0348)",
+      "No fall flags triggered"
+    ],
+    "reason": "The individual maintains an upright posture with stable, low velocity, and no fall indicators are present.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and stable, with no rapid descent or significant movement detected.\n\nINDICATORS:\n- Body angles: 86.5\u00b0 to 88.2\u00b0 (upright)\n- Hip_y consistently below 0.5\n- Low and stable velocity (max 0.0348)\n- No fall flags triggered\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable, low velocity, and no fall indicators are present."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_021_w0010",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a generally stable orientation. However, there is a significant velocity spike in Frame 2, which is accompanied by a \"RAPID_DESCENT\" flag, suggesting a brief but notable movement. Despite this, the hip height remains relatively stable and above the threshold for a fall.",
+    "indicators": [
+      "Body angle remains above 70\u00b0 throughout.",
+      "Velocity spike in Frame 2 with a \"RAPID_DESCENT\" flag.",
+      "Hip height remains above 0.45, indicating standing height.",
+      "Overall trajectory is stable."
+    ],
+    "reason": "Despite the rapid descent flag, the consistent upright posture and stable hip height suggest no fall occurred.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a generally stable orientation. However, there is a significant velocity spike in Frame 2, which is accompanied by a \"RAPID_DESCENT\" flag, suggesting a brief but notable movement. Despite this, the hip height remains relatively stable and above the threshold for a fall.\n\nINDICATORS:\n- Body angle remains above 70\u00b0 throughout.\n- Velocity spike in Frame 2 with a \"RAPID_DESCENT\" flag.\n- Hip height remains above 0.45, indicating standing height.\n- Overall trajectory is stable.\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: MEDIUM\nREASON: Despite the rapid descent flag, the consistent upright posture and stable hip height suggest no fall occurred."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_010_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating stability. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a noted maximum velocity of 0.0940, it does not coincide with a rapid descent or any fall indicators.",
+    "indicators": [
+      "Body angle consistently above 70\u00b0.",
+      "Hip_y values below 0.5.",
+      "No rapid descent or fall flags triggered.",
+      "Maximum velocity noted but no velocity spike."
+    ],
+    "reason": "The person maintains an upright posture with no fall indicators triggered, suggesting stability and no fall occurrence.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating stability. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a noted maximum velocity of 0.0940, it does not coincide with a rapid descent or any fall indicators.\n\nINDICATORS:\n- Body angle consistently above 70\u00b0.\n- Hip_y values below 0.5.\n- No rapid descent or fall flags triggered.\n- Maximum velocity noted but no velocity spike.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with no fall indicators triggered, suggesting stability and no fall occurrence."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_020_w0003",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, which limits the ability to determine any fall indicators.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the person's orientation, velocity, or position relative to the ground. The trajectory and velocity information are also unknown, which limits the ability to determine any fall indicators.\n\nINDICATORS:\n- Pose not detected in all frames\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0043",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position. The hip height remains relatively constant and low, but not indicative of a fall. The velocity is low throughout, with no significant spikes, suggesting no rapid descent.",
+    "indicators": [
+      "Body angles consistently above 80\u00b0.",
+      "Low and stable velocity (max 0.0353).",
+      "Upright posture maintained.",
+      "No fall flags triggered."
+    ],
+    "reason": "The individual maintains an upright posture with stable velocity and no fall indicators present.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position. The hip height remains relatively constant and low, but not indicative of a fall. The velocity is low throughout, with no significant spikes, suggesting no rapid descent.\n\nINDICATORS:\n- Body angles consistently above 80\u00b0.\n- Low and stable velocity (max 0.0353).\n- Upright posture maintained.\n- No fall flags triggered.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The individual maintains an upright posture with stable velocity and no fall indicators present."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_074_w0004",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and stable, with no significant spikes, further supporting the absence of a fall.",
+    "indicators": [
+      "Body angles consistently above 87\u00b0.",
+      "Hip_y values below 0.5.",
+      "Low and stable velocity (max 0.0096).",
+      "Upright posture maintained."
+    ],
+    "reason": "The indicators show an upright and stable posture with no signs of rapid descent or horizontal orientation.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistently upright posture with body angles well above 70\u00b0, indicating a stable and upright position throughout. The hip_y values remain below 0.5, suggesting the person is standing. The velocity is low and stable, with no significant spikes, further supporting the absence of a fall.\n\nINDICATORS:\n- Body angles consistently above 87\u00b0.\n- Hip_y values below 0.5.\n- Low and stable velocity (max 0.0096).\n- Upright posture maintained.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The indicators show an upright and stable posture with no signs of rapid descent or horizontal orientation."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_066_w0032",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows a consistent low hip position and a horizontal body angle across all frames, indicating the person is on the ground. The posture is marked as \"fallen\" throughout, and the flags for being on the ground and horizontal are consistently triggered. Although the velocity is low, the combination of these indicators strongly suggests a fall.",
+    "indicators": [
+      "hip_y consistently at 0.693 (indicating low position)",
+      "body_angle consistently below 50\u00b0 (horizontal orientation)",
+      "posture marked as \"fallen\" in all frames",
+      "ON_GROUND and HORIZONTAL flags are active"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip position, horizontal orientation, and \"fallen\" posture.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a consistent low hip position and a horizontal body angle across all frames, indicating the person is on the ground. The posture is marked as \"fallen\" throughout, and the flags for being on the ground and horizontal are consistently triggered. Although the velocity is low, the combination of these indicators strongly suggests a fall.\n\nINDICATORS:\n- hip_y consistently at 0.693 (indicating low position)\n- body_angle consistently below 50\u00b0 (horizontal orientation)\n- posture marked as \"fallen\" in all frames\n- ON_GROUND and HORIZONTAL flags are active\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip position, horizontal orientation, and \"fallen\" posture."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_006_w0003",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a person with a hip height consistently above 0.65, indicating they are low to the ground. The body angle remains above 50\u00b0, suggesting an upright posture, but the presence of the ON_GROUND flag in the first two frames is concerning. Additionally, the velocity in Frame 3 is notably high, indicating a rapid descent.",
+    "indicators": [
+      "hip_y > 0.65 in all frames",
+      "ON_GROUND flag present in Frames 1 and 2",
+      "High velocity of -0.1331 in Frame 3",
+      "Body angle remains above 50\u00b0 throughout"
+    ],
+    "reason": "The combination of being low to the ground, the ON_GROUND flag, and a high velocity in Frame 3 strongly suggests a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a person with a hip height consistently above 0.65, indicating they are low to the ground. The body angle remains above 50\u00b0, suggesting an upright posture, but the presence of the ON_GROUND flag in the first two frames is concerning. Additionally, the velocity in Frame 3 is notably high, indicating a rapid descent.\n\nINDICATORS:\n- hip_y > 0.65 in all frames\n- ON_GROUND flag present in Frames 1 and 2\n- High velocity of -0.1331 in Frame 3\n- Body angle remains above 50\u00b0 throughout\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of being low to the ground, the ON_GROUND flag, and a high velocity in Frame 3 strongly suggests a fall."
+  },
+  {
+    "window_id": "le2i_CR01_video_26_fall_w0003",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person with a stable trajectory and low velocity, indicating minimal movement. The body angle remains consistently upright, and the hip height is within the standing range. Although the posture is noted as \"transitioning\" initially, it shifts to \"upright,\" suggesting stabilization.",
+    "indicators": [
+      "Body angle remains above 88\u00b0 throughout.",
+      "Hip height is consistently around 0.47, indicating standing.",
+      "Velocity is low, with a maximum of 0.0182.",
+      "No fall flags such as \"is_on_ground\" or \"is_horizontal\" are triggered."
+    ],
+    "reason": "The indicators show an upright and stable posture with no signs of rapid descent or ground contact.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person with a stable trajectory and low velocity, indicating minimal movement. The body angle remains consistently upright, and the hip height is within the standing range. Although the posture is noted as \"transitioning\" initially, it shifts to \"upright,\" suggesting stabilization.\n\nINDICATORS:\n- Body angle remains above 88\u00b0 throughout.\n- Hip height is consistently around 0.47, indicating standing.\n- Velocity is low, with a maximum of 0.0182.\n- No fall flags such as \"is_on_ground\" or \"is_horizontal\" are triggered.\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: HIGH\nREASON: The indicators show an upright and stable posture with no signs of rapid descent or ground contact."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_042_w0017",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " In Frame 2, the hip_y value is 0.695, which is above the threshold indicating the person is likely on the ground. Despite the body angle being 71.4\u00b0, which suggests an upright posture, the presence of the ON_GROUND flag strongly indicates a fall. The high negative velocity in Frame 2 suggests a rapid descent, further supporting the likelihood of a fall.",
+    "indicators": [
+      "hip_y=0.695 (person low/on ground)",
+      "velocity=-0.2735 (rapid descent)",
+      "FLAGS: ON_GROUND"
+    ],
+    "reason": "The combination of high hip_y, rapid descent velocity, and the ON_GROUND flag strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nIn Frame 2, the hip_y value is 0.695, which is above the threshold indicating the person is likely on the ground. Despite the body angle being 71.4\u00b0, which suggests an upright posture, the presence of the ON_GROUND flag strongly indicates a fall. The high negative velocity in Frame 2 suggests a rapid descent, further supporting the likelihood of a fall.\n\nINDICATORS:\n- hip_y=0.695 (person low/on ground)\n- velocity=-0.2735 (rapid descent)\n- FLAGS: ON_GROUND\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of high hip_y, rapid descent velocity, and the ON_GROUND flag strongly indicates a fall."
+  },
+  {
+    "window_id": "urfd_adl-07-cam0_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in any frame",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the individual. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in any frame\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_028_w0005",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The data from Frame 3 shows multiple strong indicators of a fall. The hip_y value is significantly high at 0.887, suggesting the person is very low to the ground. The body angle is extremely low at 5.8\u00b0, indicating a horizontal orientation. Additionally, the velocity is high at 0.4125, and the posture is marked as \"fallen,\" with all fall-related flags triggered.",
+    "indicators": [
+      "hip_y=0.887 (very low position)",
+      "body_angle=5.8\u00b0 (horizontal orientation)",
+      "velocity=0.4125 (rapid descent)",
+      "FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip position, horizontal body angle, high velocity, and all fall flags triggered.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe data from Frame 3 shows multiple strong indicators of a fall. The hip_y value is significantly high at 0.887, suggesting the person is very low to the ground. The body angle is extremely low at 5.8\u00b0, indicating a horizontal orientation. Additionally, the velocity is high at 0.4125, and the posture is marked as \"fallen,\" with all fall-related flags triggered.\n\nINDICATORS:\n- hip_y=0.887 (very low position)\n- body_angle=5.8\u00b0 (horizontal orientation)\n- velocity=0.4125 (rapid descent)\n- FLAGS: ON_GROUND, HORIZONTAL, RAPID_DESCENT\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip position, horizontal body angle, high velocity, and all fall flags triggered."
+  },
+  {
+    "window_id": "le2i_CR02_video_53_adl_w0005",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a descending trajectory with increasing hip height and body angle, indicating an upright posture throughout. Although there is a slight increase in velocity, it remains below the threshold for rapid descent. The body angle consistently suggests an upright position, and no fall flags are triggered.",
+    "indicators": [
+      "Body angle remains above 70\u00b0 in all frames.",
+      "Velocity is slightly elevated but not indicative of a rapid descent.",
+      "Hip height remains below 0.5, suggesting a standing position.",
+      "No fall flags such as \"is_on_ground\" or \"is_horizontal\" are triggered."
+    ],
+    "reason": "The indicators consistently show an upright and stable posture with no strong fall indicators present.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a descending trajectory with increasing hip height and body angle, indicating an upright posture throughout. Although there is a slight increase in velocity, it remains below the threshold for rapid descent. The body angle consistently suggests an upright position, and no fall flags are triggered.\n\nINDICATORS:\n- Body angle remains above 70\u00b0 in all frames.\n- Velocity is slightly elevated but not indicative of a rapid descent.\n- Hip height remains below 0.5, suggesting a standing position.\n- No fall flags such as \"is_on_ground\" or \"is_horizontal\" are triggered.\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: HIGH\nREASON: The indicators consistently show an upright and stable posture with no strong fall indicators present."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_003_w0004",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The sequence shows a person transitioning with a significant velocity spike, indicating rapid movement. The body angle remains relatively upright, but the presence of a \"transitioning\" posture and a flagged rapid descent suggest a potential fall. The hip height increases slightly, but the rapid velocity is concerning.",
+    "indicators": [
+      "Velocity spike with max velocity of 0.5618",
+      "Posture marked as \"transitioning\"",
+      "Flagged for rapid descent"
+    ],
+    "reason": "The rapid descent and transitioning posture strongly indicate a fall despite the upright body angle.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a person transitioning with a significant velocity spike, indicating rapid movement. The body angle remains relatively upright, but the presence of a \"transitioning\" posture and a flagged rapid descent suggest a potential fall. The hip height increases slightly, but the rapid velocity is concerning.\n\nINDICATORS:\n- Velocity spike with max velocity of 0.5618\n- Posture marked as \"transitioning\"\n- Flagged for rapid descent\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The rapid descent and transitioning posture strongly indicate a fall despite the upright body angle."
+  },
+  {
+    "window_id": "le2i_CR02_video_56_adl_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person with a hip height slightly above the threshold for standing, and the body angle remains above 70\u00b0, indicating an upright posture. The velocity is low and stable throughout the frames, with no significant spikes, suggesting no rapid descent. However, the posture is consistently marked as \"transitioning,\" which could indicate movement or instability.",
+    "indicators": [
+      "Hip height remains around 0.518, above the ground threshold.",
+      "Body angle is consistently above 70\u00b0, indicating an upright posture.",
+      "Velocity is low and stable, with no rapid descent.",
+      "Posture is marked as \"transitioning\" in all frames."
+    ],
+    "reason": "Despite the \"transitioning\" posture, the stable hip height and upright body angle, along with low velocity, suggest no fall occurred.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person with a hip height slightly above the threshold for standing, and the body angle remains above 70\u00b0, indicating an upright posture. The velocity is low and stable throughout the frames, with no significant spikes, suggesting no rapid descent. However, the posture is consistently marked as \"transitioning,\" which could indicate movement or instability.\n\nINDICATORS:\n- Hip height remains around 0.518, above the ground threshold.\n- Body angle is consistently above 70\u00b0, indicating an upright posture.\n- Velocity is low and stable, with no rapid descent.\n- Posture is marked as \"transitioning\" in all frames.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: MEDIUM  \nREASON: Despite the \"transitioning\" posture, the stable hip height and upright body angle, along with low velocity, suggest no fall occurred."
+  },
+  {
+    "window_id": "le2i_CR01_video_26_fall_w0036",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence shows a gradual decrease in hip height and body angle, with the velocity increasing slightly but remaining below the rapid descent threshold. The posture remains upright throughout, and there are no indications of a rapid descent or horizontal orientation.",
+    "indicators": [
+      "Hip height decreases from 0.6 to 0.545.",
+      "Body angle decreases from 89.9\u00b0 to 83.1\u00b0.",
+      "Velocity increases but remains below 0.05.",
+      "Posture remains upright."
+    ],
+    "reason": "The indicators show a stable trajectory with no strong fall indicators, and the posture remains upright.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe sequence shows a gradual decrease in hip height and body angle, with the velocity increasing slightly but remaining below the rapid descent threshold. The posture remains upright throughout, and there are no indications of a rapid descent or horizontal orientation.\n\nINDICATORS:\n- Hip height decreases from 0.6 to 0.545.\n- Body angle decreases from 89.9\u00b0 to 83.1\u00b0.\n- Velocity increases but remains below 0.05.\n- Posture remains upright.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The indicators show a stable trajectory with no strong fall indicators, and the posture remains upright."
+  },
+  {
+    "window_id": "le2i_H01_video_5_adl_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data across the frames indicates a generally stable and upright posture, with the hip height consistently below the threshold for a fall. The body angle remains above 70\u00b0, suggesting an upright orientation. The velocity is low, and there are no indications of rapid descent or horizontal orientation. The absence of a pose in Frame 3 does not provide additional fall indicators.",
+    "indicators": [
+      "Hip height remains below 0.5, indicating standing height.",
+      "Body angle is consistently above 70\u00b0, suggesting an upright posture.",
+      "Velocity is low, with no spikes indicating rapid movement.",
+      "No fall flags such as \"fallen\" or \"transitioning\" are triggered."
+    ],
+    "reason": "The indicators consistently show an upright and stable posture with no signs of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose data across the frames indicates a generally stable and upright posture, with the hip height consistently below the threshold for a fall. The body angle remains above 70\u00b0, suggesting an upright orientation. The velocity is low, and there are no indications of rapid descent or horizontal orientation. The absence of a pose in Frame 3 does not provide additional fall indicators.\n\nINDICATORS:\n- Hip height remains below 0.5, indicating standing height.\n- Body angle is consistently above 70\u00b0, suggesting an upright posture.\n- Velocity is low, with no spikes indicating rapid movement.\n- No fall flags such as \"fallen\" or \"transitioning\" are triggered.\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: HIGH\nREASON: The indicators consistently show an upright and stable posture with no signs of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_017_w0028",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows consistently high hip_y values above 0.85, indicating the person is very low to the ground. The body angle remains extremely low, close to horizontal, across all frames. The posture is consistently marked as \"fallen,\" and the flags for being on the ground and horizontal are persistently triggered.",
+    "indicators": [
+      "hip_y consistently > 0.85",
+      "body_angle consistently < 7\u00b0",
+      "posture consistently \"fallen\"",
+      "FLAGS: ON_GROUND, HORIZONTAL in all frames"
+    ],
+    "reason": "Multiple strong fall indicators are present, including low hip_y, horizontal body angle, and persistent \"fallen\" posture with fall flags.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows consistently high hip_y values above 0.85, indicating the person is very low to the ground. The body angle remains extremely low, close to horizontal, across all frames. The posture is consistently marked as \"fallen,\" and the flags for being on the ground and horizontal are persistently triggered.\n\nINDICATORS:\n- hip_y consistently > 0.85\n- body_angle consistently < 7\u00b0\n- posture consistently \"fallen\"\n- FLAGS: ON_GROUND, HORIZONTAL in all frames\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: Multiple strong fall indicators are present, including low hip_y, horizontal body angle, and persistent \"fallen\" posture with fall flags."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_062_w0002",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows the individual maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable orientation. However, the hip_y values are consistently high, suggesting the person is low to the ground, and the ON_GROUND flag is triggered in all frames, which is a strong fall indicator.",
+    "indicators": [
+      "hip_y consistently above 0.65",
+      "ON_GROUND flag triggered in all frames",
+      "Body angle consistently above 70\u00b0",
+      "Stable trajectory with low velocity"
+    ],
+    "reason": "The ON_GROUND flag and high hip_y values strongly indicate a fall, despite the upright posture and stable trajectory.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows the individual maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable orientation. However, the hip_y values are consistently high, suggesting the person is low to the ground, and the ON_GROUND flag is triggered in all frames, which is a strong fall indicator.\n\nINDICATORS:\n- hip_y consistently above 0.65\n- ON_GROUND flag triggered in all frames\n- Body angle consistently above 70\u00b0\n- Stable trajectory with low velocity\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The ON_GROUND flag and high hip_y values strongly indicate a fall, despite the upright posture and stable trajectory."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_046_w0007",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person with a stable trajectory and minimal velocity, indicating no rapid descent. The body angle remains upright, consistently above 70\u00b0, suggesting an upright posture. However, the posture is marked as \"transitioning,\" which could indicate movement but not necessarily a fall.",
+    "indicators": [
+      "Body angle remains above 70\u00b0 (upright posture).",
+      "Velocity is low and stable, with no rapid descent.",
+      "Posture is \"transitioning,\" but no fall flags are triggered.",
+      "Hip_y is above 0.5, indicating a standing height."
+    ],
+    "reason": "The indicators show an upright and stable position with no signs of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person with a stable trajectory and minimal velocity, indicating no rapid descent. The body angle remains upright, consistently above 70\u00b0, suggesting an upright posture. However, the posture is marked as \"transitioning,\" which could indicate movement but not necessarily a fall.\n\nINDICATORS:\n- Body angle remains above 70\u00b0 (upright posture).\n- Velocity is low and stable, with no rapid descent.\n- Posture is \"transitioning,\" but no fall flags are triggered.\n- Hip_y is above 0.5, indicating a standing height.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The indicators show an upright and stable position with no signs of a fall."
+  },
+  {
+    "window_id": "urfd_fall-29-cam0_w0013",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the person. Consequently, no fall indicators can be evaluated.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Trajectory unknown",
+      "Max Velocity: 0.0000"
+    ],
+    "reason": "The absence of pose data prevents any reliable fall detection analysis.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose data, it is impossible to assess the position, orientation, or movement of the person. Consequently, no fall indicators can be evaluated.\n\nINDICATORS:\n- Pose not detected in all frames\n- Trajectory unknown\n- Max Velocity: 0.0000\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The absence of pose data prevents any reliable fall detection analysis."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_049_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a stable trajectory with the hip height consistently above 0.5, indicating a standing position. The body angle remains well above 70\u00b0, suggesting an upright posture throughout. The velocity is low, with no significant spikes, indicating no rapid descent.",
+    "indicators": [
+      "Hip height consistently above 0.5 (Frame 1: 0.526, Frame 2: 0.532, Frame 3: 0.529)",
+      "Body angle consistently above 70\u00b0 (Frame 1: 87.7\u00b0, Frame 2: 83.8\u00b0, Frame 3: 89.4\u00b0)",
+      "Low velocity with no spikes (Max Velocity: 0.0333)"
+    ],
+    "reason": "All indicators suggest a stable, upright posture with no signs of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a stable trajectory with the hip height consistently above 0.5, indicating a standing position. The body angle remains well above 70\u00b0, suggesting an upright posture throughout. The velocity is low, with no significant spikes, indicating no rapid descent.\n\nINDICATORS:\n- Hip height consistently above 0.5 (Frame 1: 0.526, Frame 2: 0.532, Frame 3: 0.529)\n- Body angle consistently above 70\u00b0 (Frame 1: 87.7\u00b0, Frame 2: 83.8\u00b0, Frame 3: 89.4\u00b0)\n- Low velocity with no spikes (Max Velocity: 0.0333)\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: All indicators suggest a stable, upright posture with no signs of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_060_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The sequence shows a gradual decrease in hip height and body angle, with a notable increase in velocity in Frame 3. However, the body angle remains above 70\u00b0, indicating an upright posture throughout. The trajectory is stable, and there is no significant velocity spike, suggesting controlled movement rather than a fall.",
+    "indicators": [
+      "Body angle remains above 70\u00b0 (upright posture).",
+      "Velocity increases in Frame 3 but no spike detected.",
+      "Hip height decreases but stays above 0.4."
+    ],
+    "reason": "Despite the increased velocity, the upright posture and lack of fall indicators suggest no fall occurred.",
+    "confidence": "medium",
+    "full_response": "ANALYSIS:\nThe sequence shows a gradual decrease in hip height and body angle, with a notable increase in velocity in Frame 3. However, the body angle remains above 70\u00b0, indicating an upright posture throughout. The trajectory is stable, and there is no significant velocity spike, suggesting controlled movement rather than a fall.\n\nINDICATORS:\n- Body angle remains above 70\u00b0 (upright posture).\n- Velocity increases in Frame 3 but no spike detected.\n- Hip height decreases but stays above 0.4.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: MEDIUM  \nREASON: Despite the increased velocity, the upright posture and lack of fall indicators suggest no fall occurred."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0013",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The pose sequence shows a person in a transitioning posture with a body angle consistently around 54\u00b0, indicating a relatively horizontal orientation. The hip height remains low, around 0.35, which is below typical standing height. Although the velocity is low and stable, the transitioning posture and horizontal body angle suggest a potential fall.",
+    "indicators": [
+      "hip_y remains low at approximately 0.35",
+      "body_angle is consistently around 54\u00b0, indicating horizontal orientation",
+      "posture is \"transitioning\" throughout the sequence",
+      "velocity is stable and low, with no spike"
+    ],
+    "reason": "The combination of low hip height, horizontal body angle, and transitioning posture strongly indicates a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person in a transitioning posture with a body angle consistently around 54\u00b0, indicating a relatively horizontal orientation. The hip height remains low, around 0.35, which is below typical standing height. Although the velocity is low and stable, the transitioning posture and horizontal body angle suggest a potential fall.\n\nINDICATORS:\n- hip_y remains low at approximately 0.35\n- body_angle is consistently around 54\u00b0, indicating horizontal orientation\n- posture is \"transitioning\" throughout the sequence\n- velocity is stable and low, with no spike\n\nCLASSIFICATION: FALL\nCONFIDENCE: HIGH\nREASON: The combination of low hip height, horizontal body angle, and transitioning posture strongly indicates a fall."
+  },
+  {
+    "window_id": "le2i_CR01_video_12_adl_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person with a hip height consistently around 0.48 to 0.49, indicating a standing position. The body angle remains above 85\u00b0, suggesting an upright posture. Although the posture is marked as \"transitioning,\" there is no significant velocity or rapid descent observed.",
+    "indicators": [
+      "Hip height remains around 0.48-0.49.",
+      "Body angle consistently above 85\u00b0.",
+      "Maximum velocity recorded is 0.0752, but no velocity spike.",
+      "Posture is \"transitioning,\" but no fall flags are triggered."
+    ],
+    "reason": "The person maintains an upright posture with stable hip height and no rapid descent, indicating no fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person with a hip height consistently around 0.48 to 0.49, indicating a standing position. The body angle remains above 85\u00b0, suggesting an upright posture. Although the posture is marked as \"transitioning,\" there is no significant velocity or rapid descent observed.\n\nINDICATORS:\n- Hip height remains around 0.48-0.49.\n- Body angle consistently above 85\u00b0.\n- Maximum velocity recorded is 0.0752, but no velocity spike.\n- Posture is \"transitioning,\" but no fall flags are triggered.\n\nCLASSIFICATION: NO_FALL  \nCONFIDENCE: HIGH  \nREASON: The person maintains an upright posture with stable hip height and no rapid descent, indicating no fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_023_w0003",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a brief increase in velocity in Frame 3, it does not exceed the threshold for rapid descent, and the overall trajectory is stable with no significant velocity spikes.",
+    "indicators": [
+      "Body angle consistently above 70\u00b0 (upright posture)",
+      "Hip_y values below 0.5 (standing height)",
+      "No rapid descent or velocity spikes",
+      "Stable trajectory throughout the sequence"
+    ],
+    "reason": "The indicators show an upright and stable posture with no signs of a fall.",
+    "confidence": "high",
+    "full_response": "ANALYSIS:\nThe pose sequence shows a person maintaining an upright posture with a body angle consistently above 70\u00b0, indicating a stable and upright position. The hip_y values remain below 0.5, suggesting the person is standing. Although there is a brief increase in velocity in Frame 3, it does not exceed the threshold for rapid descent, and the overall trajectory is stable with no significant velocity spikes.\n\nINDICATORS:\n- Body angle consistently above 70\u00b0 (upright posture)\n- Hip_y values below 0.5 (standing height)\n- No rapid descent or velocity spikes\n- Stable trajectory throughout the sequence\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: HIGH\nREASON: The indicators show an upright and stable posture with no signs of a fall."
+  },
+  {
+    "window_id": "urfd_adl-22-cam0_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose detection, key indicators such as body angle, hip height, or velocity cannot be assessed. The absence of data makes it impossible to determine the person's posture or movement trajectory.",
+    "indicators": [
+      "Pose not detected in all frames",
+      "Max Velocity: 0.0000",
+      "Velocity Spike: False"
+    ],
+    "reason": "The classification is based on the absence of data, which provides no evidence of a fall.",
+    "confidence": "low",
+    "full_response": "ANALYSIS:\nThe pose data for the sequence is unavailable, as no pose was detected in any of the frames. Without pose detection, key indicators such as body angle, hip height, or velocity cannot be assessed. The absence of data makes it impossible to determine the person's posture or movement trajectory.\n\nINDICATORS:\n- Pose not detected in all frames\n- Max Velocity: 0.0000\n- Velocity Spike: False\n\nCLASSIFICATION: NO_FALL\nCONFIDENCE: LOW\nREASON: The classification is based on the absence of data, which provides no evidence of a fall."
+  }
+]

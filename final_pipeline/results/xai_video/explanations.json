@@ -1,0 +1,742 @@
+[
+  {
+    "video_id": "gmncsa24_gmncsa_fall_020",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video sequence shows a significant change in posture and position between the initial and later windows. Initially, the person is upright, but later data indicates a transition to a lower position with a significant change in angle and a flag indicating the person is on the ground.",
+    "observations": [
+      "Initial upright posture with hip_y=0.44 and angle=90\u00b0.",
+      "A single window (Window 6) shows a hip_y=0.90 and angle=43\u00b0, indicating a transition.",
+      "ON_GROUND flag is present in Window 6.",
+      "No pose data detected in most windows, suggesting possible occlusion or lack of movement.",
+      "No rapid descent detected, but significant posture change is noted."
+    ],
+    "explanation": "The presence of an ON_GROUND flag and a significant change in posture from upright to a lower angle suggests a fall occurred. Although there is no rapid descent detected, the transition to a near-ground position and the lack of pose data in other windows support the fall classification. The confidence is medium due to the limited data points and lack of rapid descent confirmation.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_044",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an initial upright posture to a sustained fallen state. The first window indicates a rapid descent and transition to a horizontal position, followed by a consistent fallen posture across subsequent windows. The hip_y values remain low, and the angle remains near horizontal, indicating the person is on the ground throughout most of the video.",
+    "observations": [
+      "Window 0 shows rapid descent and multiple fall flags, indicating a fall event.",
+      "Subsequent windows (1-10) consistently show the person in a fallen posture with stable trajectories.",
+      "The hip_y values remain consistently low (around 0.75-0.76), suggesting the person is near the ground.",
+      "The angle remains low (around 18\u00b0-22\u00b0) after the initial fall, indicating a horizontal position.",
+      "Multiple fall flags (ON_GROUND, HORIZONTAL) are present in all windows, reinforcing the fall occurrence."
+    ],
+    "explanation": "The video clearly depicts a fall event, as evidenced by the rapid descent and transition to a horizontal position in the first window, followed by a sustained fallen posture with consistent fall flags in all subsequent windows. The low hip_y and angle values further confirm the person remains on the ground throughout the video.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_H01_video_8_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video sequence provided consists of two time windows, both of which report no pose detected. This indicates that the system was unable to identify or track any human figure or movement within the frames analyzed.",
+    "observations": [
+      "Both time windows report \"No pose detected.\"",
+      "There is no data on posture, movement, or position of any person.",
+      "Absence of any fall indicators or movement patterns."
+    ],
+    "explanation": "The classification is based on the absence of any detected poses or movements, which means there is no evidence to suggest a fall occurred. However, the confidence is low due to the lack of data, as the system did not capture any relevant information to make a definitive assessment.",
+    "confidence": "low"
+  },
+  {
+    "video_id": "le2i_H01_video_18_fall",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The video consists of a single time window where the person is in a transitioning posture. The hip height is consistently at 0.57, and the angle is 55\u00b0, indicating a non-upright position. There is no recorded velocity, and no fall flags are present in this window.",
+    "observations": [
+      "The average hip height is 0.57, which is below the typical upright threshold.",
+      "The angle of 55\u00b0 suggests a non-upright posture.",
+      "There is no recorded movement (velocity is 0.000).",
+      "The posture is described as transitioning, with no clear indication of a fall.",
+      "No fall flags are present in the analyzed window."
+    ],
+    "explanation": "The video shows a person in a transitioning posture with a low hip height and non-upright angle, but there is no evidence of rapid descent or fall indicators such as being on the ground or in a horizontal position. The lack of movement and fall flags suggests that this is not a fall event, but the transitioning posture warrants a medium confidence level.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_037",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The video sequence 'gmncsa24_gmncsa_fall_037' consists of five time windows, none of which contain any detectable pose data. This lack of data makes it challenging to directly observe any fall-related events or postures.",
+    "observations": [
+      "All five windows report \"No pose detected.\"",
+      "There is no information on posture transitions or movements.",
+      "No fall indicators such as rapid descent or horizontal posture are available.",
+      "The absence of data prevents assessment of ground proximity or posture state.",
+      "The video lacks any observable evidence of a fall or normal activity."
+    ],
+    "explanation": "Due to the absence of pose data across all windows, it is impossible to confirm or deny the occurrence of a fall. The classification of NO_FALL is based on the lack of evidence rather than positive indicators of normal activity. The confidence is low because the analysis is constrained by the complete lack of observable data.",
+    "confidence": "low"
+  },
+  {
+    "video_id": "urfd_fall-23-cam0",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The video contains only one time window, and within this window, no pose was detected. This lack of data makes it challenging to assess any movement patterns or postural transitions.",
+    "observations": [
+      "Only one time window was provided for analysis.",
+      "No pose data was detected in the available window.",
+      "Absence of any fall indicators due to lack of pose information."
+    ],
+    "explanation": "The classification is based on the absence of any detectable pose data, which prevents the identification of a fall. Without pose information, it is impossible to observe any rapid descent, postural transitions, or ground contact. Therefore, the video is classified as NO_FALL, but with low confidence due to insufficient data.",
+    "confidence": "low"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_006",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a progression from stable, upright postures to a significant number of windows indicating fall-related flags. Initially, the subject maintains an upright posture with stable trajectories and low velocities. However, as the video progresses, there is a notable increase in fall indicators, including a wide range of hip_y values and angles, as well as a high maximum velocity.",
+    "observations": [
+      "The hip_y value ranges from 0.35 to 0.68, indicating the subject ends up near the ground.",
+      "The angle range is broad, from 3\u00b0 to 89\u00b0, suggesting a transition from upright to horizontal.",
+      "A maximum velocity of 0.444 suggests a rapid descent at some point.",
+      "12 out of 16 windows have fall flags, indicating multiple fall indicators.",
+      "The posture distribution includes 5 instances of a \"fallen\" state."
+    ],
+    "explanation": "The video exhibits clear signs of a fall, with multiple windows showing fall flags, a transition from upright to horizontal postures, and the subject ending near the ground. The high maximum velocity further supports the occurrence of a rapid descent, consistent with a fall event.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_H01_video_29_adl",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The video shows a progression from stable movement to a rapid descent. Initially, the person maintains a relatively stable trajectory with a consistent hip height and angle. However, in the final window, there is a significant change with a rapid descent and a decrease in hip height, indicating a potential fall.",
+    "observations": [
+      "The hip height decreases from 0.56 to 0.35 across the windows.",
+      "The angle decreases from 74\u00b0 to 67\u00b0, suggesting a shift towards a more horizontal posture.",
+      "The maximum velocity spikes to 0.267 in the final window, indicating rapid movement.",
+      "The final window has a RAPID_DESCENT flag.",
+      "The posture transitions from upright to transitioning, with no return to a stable upright posture."
+    ],
+    "explanation": "The video shows a clear pattern of a fall, with a rapid descent and a significant decrease in hip height in the final window. The presence of the RAPID_DESCENT flag and the lack of recovery to an upright posture further support the classification of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_adl-11-cam0",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The video sequence shows a pattern of inconsistent posture detection with multiple instances of the person being on the ground. There are significant fluctuations in hip height and body angle, with a notable rapid descent in one of the windows. The presence of multiple fall-related flags across several windows suggests a potential fall event.",
+    "observations": [
+      "Window 3 shows a rapid descent with a high velocity of 0.248 and a transition from upright to a lower hip position.",
+      "Multiple windows (1, 3, 4, 5) have the ON_GROUND flag, indicating the person is frequently near the ground.",
+      "The hip_y values fluctuate significantly, with a minimum of 0.60 in Window 3, suggesting proximity to the ground.",
+      "The posture states include several transitioning phases, indicating instability.",
+      "The angle changes from 50\u00b0 to 82\u00b0, showing a shift from a more upright to a horizontal orientation."
+    ],
+    "explanation": "The video exhibits clear signs of a fall, including a rapid descent in Window 3, multiple ON_GROUND flags, and transitions from upright to horizontal postures. The combination of these indicators across several windows strongly suggests a fall event occurred.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_42_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a person maintaining a generally upright posture with some transitioning movements. The hip height remains relatively stable, and the angle indicates an upright position throughout. There is no indication of rapid descent or a transition to a horizontal posture. The velocity remains low, and no fall flags are present in any of the windows.",
+    "observations": [
+      "The average hip_y values (0.58 and 0.48) suggest the person remains above ground level.",
+      "The angle remains mostly upright (72\u00b0 and 77\u00b0), indicating no horizontal posture.",
+      "The maximum velocity recorded is 0.132, which is not indicative of a rapid descent.",
+      "The trajectory is stable across both windows, with no sudden changes.",
+      "No fall flags are triggered in either window."
+    ],
+    "explanation": "The video consistently shows upright postures with stable trajectories and low velocities, indicating normal movement patterns. There are no fall indicators such as rapid descent, horizontal posture, or fall flags, supporting a high-confidence classification of NO_FALL.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_15_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video consists of a single time window where the person maintains an upright posture throughout. The hip height remains consistently high, and the angle indicates an upright position. Despite the presence of ON_GROUND flags, the trajectory is stable, and there is no indication of rapid descent or transition to a horizontal posture.",
+    "observations": [
+      "The average hip_y is 0.82, indicating the person is well above the ground.",
+      "The average angle is 84\u00b0, consistent with an upright posture.",
+      "The maximum velocity is low at 0.153, suggesting no rapid movements.",
+      "The posture is consistently upright across the window.",
+      "ON_GROUND flags are present, but without supporting evidence of a fall."
+    ],
+    "explanation": "Despite the presence of ON_GROUND flags, the consistent upright posture, stable trajectory, and lack of rapid descent or horizontal transition suggest no fall occurred. The flags may be false positives, as other indicators of a fall are absent.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_065",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a consistent pattern of upright posture across all time windows. The hip height remains relatively stable with minor fluctuations, and the angle indicates an upright position throughout. The velocity is low, and the trajectory is stable, indicating no sudden movements or falls.",
+    "observations": [
+      "All windows show an upright posture with no transitions to a horizontal state.",
+      "The average hip_y remains above 0.57, indicating the person is not near the ground.",
+      "The maximum velocity recorded is 0.049, which is low and suggests no rapid descent.",
+      "There are no fall flags triggered in any of the windows.",
+      "The posture distribution is entirely upright, with no indication of a fallen state."
+    ],
+    "explanation": "The video consistently shows the person in an upright posture with stable movement patterns and no fall indicators across all windows. The absence of rapid descent, horizontal transitions, or any fall flags supports a high-confidence classification of NO_FALL.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_37_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video consists of a single time window where the subject maintains an upright posture throughout. The hip_y values indicate the subject remains well above the ground, and the angle remains close to vertical, suggesting no significant change in posture. Despite this, the presence of ON_GROUND flags is contradictory to the observed posture and trajectory data.",
+    "observations": [
+      "The subject's posture is consistently upright across the window.",
+      "The hip_y values are high, indicating the subject is not near the ground.",
+      "The angle remains close to vertical, showing no transition to a horizontal position.",
+      "The velocity is low, indicating no rapid movement.",
+      "ON_GROUND flags are present, which is inconsistent with other data."
+    ],
+    "explanation": "Despite the presence of ON_GROUND flags, the consistent upright posture, high hip_y values, and stable trajectory suggest no fall occurred. The flags may be erroneous or misinterpreted, as other indicators of a fall are absent.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_066",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright posture to a fallen state. Initially, the subject maintains a stable upright posture with minimal movement. However, a rapid descent occurs in the middle of the sequence, followed by a transition to a horizontal and fallen posture, which persists through the end of the video.",
+    "observations": [
+      "A significant increase in velocity (0.733) and a rapid descent is observed in Window 3.",
+      "The subject transitions from an upright to a horizontal posture, with multiple fall flags (HORIZONTAL, RAPID_DESCENT, ON_GROUND) appearing from Window 3 onwards.",
+      "The hip_y value increases from 0.47 to 0.70, indicating the subject ends up near the ground.",
+      "The posture state transitions from 'upright' to 'fallen' by Window 5, with consistent 'fallen' postures in the final windows.",
+      "Multiple fall indicators are present across several windows, confirming a fall event."
+    ],
+    "explanation": "The video exhibits a clear fall pattern, with a rapid descent and transition from upright to horizontal posture, accompanied by multiple fall flags. The subject ends up in a fallen state on the ground, as indicated by the hip_y values and posture analysis. The consistent presence of fall indicators across multiple windows supports a high-confidence classification of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_13_fall",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright to a horizontal posture, with the person ending up near the ground. The trajectory is descending, and there are multiple fall indicators present in the window.",
+    "observations": [
+      "The average hip_y is 0.67, indicating the person is near the ground.",
+      "The angle range from 13\u00b0 to 54\u00b0 shows a transition from upright to horizontal.",
+      "The maximum velocity of 0.427 suggests rapid movement.",
+      "The presence of multiple fall flags: RAPID_DESCENT, ON_GROUND, and HORIZONTAL.",
+      "The posture states include both transitioning and fallen."
+    ],
+    "explanation": "The video window shows a rapid descent with the person transitioning from an upright to a horizontal position, ending near the ground. The presence of multiple fall flags and the \"fallen\" posture state strongly indicate a fall event.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_fall-14-cam0",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a progression from an upright posture to a fallen state. Initially, the person is upright with a stable trajectory, but there are consistent ON_GROUND flags. In the subsequent window, there is a significant increase in velocity and multiple fall indicators, including RAPID_DESCENT and HORIZONTAL flags, suggesting a fall event.",
+    "observations": [
+      "Window 0 shows consistent ON_GROUND flags despite upright postures.",
+      "Window 1 exhibits a high velocity of 0.493, indicating rapid movement.",
+      "Transition from upright to fallen posture is observed.",
+      "Multiple fall flags (ON_GROUND, HORIZONTAL, RAPID_DESCENT) are present in Window 1.",
+      "The hip_y values indicate proximity to the ground throughout the video."
+    ],
+    "explanation": "The video demonstrates a clear transition from an upright to a fallen posture, with multiple fall indicators such as high velocity and fall flags in Window 1. The presence of ON_GROUND flags in both windows further supports the occurrence of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_14_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video consists of a single time window where the subject maintains an upright posture throughout. The hip height remains consistently above 0.73, indicating the person is not near the ground. The angle remains close to vertical, and the velocity is low, suggesting stable movement without rapid descent.",
+    "observations": [
+      "The subject's hip height is consistently above 0.73, indicating they are not on the ground.",
+      "The angle remains between 86\u00b0 and 88\u00b0, showing an upright posture.",
+      "The maximum velocity is low at 0.210, indicating no rapid movement.",
+      "The posture is consistently upright across all frames.",
+      "Despite the ON_GROUND flags, the posture and hip height suggest no fall occurred."
+    ],
+    "explanation": "The subject maintains an upright posture with stable movement and no rapid descent throughout the video. The hip height and angle indicate the person is not on the ground, contradicting the ON_GROUND flags. Therefore, the video does not show a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_078",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a consistent pattern of upright posture across all time windows, with only a minor transition observed in one window. The hip height remains relatively stable, and there are no significant changes in angle or velocity that would indicate a fall. The trajectory is stable throughout, and no fall flags are present in any of the windows.",
+    "observations": [
+      "The hip_y values remain above 0.43, indicating the person is not near the ground.",
+      "The angle remains close to upright, with a minimum of 82\u00b0.",
+      "The maximum velocity recorded is 0.128, which is not indicative of a rapid descent.",
+      "Only one instance of a transitioning posture, with no subsequent fall indicators.",
+      "No fall flags are triggered in any of the windows."
+    ],
+    "explanation": "The video consistently shows upright postures with stable trajectories and no rapid descent or significant changes in posture that would suggest a fall. The absence of fall flags and the stable hip_y and angle values across all windows support a high-confidence classification of NO_FALL.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_042",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright posture to a fallen state. Initially, the subject is upright with stable movement, but there is a rapid descent in Window 1, followed by a transition to a horizontal and fallen posture in subsequent windows. The subject remains on the ground with a consistent fallen posture from Window 2 onwards.",
+    "observations": [
+      "Window 1 shows a rapid descent with a significant change in angle and velocity.",
+      "Windows 2 and 3 indicate the subject is on the ground with multiple fall flags (ON_GROUND, HORIZONTAL).",
+      "The subject remains in a fallen posture from Window 2 through Window 7.",
+      "The hip_y value consistently indicates the subject is near the ground from Window 2 onwards.",
+      "Multiple fall flags are present across several windows, confirming a fall event."
+    ],
+    "explanation": "The video exhibits a clear fall event characterized by a rapid descent in Window 1, followed by a transition to a horizontal and fallen posture in subsequent windows. The subject remains on the ground with multiple fall indicators, confirming a fall with high confidence.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR02_video_56_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a consistent pattern of stable movement with no significant changes in posture or trajectory that would indicate a fall. The person maintains a relatively upright posture throughout, with some transitioning movements but no rapid descent or horizontal positioning.",
+    "observations": [
+      "The average hip_y remains above 0.45, indicating the person is not near the ground.",
+      "The angle remains mostly upright, with a minimum of 71\u00b0, suggesting no horizontal posture.",
+      "Maximum velocity is low (0.109), indicating no rapid descent.",
+      "All windows show stable trajectories with no fall flags triggered.",
+      "The posture distribution shows more transitioning than upright, but no fallen posture."
+    ],
+    "explanation": "The video consistently shows stable movement patterns with no indicators of a fall. The person remains mostly upright, with no rapid descent or horizontal posture, and no fall flags are present in any window. The transitioning postures do not suggest a fall, as they are stable and controlled.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_076",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright posture to a fallen state. Initially, the subject maintains an upright posture with stable movement. However, there is a rapid descent observed in the middle windows, followed by a transition to a fallen posture that persists through the remaining windows.",
+    "observations": [
+      "Window 3 shows a significant increase in velocity (0.735) and multiple fall flags, indicating a rapid descent and contact with the ground.",
+      "Windows 4 to 7 consistently show a fallen posture with the subject on the ground, confirmed by multiple ON_GROUND and HORIZONTAL flags.",
+      "The hip_y value increases significantly from 0.50 to 0.88, indicating a descent to the ground.",
+      "The angle decreases from near upright (89\u00b0) to a horizontal position (14\u00b0) by the end of the video.",
+      "Multiple RAPID_DESCENT flags in windows 1 to 3 indicate a loss of balance leading to a fall."
+    ],
+    "explanation": "The video clearly demonstrates a fall event, characterized by a rapid descent, transition from upright to horizontal posture, and the subject ending up on the ground. The presence of multiple fall indicators across several windows supports a high-confidence classification of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_036",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows consistent upright posture across both time windows, with stable trajectories and low velocities. There are no indications of rapid descent or transitions from upright to horizontal posture. The hip height remains consistently above the threshold for being on the ground.",
+    "observations": [
+      "Consistent upright posture throughout all windows.",
+      "Stable trajectory with no rapid movements.",
+      "Low maximum velocity indicating normal movement.",
+      "No fall flags were triggered in any window.",
+      "Hip height remains consistently above 0.65, indicating the person is not near the ground."
+    ],
+    "explanation": "The video consistently shows upright posture with stable movement patterns and no fall indicators across all windows. The hip height and angle remain within normal ranges, and no fall flags are present, indicating no fall occurred.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_003",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright to a fallen state. Initial windows indicate rapid descent and transitioning postures, followed by a period of no pose detection. Later windows show the subject in a stable fallen posture with multiple fall flags.",
+    "observations": [
+      "Windows 0 and 1 show rapid descent with transitioning postures and RAPID_DESCENT flags.",
+      "Windows 2 and 3 have no pose detected, possibly indicating a critical transition phase.",
+      "Window 5 shows a significant descent with ON_GROUND and RAPID_DESCENT flags.",
+      "Windows 6 to 8 consistently show the subject in a fallen posture with ON_GROUND and HORIZONTAL flags.",
+      "The subject's hip_y increases significantly in later windows, indicating proximity to the ground."
+    ],
+    "explanation": "The video exhibits a clear fall pattern, with rapid descent and transitioning postures early on, followed by a stable fallen posture with multiple fall flags in later windows. The consistent presence of ON_GROUND and HORIZONTAL flags in the final windows confirms the fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_6_fall",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "analysis": " The video consists of a single time window where no pose was detected. This lack of data makes it challenging to assess any movement patterns or postural changes.",
+    "observations": [
+      "The video contains only one time window.",
+      "No pose data was detected in the available window.",
+      "Absence of any fall indicators due to lack of pose information."
+    ],
+    "explanation": "The classification is based on the absence of any detectable pose data, which prevents the identification of a fall. Without pose information, it is impossible to observe any rapid descent, postural transitions, or ground contact. Therefore, the video is classified as NO_FALL, but with low confidence due to insufficient data.",
+    "confidence": "low"
+  },
+  {
+    "video_id": "le2i_H02_video_33_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video sequence across all three time windows shows no pose detection, indicating that the system was unable to identify any human figures or movements during the entire duration of the video.",
+    "observations": [
+      "All three windows report \"No pose detected.\"",
+      "There is no data on posture, movement, or position of any person.",
+      "Absence of any fall indicators or normal movement patterns."
+    ],
+    "explanation": "The lack of pose detection across all windows makes it impossible to assess any fall-related criteria. Without any data on posture or movement, we cannot definitively identify a fall. However, the absence of any detected activity suggests no significant events, such as a fall, were captured.",
+    "confidence": "low"
+  },
+  {
+    "video_id": "le2i_CR02_video_56_fall",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a significant transition from an upright to a fallen posture. The temporal progression indicates a rapid descent followed by the person remaining on the ground. The presence of multiple fall indicators suggests a fall event.",
+    "observations": [
+      "The average hip_y is 0.74, indicating the person is near the ground.",
+      "The angle range varies significantly from 3\u00b0 to 86\u00b0, showing a transition from upright to horizontal.",
+      "The maximum velocity recorded is 0.642, which is relatively high.",
+      "The posture distribution shows more instances of a fallen state than upright.",
+      "Multiple fall flags are present, including ON_GROUND, RAPID_DESCENT, and HORIZONTAL."
+    ],
+    "explanation": "The video exhibits clear signs of a fall, with rapid descent, transition to a horizontal position, and the person ending up on the ground. The presence of multiple fall flags and the posture distribution further confirm the occurrence of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_adl-17-cam0",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video sequence shows a lack of pose detection in the initial windows, followed by a brief period of rapid descent in window 3, which is then stabilized in window 4. The overall posture remains upright throughout the detected windows, with only one instance of a fall flag.",
+    "observations": [
+      "No pose detected in the first three windows.",
+      "Window 3 shows a rapid descent with a hip_y of 0.53 and a fall flag.",
+      "Window 4 shows stabilization with a hip_y of 0.54 and no fall flags.",
+      "The posture remains upright in all detected windows.",
+      "Only one window out of five has a fall flag."
+    ],
+    "explanation": "Although there is a rapid descent detected in window 3, the person remains upright throughout the sequence, and the descent does not result in a transition to a horizontal posture or a position near the ground. The stabilization in window 4 and the lack of multiple fall indicators suggest that a fall did not occur.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "le2i_CR01_video_44_fall",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a sequence where the person transitions from an upright posture to a state that suggests a fall. The presence of multiple fall flags and the posture distribution indicate a significant event.",
+    "observations": [
+      "The average hip_y is 0.78, indicating the person is near the ground.",
+      "The angle range from 48\u00b0 to 81\u00b0 suggests a transition from upright to a more horizontal position.",
+      "The maximum velocity of 1.228 indicates a rapid movement, consistent with a fall.",
+      "Multiple fall flags are present, including ON_GROUND and RAPID_DESCENT.",
+      "The posture distribution shows more transitioning states than upright, indicating instability."
+    ],
+    "explanation": "The video window shows clear indicators of a fall, including rapid descent, multiple fall flags, and a transition from upright to near-ground posture. The consistent presence of ON_GROUND and RAPID_DESCENT flags across the window strongly supports the classification of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_025",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a consistent pattern of upright posture with stable trajectories across all time windows. There is a slight variation in the angle and a minor increase in velocity in window 5, but no significant changes indicating a fall. The hip height remains consistently low, suggesting the person is not elevated, but there are no indicators of a fall.",
+    "observations": [
+      "The hip_y value remains stable between 0.47 and 0.49 throughout all windows.",
+      "The angle remains mostly upright, with a slight dip in window 5 but no horizontal transition.",
+      "The maximum velocity observed is 0.031, which is relatively low and does not indicate rapid descent.",
+      "No fall flags are triggered in any of the windows.",
+      "The posture is predominantly upright with only two instances of transitioning, which do not suggest a fall."
+    ],
+    "explanation": "The video consistently shows upright posture with stable movement patterns and no fall indicators across all windows. The slight variations in angle and velocity do not meet the criteria for a fall, and there are no fall flags present. The overall analysis strongly supports a classification of NO_FALL.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_3_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a person primarily maintaining an upright posture throughout the sequence. However, there are indications of potential instability, particularly in the first two windows where the ON_GROUND flag is present. The hip height decreases significantly from window 0 to window 2, suggesting a downward movement, but the posture remains upright, and the velocity does not indicate a rapid descent.",
+    "observations": [
+      "Window 0 and 1 have the ON_GROUND flag, indicating potential contact with the ground.",
+      "The hip_y value decreases from 0.87 to 0.44 between windows 0 and 2, suggesting a descent.",
+      "The angle remains close to upright (85\u00b0 - 90\u00b0) throughout all windows.",
+      "No rapid descent is observed; the maximum velocity recorded is 0.201.",
+      "The posture is consistently upright across all windows."
+    ],
+    "explanation": "Despite the presence of the ON_GROUND flag in the first two windows and a decrease in hip height, the consistent upright posture and lack of rapid descent suggest that a fall did not occur. The person may have been in a low position or transitioning without falling. The absence of multiple fall indicators and the stable trajectory support this classification.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_004",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The video shows a progression from stable upright postures to a significant event where the subject appears to have fallen and remained on the ground. Initially, the subject maintains an upright posture with stable trajectories. However, there is a notable transition in window 2, followed by multiple fall indicators in subsequent windows.",
+    "observations": [
+      "Window 2 shows a transition with a descending trajectory and a horizontal flag.",
+      "Window 3 indicates a rapid descent with the subject ending up on the ground (hip_y=0.73).",
+      "Windows 3 to 6 consistently show the subject on the ground with multiple ON_GROUND flags.",
+      "The maximum velocity recorded is 0.439, indicating a rapid movement likely associated with a fall.",
+      "The subject does not return to an upright posture after window 3."
+    ],
+    "explanation": "The video exhibits a clear fall event characterized by a rapid descent and transition to a horizontal posture in window 2, followed by the subject remaining on the ground in subsequent windows. The presence of multiple fall flags and the lack of recovery to an upright posture strongly indicate a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR02_video_59_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a consistent pattern of the person being in an upright posture across all time windows. However, there are persistent ON_GROUND flags in each window, indicating a potential issue. The hip_y values are slightly above the typical threshold for being on the ground, and the angles remain close to upright. The velocity is low, and there is no rapid descent observed.",
+    "observations": [
+      "All windows show the person in an upright posture.",
+      "ON_GROUND flags are present in all windows, despite upright postures.",
+      "Hip_y values are slightly above the ground threshold but consistent.",
+      "No rapid descent or significant change in posture angle.",
+      "The trajectory is stable in the latter windows."
+    ],
+    "explanation": "Despite the presence of ON_GROUND flags, the consistent upright posture and lack of rapid descent or significant posture change suggest no fall occurred. The hip_y values and stable trajectory further support this conclusion, though the persistent flags warrant a medium confidence level.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_049",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video sequence predominantly shows stable and upright postures across all windows, with only one instance of a rapid descent flag in the initial window. The hip height and body angle remain consistent, indicating no significant change in posture or position after the initial window.",
+    "observations": [
+      "Window 0 shows a rapid descent with a hip_y of 0.44 and an angle of 75\u00b0, but no transition to a horizontal posture or ground contact.",
+      "All subsequent windows (1-8) show stable trajectories with upright postures and no fall indicators.",
+      "The average hip_y remains above 0.52 in most windows, suggesting the person is not near the ground.",
+      "The maximum velocity of 0.205 occurs only in the first window, with significantly lower velocities in the following windows.",
+      "Only one window out of nine has a fall-related flag, and no \"fallen\" posture state is observed."
+    ],
+    "explanation": "Despite the rapid descent flag in the first window, the absence of a transition to a horizontal posture, ground contact, or multiple fall indicators in subsequent windows suggests no fall occurred. The consistent upright posture and stable movement patterns throughout the majority of the video support a high-confidence classification of NO_FALL.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_fall-13-cam0",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video sequence shows a progression from no detectable pose to a clear pattern of rapid descent and transitioning postures, with the individual ending up on or near the ground. The presence of fall indicators increases in the latter windows, suggesting a significant event.",
+    "observations": [
+      "Windows 2 and 3 show a descending trajectory with high velocities, indicating rapid movement towards the ground.",
+      "The average hip_y values in windows 2 and 3 are 0.65 and 0.79, respectively, which are consistent with being on or near the ground.",
+      "Both windows 2 and 3 have multiple fall flags, including ON_GROUND and RAPID_DESCENT.",
+      "The posture state is consistently transitioning, indicating instability or a change from an upright to a horizontal position.",
+      "No pose was detected in the initial windows, which may suggest the onset of a fall was not captured."
+    ],
+    "explanation": "The video shows a clear pattern of a fall, with rapid descent and multiple fall indicators in the latter windows. The individual transitions from an upright to a horizontal position, ending up on the ground, as evidenced by the hip_y values and fall flags. The consistent presence of fall indicators across multiple windows supports a high-confidence classification of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_068",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a progression from an upright posture to a consistently horizontal posture across the time windows. The hip height remains relatively stable, indicating no significant descent, but the angle decreases significantly, suggesting a transition to a horizontal position. The presence of multiple HORIZONTAL flags in the latter windows indicates a sustained horizontal posture.",
+    "observations": [
+      "The hip_y remains stable around 0.50-0.51, indicating no descent to the ground.",
+      "The angle decreases from 61\u00b0 to 2\u00b0, showing a transition from upright to horizontal.",
+      "Multiple HORIZONTAL flags are present in windows 1, 2, and 3.",
+      "No rapid descent is observed, as indicated by the low maximum velocity.",
+      "The posture is predominantly transitioning, with no return to upright."
+    ],
+    "explanation": "Although the video shows a transition from upright to horizontal posture with multiple HORIZONTAL flags, there is no evidence of rapid descent or the person ending up on the ground (hip_y > 0.65). The stable hip height and low velocity suggest a controlled movement rather than a fall.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "urfd_fall-24-cam0",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a consistent pattern of the person being on the ground, as indicated by the ON_GROUND flags in all frames of the window. The hip height is relatively low, and the angle suggests a transition from an upright to a more horizontal posture.",
+    "observations": [
+      "The average hip_y is 0.68, indicating the person is near the ground.",
+      "The angle range from 62\u00b0 to 84\u00b0 suggests a transition from upright to a more horizontal position.",
+      "All frames in the window have the ON_GROUND flag.",
+      "The posture distribution includes two upright and one transitioning, indicating a change in posture.",
+      "The trajectory is stable, and the maximum velocity is low, which might suggest the fall has already occurred."
+    ],
+    "explanation": "The presence of ON_GROUND flags in all frames, combined with the low hip height and transitioning posture, strongly indicates a fall has occurred. The stable trajectory and low velocity suggest the fall was completed before the window, but the indicators confirm a fall event.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_26_fall",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a progression from stable, upright postures to a series of events indicating a potential fall. Initially, the subject maintains an upright posture with stable trajectories. However, as the video progresses, there are multiple instances of rapid descent and the subject ending up on the ground, as indicated by the hip_y values and posture states.",
+    "observations": [
+      "Window 4 and 5 show rapid descent with the subject still upright, suggesting a loss of balance.",
+      "Window 6 shows the subject on the ground, with all postures indicating \"ON_GROUND.\"",
+      "Multiple windows (4, 5, 9) have the \"RAPID_DESCENT\" flag, indicating high velocity movements.",
+      "The hip_y value increases significantly in window 6, indicating the subject is on the ground.",
+      "The posture transitions from upright to on the ground, with a significant change in angle."
+    ],
+    "explanation": "The video contains multiple indicators of a fall, including rapid descent, the subject ending up on the ground, and posture states confirming the subject is on the ground. The presence of multiple fall flags across several windows further supports the classification of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_H01_video_15_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video sequence across all three time windows shows no pose detection, indicating that the system was unable to identify any human figures or movements during the entire duration of the video.",
+    "observations": [
+      "All three windows report \"No pose detected.\"",
+      "There is no data on posture, movement, or position.",
+      "The absence of pose detection could be due to poor video quality, occlusion, or the person being out of frame."
+    ],
+    "explanation": "The lack of pose detection across all windows makes it impossible to assess any fall indicators. Without any data on posture or movement, we cannot definitively identify a fall. However, the absence of detected activity suggests no significant events were captured, leading to a low-confidence classification of NO_FALL.",
+    "confidence": "low"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_023",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright posture to a fallen state. Initially, the subject maintains an upright posture with stable trajectories. However, as the video progresses, there is a rapid descent, indicated by increasing velocity and a transition from upright to horizontal postures. The subject ends up in a fallen posture on the ground, with multiple fall flags activated.",
+    "observations": [
+      "Rapid descent begins in Window 2, with increasing velocity and descent trajectory.",
+      "By Window 4, the subject's hip_y significantly increases, indicating proximity to the ground, with multiple ON_GROUND and RAPID_DESCENT flags.",
+      "Windows 5 to 7 show a transition to a fallen posture, with the subject remaining on the ground.",
+      "The maximum velocity peaks at 2.293 in Window 6, confirming a rapid fall.",
+      "The subject remains in a fallen posture with consistent ON_GROUND and HORIZONTAL flags from Window 7 onwards."
+    ],
+    "explanation": "The video exhibits a clear fall pattern, with rapid descent, transition from upright to horizontal posture, and the subject ending up on the ground. Multiple fall indicators, including ON_GROUND, HORIZONTAL, and RAPID_DESCENT flags, are present across several windows, confirming a fall event with high confidence.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_CR01_video_43_adl",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a consistent pattern of upright posture across all time windows, with only a minor deviation in Window 1 where a transitioning posture is noted. The hip height remains relatively stable, and the angle stays within a range that suggests an upright position. There are no significant changes in velocity or trajectory that would indicate a fall.",
+    "observations": [
+      "The average hip_y remains above 0.39, indicating the person is not near the ground.",
+      "The angle remains mostly above 80\u00b0, suggesting an upright posture.",
+      "The maximum velocity recorded is 0.142, which is not indicative of a rapid descent.",
+      "Only one instance of a transitioning posture is observed, with no persistent horizontal or fallen states.",
+      "No fall flags are triggered in any of the windows."
+    ],
+    "explanation": "The video consistently shows an upright posture with stable trajectories and no rapid descent or fall indicators. The brief transition in Window 1 does not lead to a fall, as the posture returns to upright immediately. The absence of fall flags and the stable hip height further support the classification of NO_FALL.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "le2i_H01_video_6_fall",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a sequence where the subject experiences rapid changes in posture and velocity. Initially, there is a rapid descent with a transitioning posture, followed by a stable trajectory with a return to an upright posture. The hip height remains relatively low throughout, indicating proximity to the ground.",
+    "observations": [
+      "Both windows show rapid descent, with high velocities, especially in Window 1.",
+      "The hip height is consistently low, with an average below 0.65, suggesting the subject is near the ground.",
+      "The posture transitions from upright to transitioning, indicating instability.",
+      "Multiple fall flags are present, particularly RAPID_DESCENT in both windows.",
+      "The angle range suggests significant changes in body orientation."
+    ],
+    "explanation": "The video exhibits clear signs of a fall, including rapid descent, low hip height, and multiple fall flags. The subject transitions from an upright to a transitioning posture, with high velocity and proximity to the ground, confirming a fall event.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_adl-34-cam0",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The video sequence primarily lacks pose detection in the first three windows, with only the final window providing data. In this last window, the person is on the ground with a hip height of 0.78 and an angle of 71\u00b0, indicating a transitioning posture. There is no recorded movement, as shown by the zero velocity, but the ON_GROUND flag is present.",
+    "observations": [
+      "No pose data is available for the first three windows.",
+      "The final window shows the person on the ground with a hip height of 0.78.",
+      "The angle of 71\u00b0 suggests a non-upright posture.",
+      "The ON_GROUND flag is active in the last window.",
+      "There is no recorded rapid descent or horizontal posture."
+    ],
+    "explanation": "The presence of the ON_GROUND flag in the final window, combined with the transitioning posture and hip height of 0.78, suggests a fall may have occurred. However, the lack of data in the first three windows and absence of rapid descent or horizontal posture indicators reduce the confidence level. The classification is based on the final window's indication of the person being on the ground.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "urfd_fall-29-cam0",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video sequence shows a lack of pose detection in the first four windows, with the fifth window indicating a fallen posture. The final window shows the person on the ground with a horizontal orientation, but no rapid descent is detected.",
+    "observations": [
+      "No pose detected in the first four windows.",
+      "In the fifth window, the person is on the ground with a hip_y of 0.93.",
+      "The angle in the fifth window is 17\u00b0, indicating a horizontal posture.",
+      "The posture in the fifth window is classified as \"fallen.\"",
+      "Fall flags ON_GROUND and HORIZONTAL are present in the fifth window."
+    ],
+    "explanation": "The video shows a clear indication of a fall in the fifth window, with the person ending up on the ground in a horizontal position. Although there is no rapid descent detected, the presence of fall flags and the fallen posture in the final window suggest a fall occurred. The lack of data in the first four windows reduces confidence slightly, but the evidence in the fifth window is strong enough to classify this as a fall.",
+    "confidence": "medium"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_061",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright posture to a fallen state. Initially, the person is upright and transitioning, but by the second window, they are transitioning with a horizontal flag. The third and fourth windows confirm the person is on the ground with multiple fall indicators.",
+    "observations": [
+      "The hip_y value increases significantly from 0.52 to 0.82, indicating a descent to the ground.",
+      "The angle decreases from 56\u00b0 to 8\u00b0, showing a transition from upright to horizontal.",
+      "Window 2 shows multiple fall flags: ON_GROUND, HORIZONTAL, and RAPID_DESCENT.",
+      "The posture transitions from upright to fallen across the windows.",
+      "The maximum velocity of 0.241 in Window 2 suggests a rapid descent."
+    ],
+    "explanation": "The video exhibits a clear fall pattern with a rapid descent, transition from upright to horizontal, and the person ending up on the ground. Multiple fall flags in Window 2, along with the posture and trajectory data, confirm a fall event with high confidence.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_073",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright posture to a fallen state. Initially, the subject is upright with stable movement, but there is a rapid descent observed in window 2, followed by a transition to a horizontal and fallen posture. The subject remains in a fallen state for the remainder of the video, with multiple fall flags indicating ON_GROUND and HORIZONTAL postures.",
+    "observations": [
+      "Window 2 shows a rapid descent with multiple fall flags, including RAPID_DESCENT and ON_GROUND.",
+      "Windows 3 to 5 show a transition from upright to a fallen posture, with increasing hip_y values indicating proximity to the ground.",
+      "Windows 6 to 10 consistently show a fallen posture with ON_GROUND and HORIZONTAL flags.",
+      "The maximum velocity of 0.449 in window 2 indicates a significant movement, consistent with a fall.",
+      "The subject remains in a fallen state from window 6 onwards, with no recovery to an upright posture."
+    ],
+    "explanation": "The video exhibits a clear fall event characterized by a rapid descent, transition from upright to horizontal posture, and the subject remaining on the ground. Multiple fall indicators, including ON_GROUND and HORIZONTAL flags, are present across several windows, confirming the occurrence of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_adl-04-cam0",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "analysis": " The video shows a progression from a higher hip position to a lower one, with a significant change in body angle. The initial window indicates a person on the ground, while subsequent windows show attempts to transition back to an upright posture. There is a notable descent in hip position and an increase in body angle, suggesting instability.",
+    "observations": [
+      "Window 0 shows the person on the ground with a low hip position and transitioning posture.",
+      "Window 1 indicates a rapid descent with a high velocity of 0.568 and a lower hip position.",
+      "Window 2 maintains a low hip position with a descending trajectory, indicating instability.",
+      "The average hip_y decreases significantly from Window 0 to Window 2.",
+      "The presence of the ON_GROUND flag in Window 0 suggests a fall event."
+    ],
+    "explanation": "The video shows a clear pattern of a fall, with the person initially on the ground and then attempting to regain an upright posture. The rapid descent in Window 1 and the low hip position throughout indicate a fall event. The presence of the ON_GROUND flag further supports this classification.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_adl_046",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a consistent pattern of stable movement with no significant changes in posture or velocity across all time windows. The individual maintains a relatively upright posture with minor transitions, and there are no indications of rapid descent or a transition to a horizontal position.",
+    "observations": [
+      "The average hip_y remains consistently low (0.52 - 0.54), indicating the person is not near the ground.",
+      "The average angle remains close to upright (87\u00b0 - 88\u00b0) throughout the video.",
+      "The maximum velocity observed is 0.035, which is low and indicates no rapid movements.",
+      "There are no windows with fall flags, suggesting no fall indicators were detected.",
+      "The posture distribution shows a predominance of transitioning and upright postures, with no fallen states."
+    ],
+    "explanation": "The video consistently shows stable movement patterns with no rapid descent or transition to a horizontal position. The individual maintains an upright posture with no fall indicators present in any of the windows. The absence of fall flags and the stable trajectory further support the classification of NO_FALL.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_adl-28-cam0",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "analysis": " The video shows a person maintaining a mostly upright posture with some transitioning movements. There is no indication of rapid descent or a transition to a horizontal position. The hip height remains relatively stable, and the maximum velocity recorded is low, suggesting normal movement rather than a fall.",
+    "observations": [
+      "The average hip_y values (0.53 and 0.60) indicate the person is not near the ground.",
+      "The angle remains close to 90\u00b0, consistent with an upright posture.",
+      "The maximum velocity is low (0.092), indicating no rapid descent.",
+      "No fall flags are present in either window.",
+      "The posture distribution shows more upright than transitioning postures."
+    ],
+    "explanation": "The video does not exhibit any fall indicators such as rapid descent, a transition to a horizontal position, or the person ending up near the ground. The consistent upright posture and low velocity further support the absence of a fall.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "gmncsa24_gmncsa_fall_002",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from stable, upright postures to a rapid descent and eventual fallen state. Initially, the subject maintains a stable trajectory with transitioning and upright postures. However, a significant change occurs in window 5, where rapid descent is detected, followed by a transition to a fallen state in subsequent windows.",
+    "observations": [
+      "Window 5 shows a rapid descent with a high max velocity of 0.265 and multiple RAPID_DESCENT flags.",
+      "Window 6 marks a critical transition with a high hip_y of 0.74 and multiple fall flags, including ON_GROUND and HORIZONTAL.",
+      "Windows 7 to 9 consistently show the subject in a fallen posture with ON_GROUND and HORIZONTAL flags.",
+      "The hip_y values increase significantly from window 5 onwards, indicating proximity to the ground.",
+      "The angle decreases sharply from window 5, indicating a transition from upright to horizontal posture."
+    ],
+    "explanation": "The video exhibits a clear fall event characterized by a rapid descent in window 5, followed by a transition to a fallen state with consistent ON_GROUND and HORIZONTAL flags in windows 6 to 9. The subject's posture and trajectory changes align with fall detection criteria, confirming a fall with high confidence.",
+    "confidence": "high"
+  },
+  {
+    "video_id": "urfd_fall-04-cam0",
+    "true_label": "fall",
+    "predicted": "fall",
+    "analysis": " The video shows a clear progression from an upright posture to a fallen state. The initial windows indicate a rapid descent with the person transitioning from upright to a horizontal position, eventually ending up on the ground. The presence of multiple fall indicators across several windows suggests a significant event.",
+    "observations": [
+      "Window 0 shows rapid descent with ON_GROUND and RAPID_DESCENT flags.",
+      "Window 1 indicates a transition to a fallen posture with multiple fall flags.",
+      "Window 2 confirms the fallen state with ON_GROUND and HORIZONTAL flags.",
+      "Windows 3 to 5 show no recovery to an upright posture, with continued ON_GROUND flags.",
+      "The hip_y values consistently indicate proximity to the ground after the initial descent."
+    ],
+    "explanation": "The video exhibits a clear sequence of events characteristic of a fall, including rapid descent, transition to a horizontal position, and the person remaining on the ground. The presence of multiple fall flags across several windows further supports the classification of a fall with high confidence.",
+    "confidence": "high"
+  }
+]
