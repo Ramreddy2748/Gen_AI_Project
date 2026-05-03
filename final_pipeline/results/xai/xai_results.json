@@ -1,0 +1,712 @@
+[
+  {
+    "window_id": "gmncsa24_gmncsa_fall_042_w0017",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "medium",
+    "llm_reasoning": " 1. Frame 1 does not provide any pose data, so no analysis can be made from this frame. 2. In Frame 2, the person is at a medium height and upright, which typically indicates a standing or walking posture. The rapid movement with a velocity of -0.273 suggests a quick change in position, but the velocity is not extremely high. 3. The flag \"ON_GROUND\" is present, which could indicate a fall, but the posture is described as upright, which contradicts a typical fall scenario where the person would be horizontal or in an unusual position. 4. Frame 3 again lacks pose data, providing no additional information to confirm or refute a fall. 5. The trajectory is unknown, and there is no velocity spike, which are both important indicators of a fall.",
+    "llm_indicators": [
+      "Medium height and upright posture in Frame 2",
+      "Rapid movement with moderate velocity",
+      "\"ON_GROUND\" flag present",
+      "No trajectory or velocity spike data"
+    ],
+    "llm_explanation": "Despite the \"ON_GROUND\" flag, the upright posture and lack of trajectory or velocity spike suggest normal activity rather than a fall."
+  },
+  {
+    "window_id": "le2i_CR01_video_3_adl_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop in height that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with normal standing or walking posture. 3. The movement is described as RAPID, but the velocity values are relatively low and decreasing, suggesting controlled movement rather than a fall. 4. The trajectory is stable, indicating no erratic or sudden changes in direction or height. 5. There is no velocity spike, which often accompanies a fall due to sudden acceleration or deceleration.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body posture",
+      "Stable trajectory",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable trajectory, and lack of sudden height change or velocity spike indicate normal activity rather than a fall."
+  },
+  {
+    "window_id": "urfd_adl-15-cam0_w0005",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. Frame 1 does not provide any data, so the analysis begins from Frame 2. 2. In Frame 2, the person is at a medium height with an upright posture and rapid movement, indicating possible dynamic activity but not necessarily a fall. 3. Frame 3 shows a continuation of the medium height and upright posture with rapid movement, suggesting ongoing dynamic activity. 4. The trajectory is stable, which implies consistent movement without sudden changes in direction or height. 5. The maximum velocity recorded is 0.344, which is relatively high but not accompanied by a velocity spike, indicating controlled rapid movement rather than a fall.",
+    "llm_indicators": [
+      "Medium height with upright posture in both frames",
+      "Rapid movement without a velocity spike",
+      "Stable trajectory"
+    ],
+    "llm_explanation": "The consistent upright posture, stable trajectory, and lack of a velocity spike suggest controlled movement rather than a fall."
+  },
+  {
+    "window_id": "le2i_H01_video_19_adl_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "medium",
+    "llm_reasoning": " 1. In Frame 1, the person is at a medium height and maintains a vertical, upright posture, indicating stability and control. 2. The movement is described as stable/slow, which typically does not suggest a fall. 3. Frames 2 and 3 do not provide pose data, which limits the ability to observe any changes or continuation of movement. 4. The trajectory is unknown, and there is no velocity spike, suggesting no sudden or rapid movement that might indicate a fall.",
+    "llm_indicators": [
+      "Medium height and vertical posture in Frame 1",
+      "Stable/slow movement",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The initial stable and upright posture with no sudden movement suggests normal activity, but missing data in subsequent frames reduces confidence."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0029",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is near the ground with a horizontal body posture, indicating they are lying down. The rapid movement suggests a recent change in position, possibly from a fall. 2. Frame 2 shows the person still near the ground and horizontal, with continued rapid movement, reinforcing the likelihood of a fall having occurred. 3. Frame 3 maintains the same low and horizontal position, with a slight decrease in movement velocity, indicating stabilization after the initial impact. 4. The trajectory is stable, and there is no velocity spike, suggesting the person has not attempted to get up or change position significantly after the initial event. 5. The maximum velocity recorded is 0.175, which is consistent with a fall scenario where the person has come to rest.",
+    "llm_indicators": [
+      "ON_GROUND flag in all frames",
+      "HORIZONTAL body posture in all frames",
+      "Rapid movement in initial frames",
+      "Stable trajectory with no velocity spike"
+    ],
+    "llm_explanation": "The consistent low and horizontal posture with rapid movement and stabilization indicates a fall has occurred, with no attempt to rise."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_023_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is upright and stable, indicating a normal standing posture. 2. In Frame 2, the person remains upright but exhibits rapid movement, suggesting a potential shift in activity but not necessarily a fall. 3. In Frame 3, the person is still at medium height and upright, though transitioning, which could indicate a change in posture but not a collapse. 4. The trajectory is descending, which could be concerning, but the person remains upright throughout the sequence. 5. The maximum velocity recorded is 0.622, which is not excessively high for a fall scenario. 6. There is no velocity spike, which is often a key indicator of a fall.",
+    "llm_indicators": [
+      "Upright posture maintained throughout",
+      "Rapid movement but no velocity spike",
+      "Descending trajectory without collapse"
+    ],
+    "llm_explanation": "The person maintains an upright posture with no velocity spike, indicating normal activity rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0035",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person remains at a HIGH position throughout all frames, indicating they are standing. 2. The body posture is consistently VERTICAL and upright, showing no signs of imbalance or deviation from a stable posture. 3. Movement is described as stable/slow, with no sudden changes or instability. 4. The trajectory is stable, suggesting no unexpected shifts in position or direction. 5. The maximum velocity is very low (0.035), indicating minimal movement, which is typical for standing. 6. There is no velocity spike, which would suggest a sudden or uncontrolled movement.",
+    "llm_indicators": [
+      "Consistent HIGH position",
+      "VERTICAL and upright posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low maximum velocity",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable trajectory, and lack of sudden movement strongly indicate normal standing activity without any signs of a fall."
+  },
+  {
+    "window_id": "le2i_CR01_video_3_adl_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1 and Frame 2, the person maintains a medium height and an upright posture with stable or slow movement, indicating normal activity. 2. In Frame 3, although there is a rapid movement detected, the body remains vertical and upright, which suggests that the person is still maintaining control. 3. The trajectory is descending, but without a significant change in posture or a velocity spike, this could be part of a controlled movement such as sitting down or bending. 4. The maximum velocity recorded is 0.084, which is relatively low and does not suggest a sudden or uncontrolled fall. 5. The absence of a velocity spike further supports the notion that the movement is controlled and not indicative of a fall.",
+    "llm_indicators": [
+      "Upright posture maintained throughout",
+      "No velocity spike",
+      "Low maximum velocity",
+      "Descending trajectory without posture change"
+    ],
+    "llm_explanation": "The person maintains an upright posture with controlled movement, and the indicators do not suggest a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_072_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop or change in elevation that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with a stable, standing posture. 3. Movement is described as stable/slow, with no abrupt changes or instability that might indicate a loss of balance. 4. The trajectory is stable, showing no erratic or sudden movements that are typical in a fall scenario. 5. The max velocity is very low (0.036), and there is no velocity spike, suggesting controlled and deliberate movement rather than a fall.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low max velocity with no spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable movement, and lack of sudden changes in height or velocity strongly indicate normal activity rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_020_w0001",
+    "true_label": "no_fall",
+    "predicted": "fall",
+    "confidence": "medium",
+    "llm_reasoning": " 1. In Frame 1, the person is at a medium height and upright, indicating a stable and normal posture. 2. Frame 2 lacks data, which introduces some uncertainty, but we must rely on the available frames. 3. In Frame 3, the person is at a medium height but now horizontal, suggesting a significant change in posture from vertical to horizontal. 4. The rapid movement in Frame 3 with a velocity of 0.115, although not extremely high, combined with the horizontal flag, suggests a potential fall. 5. The trajectory is descending, which aligns with a fall scenario. 6. The maximum velocity recorded is 0.299, which is not excessively high, and there is no velocity spike, which typically indicates a sudden impact.",
+    "llm_indicators": [
+      "Transition from vertical to horizontal posture",
+      "Descending trajectory",
+      "Horizontal flag in Frame 3",
+      "Rapid movement in Frame 3"
+    ],
+    "llm_explanation": "The transition from upright to horizontal with descending trajectory and rapid movement suggests a fall, despite the absence of a velocity spike."
+  },
+  {
+    "window_id": "urfd_adl-04-cam0_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is upright with a medium height and rapid movement, indicating normal activity such as walking or running. 2. Frame 2 lacks data, which introduces some uncertainty, but the absence of a detected pose does not inherently suggest a fall. 3. In Frame 3, the person is still at medium height but with a tilted body at 50\u00b0, which could indicate a transition in posture, such as bending or reaching, rather than falling. 4. The trajectory is stable, suggesting consistent movement without abrupt changes typical of a fall. 5. The maximum velocity recorded is 1.022, which is not excessively high, and there is no velocity spike, reducing the likelihood of a fall.",
+    "llm_indicators": [
+      "Medium height maintained throughout",
+      "Body tilt at 50\u00b0 in Frame 3",
+      "Stable trajectory",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The consistent medium height, stable trajectory, and lack of a velocity spike suggest normal activity rather than a fall."
+  },
+  {
+    "window_id": "le2i_CR01_video_43_adl_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop or change in elevation that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with a stable, standing posture. 3. Movement is described as stable/slow, with no rapid or erratic changes that might indicate a loss of balance or control. 4. The trajectory is stable, showing no deviation that would suggest a fall. 5. The max velocity is very low (0.010), and there is no velocity spike, both of which suggest controlled and deliberate movement rather than a fall.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low max velocity with no spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable movement, and lack of velocity spikes strongly indicate normal activity rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0011",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person remains in a HIGH position throughout all frames, indicating they are standing. 2. The body tilt is consistent at approximately 56\u00b0 in the first two frames and slightly decreases to 54\u00b0 in the third frame, suggesting a minor adjustment rather than a fall. 3. The movement is described as stable and slow, with no sudden changes in posture or velocity. 4. The trajectory is stable, and there is no velocity spike, which are both strong indicators of controlled movement rather than a fall. 5. The posture is described as transitioning, which could imply a shift in stance or balance, but not necessarily a fall.",
+    "llm_indicators": [
+      "Consistent HIGH position",
+      "Stable body tilt with minor adjustment",
+      "Stable trajectory",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The consistent high position, stable trajectory, and lack of sudden movement or velocity spikes indicate controlled and intentional movement, not a fall."
+  },
+  {
+    "window_id": "urfd_fall-16-cam0_w0006",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is at a medium height with a body tilt of 55\u00b0, indicating a potential loss of balance. The presence of the ON_GROUND flag suggests the person is already in contact with the ground, possibly in a transitional phase. 2. Frame 2 shows the person in a horizontal position with rapid movement, indicating a sudden change in posture. The ON_GROUND and HORIZONTAL flags confirm the person is lying down, and the rapid movement suggests a fall. 3. Frame 3 continues to show the person in a horizontal position near the ground with rapid movement, reinforcing the likelihood of a fall. The RAPID_DESCENT flag and increased velocity further support this. 4. The trajectory is stable, but the presence of a velocity spike and a maximum velocity of 0.488 indicate a sudden and significant movement, consistent with a fall.",
+    "llm_indicators": [
+      "ON_GROUND flag in all frames",
+      "HORIZONTAL body position in Frames 2 and 3",
+      "RAPID movement and RAPID_DESCENT flag in Frame 3",
+      "Velocity spike and high maximum velocity"
+    ],
+    "llm_explanation": "The sequence of events, including the transition from a tilted to a horizontal position with rapid movement and consistent ground contact, strongly indicates a fall."
+  },
+  {
+    "window_id": "le2i_CR01_video_44_fall_w0001",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is near the ground with an upright posture but is flagged for rapid descent and on ground, indicating a sudden movement towards the ground. 2. Frame 2 shows the person still near the ground but now with a tilted body at 48\u00b0, suggesting a loss of balance or control. The rapid movement has decreased significantly, but the person remains flagged as on ground. 3. Frame 3 continues to show the person near the ground with an increased tilt to 55\u00b0, and movement has stabilized, indicating the person has not returned to an upright position. 4. The trajectory is stable, and there was a velocity spike, which is consistent with a fall event where the person hits the ground and then stabilizes.",
+    "llm_indicators": [
+      "Rapid descent and on ground flags in Frame 1",
+      "Increasing body tilt from Frame 2 to Frame 3",
+      "Velocity spike indicating sudden movement"
+    ],
+    "llm_explanation": "The sequence of rapid descent, increasing body tilt, and stabilization near the ground strongly indicates a fall event."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_023_w0006",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is upright with a stable posture, indicating no signs of imbalance or fall. 2. Frame 2 shows a rapid movement but the person remains upright, suggesting a quick motion that does not compromise stability. 3. Frame 3 returns to stable movement with the person still upright, indicating recovery or maintenance of balance. 4. The trajectory is stable throughout the sequence, showing no deviation that would suggest a fall. 5. The maximum velocity recorded is low (0.124), and there is no velocity spike, which typically accompanies a fall.",
+    "llm_indicators": [
+      "Upright posture in all frames",
+      "Stable trajectory",
+      "No velocity spike",
+      "Low maximum velocity"
+    ],
+    "llm_explanation": "The person maintains an upright posture with stable movement and no significant velocity changes, indicating no fall occurred."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_037_w0003",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "medium",
+    "llm_reasoning": " 1. Frames 1 and 2 do not provide any pose data, which means there is no information about the person's position or movement during these frames. 2. In Frame 3, the person is detected at a medium height with a vertical, upright posture, indicating a stable and normal standing position. 3. The movement is described as stable/slow, with no velocity spike and a maximum velocity of 0.000, suggesting no sudden or rapid movement that could indicate a fall. 4. The trajectory is unknown, but the available data in Frame 3 shows no signs of instability or falling.",
+    "llm_indicators": [
+      "Medium height with vertical, upright posture",
+      "Stable/slow movement",
+      "No velocity spike",
+      "Maximum velocity of 0.000"
+    ],
+    "llm_explanation": "The upright posture and lack of movement in Frame 3 suggest stability, but missing data in Frames 1 and 2 reduces confidence."
+  },
+  {
+    "window_id": "le2i_H01_video_14_adl_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data to analyze body movement or orientation. 2. The trajectory is unknown, which means there is no information on the direction or change in position of the subject. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine if a fall occurred."
+  },
+  {
+    "window_id": "le2i_CR02_video_56_adl_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. Frame 1 does not provide any data, so we begin analysis from Frame 2. 2. In Frame 2, the person is at a medium height with an upright posture and stable/slow movement, indicating normal activity. 3. Frame 3 shows the person still at medium height and upright, but with a rapid movement. However, the velocity is not excessively high (-0.105), and the posture remains upright. 4. The trajectory is stable, and there is no significant velocity spike, suggesting controlled movement rather than a fall.",
+    "llm_indicators": [
+      "Medium height with upright posture in both frames",
+      "Stable trajectory",
+      "No velocity spike",
+      "Rapid movement but not excessive"
+    ],
+    "llm_explanation": "The person maintains an upright posture with stable trajectory and no significant velocity spike, indicating normal activity rather than a fall."
+  },
+  {
+    "window_id": "le2i_H01_video_5_adl_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "medium",
+    "llm_reasoning": " 1. Frame 1 lacks pose data, so no analysis can be made for this frame. 2. In Frame 2, the person is at a medium height with a body tilt of 59\u00b0, indicating a potential imbalance. The movement is stable/slow, suggesting a controlled transition. 3. In Frame 3, the tilt increases to 69\u00b0, and the movement becomes rapid, indicating a loss of balance or a quick adjustment. The posture is still transitioning, which could mean the person is trying to regain balance. 4. The trajectory is descending, which is a common indicator of a fall, but there is no velocity spike, which often accompanies a fall.",
+    "llm_indicators": [
+      "Medium height with increasing body tilt (59\u00b0 to 69\u00b0)",
+      "Rapid movement in Frame 3",
+      "Descending trajectory"
+    ],
+    "llm_explanation": "Despite the descending trajectory and increased tilt, the absence of a velocity spike and the transitioning posture suggest an attempt to regain balance rather than a fall."
+  },
+  {
+    "window_id": "urfd_adl-34-cam0_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data to analyze body position or movement. 2. The trajectory is unknown, which means there is no information on the direction or pattern of movement. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine if a fall occurred."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0013",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person remains in a HIGH position throughout all frames, indicating they are standing. 2. The body tilt is consistent at approximately 54\u00b0 to 56\u00b0, which suggests a slight lean but not an extreme angle that would typically indicate a fall. 3. The movement is described as stable and slow, with no sudden changes in velocity, which is not characteristic of a fall. 4. The posture is noted as transitioning, which could imply a change in activity but not necessarily a fall. 5. The trajectory is stable, and there is no velocity spike, both of which are strong indicators that the person is not experiencing a fall.",
+    "llm_indicators": [
+      "Consistent HIGH position",
+      "Slight body tilt (54\u00b0-56\u00b0)",
+      "Stable/slow movement",
+      "No velocity spike",
+      "Stable trajectory"
+    ],
+    "llm_explanation": "The consistent standing position, slight body tilt, stable movement, and lack of velocity spike strongly suggest normal activity rather than a fall."
+  },
+  {
+    "window_id": "urfd_adl-18-cam0_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data to analyze body position or movement. 2. The trajectory is unknown, which means there is no information on the direction or change in position of the subject. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine if a fall occurred, but there is no evidence of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_071_w0038",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data to analyze body position or movement. 2. The trajectory is unknown, which means there is no information on the direction or pattern of movement. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine if a fall occurred, but there is no evidence of a fall."
+  },
+  {
+    "window_id": "urfd_fall-14-cam0_w0008",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. **Frame 1 Analysis**: The person is near the ground with a horizontal body position, indicating they are lying down. The rapid movement and flags such as RAPID_DESCENT and ON_GROUND suggest a sudden change in position, consistent with a fall. 2. **Frame 2 Analysis**: The person remains near the ground but transitions to a vertical position. The presence of RAPID_DESCENT and ON_GROUND flags, along with rapid movement, indicates they are attempting to recover or adjust their posture after a fall. 3. **Frame 3 Analysis**: The person is still near the ground but now upright, with a negative velocity indicating a slowing down or stabilization. The ON_GROUND flag remains, suggesting they have not fully recovered to a standing position. 4. **Trajectory and Velocity Analysis**: The stable trajectory and presence of a velocity spike further support the occurrence of a sudden event, such as a fall, followed by attempts to stabilize.",
+    "llm_indicators": [
+      "RAPID_DESCENT in Frame 1 and 2",
+      "ON_GROUND flag in all frames",
+      "HORIZONTAL body position in Frame 1",
+      "Velocity Spike"
+    ],
+    "llm_explanation": "The sequence of rapid descent, horizontal position, and subsequent attempts to stabilize while remaining near the ground strongly indicate a fall event."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_010_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop or change in elevation that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with a stable and controlled posture. 3. The movement is described as stable/slow, with no abrupt changes or instability that might indicate a loss of balance. 4. The trajectory is stable, showing no erratic or sudden movements that are typical in a fall scenario. 5. The max velocity is low (0.094), and there is no velocity spike, suggesting that the person is moving slowly and steadily without any sudden acceleration or deceleration.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low max velocity with no velocity spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable movement, and lack of sudden changes in velocity or trajectory strongly indicate normal activity rather than a fall."
+  },
+  {
+    "window_id": "le2i_CR02_video_59_adl_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is near the ground but maintains an upright posture, indicating they are not lying down or in a typical fall position. The rapid movement suggests a quick action but not necessarily a fall. 2. Frame 2 shows the person at a medium height with an upright posture, still on the ground, which could indicate a transition from a crouched position to standing or vice versa. 3. Frame 3 returns to a low position with an upright posture, similar to Frame 1, suggesting a repetitive motion rather than a fall. 4. The trajectory is stable, and there is no significant velocity spike, which are both indicators against a fall. 5. The consistent upright posture throughout all frames suggests controlled movement rather than an uncontrolled fall.",
+    "llm_indicators": [
+      "Upright posture in all frames",
+      "Stable trajectory",
+      "No velocity spike",
+      "Rapid movement but consistent with controlled actions"
+    ],
+    "llm_explanation": "The consistent upright posture and stable trajectory indicate controlled movement rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_028_w0005",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The first two frames do not provide any pose data, which means we cannot assess the person's position or movement during these frames. 2. In Frame 3, the person is detected to be low to the ground and in a horizontal position, which is a common indicator of a fall. 3. The presence of rapid movement (velocity=0.412) suggests a sudden change in position, which aligns with a fall scenario. 4. The flags RAPID_DESCENT, ON_GROUND, and HORIZONTAL collectively indicate a fall, as they suggest the person has quickly moved to a lying position on the ground. 5. The trajectory is unknown, and there is no velocity spike, which limits the ability to confirm the fall through movement patterns alone. 6. The posture is explicitly labeled as \"fallen,\" reinforcing the likelihood of a fall.",
+    "llm_indicators": [
+      "RAPID_DESCENT",
+      "ON_GROUND",
+      "HORIZONTAL",
+      "Posture: fallen"
+    ],
+    "llm_explanation": "The combination of rapid descent, horizontal position, and being on the ground strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0012",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is near the ground with a tilted body at 52\u00b0, indicating a potential fall initiation. The rapid movement suggests a sudden change in posture, which is a common characteristic of a fall. 2. In Frame 2, the person remains near the ground, but the body is now horizontal, indicating a transition from a tilted to a lying down position. The movement has slowed, which is typical after a fall when the person comes to rest. 3. In Frame 3, the person is still near the ground and remains in a horizontal position, with stable and slow movement. The presence of the \"HORIZONTAL\" flag and the posture labeled as \"fallen\" strongly suggest that the person has completed a fall. 4. The trajectory is stable, and there is no velocity spike, which aligns with a fall that has reached its conclusion without further movement.",
+    "llm_indicators": [
+      "Near ground position in all frames",
+      "Transition from tilted to horizontal body posture",
+      "Rapid movement followed by stable/slow movement",
+      "\"ON_GROUND\" and \"HORIZONTAL\" flags",
+      "Posture labeled as \"fallen\""
+    ],
+    "llm_explanation": "The sequence of events and posture changes, along with the flags and stable trajectory, strongly indicate a completed fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0029",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person is consistently LOW and HORIZONTAL across all frames, indicating they are lying down. 2. The posture is marked as \"fallen\" in each frame, suggesting a non-upright position. 3. The movement is stable and slow, with no significant changes in position or velocity, indicating no attempt to get up or move significantly. 4. The trajectory is stable, and there is no velocity spike, which means there was no sudden movement that could indicate a fall or an attempt to recover from a fall.",
+    "llm_indicators": [
+      "ON_GROUND flag in all frames",
+      "HORIZONTAL body position in all frames",
+      "Stable trajectory and low velocity",
+      "Consistent \"fallen\" posture"
+    ],
+    "llm_explanation": "The consistent low, horizontal position with stable movement and a \"fallen\" posture strongly indicates a fall has occurred."
+  },
+  {
+    "window_id": "urfd_adl-17-cam0_w0004",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is upright with stable and slow movement, indicating a normal standing posture. 2. In Frame 2, the person remains upright but experiences rapid movement, suggesting a sudden change in position or activity, yet still maintaining an upright posture. 3. In Frame 3, the person continues to be upright with rapid movement, but there is no indication of a loss of balance or a change in height that would suggest a fall. 4. The trajectory is stable, indicating no significant deviation from the initial position. 5. The maximum velocity recorded is 0.500, which is not excessively high and does not indicate a fall. 6. There is no velocity spike, which often accompanies a fall due to sudden acceleration and deceleration.",
+    "llm_indicators": [
+      "Upright posture maintained throughout all frames",
+      "Stable trajectory",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The person maintains an upright posture with stable trajectory and no velocity spike, indicating normal activity rather than a fall."
+  },
+  {
+    "window_id": "urfd_adl-34-cam0_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data to analyze body position or movement. 2. The trajectory is unknown, which means there is no information on the direction or pattern of movement. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine if a fall occurred, but there is no evidence of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_037_w0009",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data to analyze body position or movement. 2. The trajectory is unknown, which means there is no information on the direction or change in position of the subject. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine if a fall occurred, but there is no evidence of a fall."
+  },
+  {
+    "window_id": "urfd_adl-27-cam0_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is upright with a stable posture and slow movement, indicating normal activity. 2. Frame 2 shows a continuation of the upright posture with stable and slow movement, suggesting no change in activity level. 3. Frame 3 introduces rapid movement, but the posture remains upright, and the height is consistent with previous frames, indicating no loss of balance or sudden drop. 4. The trajectory is stable throughout the sequence, and there is no significant velocity spike, which would typically indicate a fall. 5. The maximum velocity recorded is 0.093, which is relatively low and does not suggest a fall.",
+    "llm_indicators": [
+      "Consistent medium height and upright posture",
+      "Stable trajectory",
+      "No velocity spike",
+      "Maximum velocity is low"
+    ],
+    "llm_explanation": "The consistent upright posture, stable trajectory, and lack of significant velocity changes indicate normal activity without signs of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0032",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person remains at a HIGH position throughout all frames, indicating they are standing. 2. The body remains VERTICAL and upright in all frames, showing no signs of tilting or falling. 3. Movement is described as stable/slow, with no sudden changes in posture or position. 4. The trajectory is stable, suggesting consistent and controlled movement. 5. The maximum velocity is very low (0.047), indicating minimal movement, which is typical for standing. 6. There is no velocity spike, which would typically indicate a sudden movement or fall.",
+    "llm_indicators": [
+      "Consistent HIGH position",
+      "VERTICAL body posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low maximum velocity",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The person maintains a stable, upright posture with minimal movement, showing no signs of a fall."
+  },
+  {
+    "window_id": "le2i_CR01_video_23_adl_w0002",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is upright with stable and slow movement, indicating a normal standing posture. 2. In Frame 2, the person remains at medium height and upright, but the posture is transitioning, suggesting a possible change in activity, such as starting to walk or adjust position. 3. In Frame 3, the person is still at medium height and upright, with a rapid movement noted. However, the velocity is not significantly high (velocity=-0.094), and the posture is still transitioning, which could indicate a quick adjustment or movement rather than a fall. 4. The trajectory is stable throughout the sequence, and there is no velocity spike, which are both strong indicators against a fall.",
+    "llm_indicators": [
+      "Upright posture maintained throughout",
+      "Medium height consistent across frames",
+      "No velocity spike",
+      "Stable trajectory"
+    ],
+    "llm_explanation": "The person maintains an upright posture with stable trajectory and no significant velocity spike, indicating normal activity rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_006_w0043",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person remains at a HIGH position throughout all frames, indicating they are standing. 2. The body posture is consistently VERTICAL and upright, showing no signs of imbalance or deviation from a stable posture. 3. Movement is described as stable/slow, with no sudden changes or instability. 4. The trajectory is stable, suggesting no unexpected shifts in position or orientation. 5. The maximum velocity is very low (0.035), indicating minimal movement, which is typical for standing or slow walking. 6. There is no velocity spike, which would typically indicate a sudden movement or fall.",
+    "llm_indicators": [
+      "Consistent HIGH position",
+      "VERTICAL and upright posture",
+      "Stable trajectory",
+      "Low maximum velocity",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable trajectory, and lack of sudden movement strongly indicate normal standing activity without any signs of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_066_w0032",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person is consistently at a medium height and in a horizontal position across all frames, indicating they are lying down. 2. The posture is marked as \"fallen\" in each frame, suggesting a potential fall. 3. The movement is stable and slow, with no significant changes in velocity, which is typical after a fall when the person remains on the ground. 4. The trajectory is stable, and there is no velocity spike, indicating no attempt to get up or sudden movement that might suggest a recovery or continuation of normal activity.",
+    "llm_indicators": [
+      "ON_GROUND flag in all frames",
+      "HORIZONTAL body position in all frames",
+      "Posture marked as \"fallen\"",
+      "Stable trajectory with no velocity spike"
+    ],
+    "llm_explanation": "The consistent horizontal position and \"fallen\" posture, combined with stable and slow movement, strongly indicate a fall with no recovery attempt."
+  },
+  {
+    "window_id": "le2i_CR01_video_43_adl_w0004",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop or change in elevation that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with a stable, standing posture. 3. Movement is described as stable/slow, with no abrupt changes or instability that might indicate a loss of balance. 4. The trajectory is stable, showing no erratic or sudden movements that are typical in a fall scenario. 5. The max velocity is very low (0.039), and there is no velocity spike, suggesting controlled and deliberate movement rather than a fall.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low max velocity with no spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable movement, and lack of velocity spikes strongly indicate normal activity rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_002_w0021",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is standing upright with a stable posture, indicating no signs of a fall. 2. In Frame 2, the person is still upright but has moved to a medium height with rapid movement, suggesting a potential loss of balance or beginning of a fall. The flag for rapid descent is a critical indicator here. 3. In Frame 3, the person remains at medium height with continued rapid movement, maintaining an upright posture. The trajectory is descending, and the presence of a velocity spike indicates a sudden change in movement speed, which is often associated with falls. 4. The overall trajectory is descending, and the maximum velocity recorded is 0.406, which is relatively high and consistent with a fall scenario.",
+    "llm_indicators": [
+      "Rapid descent flags in Frames 2 and 3",
+      "Descending trajectory",
+      "Velocity spike",
+      "High maximum velocity (0.406)"
+    ],
+    "llm_explanation": "The combination of rapid descent, descending trajectory, velocity spike, and high maximum velocity strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_021_w0001",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop or change in elevation that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with a stable and controlled posture. 3. Movement is described as stable/slow, with no abrupt changes or instability that might indicate a loss of balance. 4. The trajectory is stable, showing no erratic or sudden movements that are typical in a fall scenario. 5. The max velocity is low (0.139), and there is no velocity spike, suggesting that the person is not experiencing any rapid or uncontrolled motion.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low max velocity with no spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable movement, and lack of sudden changes in velocity or trajectory strongly indicate normal activity rather than a fall."
+  },
+  {
+    "window_id": "urfd_adl-18-cam0_w0001",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data on the subject's position or movement. 2. The trajectory is unknown, which means we cannot determine any directional movement or change in position. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine a fall, but there is no evidence of a fall occurring."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_adl_076_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop or change in elevation that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with a stable, standing posture. 3. Movement is described as stable/slow, with no abrupt changes or instability that might indicate a loss of balance. 4. The trajectory is stable, showing no erratic or sudden movements that are typical in a fall scenario. 5. The max velocity is very low (0.023), and there is no velocity spike, suggesting controlled and deliberate movement rather than a fall.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body posture",
+      "Stable/slow movement",
+      "Stable trajectory",
+      "Low max velocity with no spike"
+    ],
+    "llm_explanation": "The consistent upright posture, stable movement, and lack of sudden changes in height or velocity strongly indicate normal activity rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_038_w0001",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is upright and stable, indicating normal activity. 2. In Frame 2, the person remains at medium height but shows rapid movement with a velocity of 0.622, and flags indicate rapid descent and on ground, suggesting a potential fall. 3. In Frame 3, the person is now horizontal and still at medium height, with a negative velocity indicating a stop or slight movement on the ground, confirming the person is lying down. 4. The trajectory shows a descending pattern, and the presence of a velocity spike further supports the occurrence of a fall.",
+    "llm_indicators": [
+      "Rapid descent flag in Frame 2",
+      "On ground flag in Frames 2 and 3",
+      "Horizontal body position in Frame 3",
+      "Descending trajectory",
+      "Velocity spike"
+    ],
+    "llm_explanation": "The combination of rapid descent, on ground status, horizontal position, and velocity spike strongly indicates a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_061_w0007",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is at a medium height with a body tilt of 62\u00b0, indicating a slight lean but maintaining an upright posture with stable and slow movement. This suggests normal activity. 2. In Frame 2, the body tilt decreases to 56\u00b0, and there is a rapid movement with a velocity of 0.112, indicating a transition in posture. However, the person remains at medium height, which suggests they are not falling. 3. In Frame 3, the body tilt further decreases to 49\u00b0, with a rapid movement and a velocity of -0.129, still indicating a transition. The medium height is maintained, and there is no significant velocity spike. 4. The trajectory is stable, and the maximum velocity recorded is 0.153, which is not indicative of a fall.",
+    "llm_indicators": [
+      "Medium height maintained throughout",
+      "Decreasing body tilt",
+      "Rapid movement without a velocity spike",
+      "Stable trajectory"
+    ],
+    "llm_explanation": "The consistent medium height, decreasing tilt, and lack of a velocity spike suggest normal transitional movement rather than a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_073_w0010",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is near the ground with a significant body tilt of 66\u00b0, indicating a potential fall. The rapid movement and the ON_GROUND flag suggest a sudden change in position. 2. Frame 2 shows the person still near the ground with a slight decrease in tilt to 65\u00b0, but the presence of the RAPID_DESCENT flag and increased velocity (0.152) indicate a continuation of a downward motion, consistent with falling. 3. In Frame 3, the tilt decreases further to 52\u00b0, and the person remains near the ground with rapid movement, suggesting they have not yet stabilized or returned to a normal posture. 4. The trajectory is stable, but the presence of a velocity spike and the maximum velocity of 0.307 support the occurrence of a rapid, uncontrolled movement typical of a fall.",
+    "llm_indicators": [
+      "ON_GROUND flag in all frames",
+      "RAPID_DESCENT flag in Frame 2",
+      "Significant body tilt in all frames",
+      "Rapid movement with velocity spike",
+      "Transitioning posture without stabilization"
+    ],
+    "llm_explanation": "The combination of being near the ground, significant body tilt, rapid movement, and the presence of fall-specific flags strongly indicates a fall event."
+  },
+  {
+    "window_id": "urfd_fall-29-cam0_w0013",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "low",
+    "llm_reasoning": " 1. The sequence consists of three frames where the pose is not detected, indicating a lack of data to analyze body position or movement. 2. The trajectory is unknown, which means there is no information on the direction or change in position of the subject. 3. The max velocity is 0.000, suggesting no movement was detected during the frames. 4. There is no velocity spike, indicating no sudden or rapid movement was captured.",
+    "llm_indicators": [
+      "Pose not detected in all frames",
+      "Unknown trajectory",
+      "Max velocity of 0.000",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The absence of pose data and movement information makes it impossible to determine if a fall occurred, but there is no evidence of a fall."
+  },
+  {
+    "window_id": "gmncsa24_gmncsa_fall_021_w0048",
+    "true_label": "fall",
+    "predicted": "fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person is consistently LOW and HORIZONTAL across all frames, indicating they are lying down. 2. The posture is marked as \"fallen\" in each frame, suggesting a non-upright position. 3. The movement is stable and slow, with no significant changes in position or velocity, indicating no attempt to get up or move significantly. 4. The trajectory is stable, and there is no velocity spike, which means there was no sudden movement that could indicate a fall or an attempt to recover from a fall.",
+    "llm_indicators": [
+      "ON_GROUND flag in all frames",
+      "HORIZONTAL body position in all frames",
+      "Stable trajectory and low max velocity",
+      "No velocity spike"
+    ],
+    "llm_explanation": "The consistent low, horizontal position with stable, slow movement and no recovery attempts strongly indicates a fall has occurred."
+  },
+  {
+    "window_id": "le2i_CR02_video_50_fall_w0030",
+    "true_label": "fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. In Frame 1, the person is near the ground but maintains an upright posture with stable and slow movement, indicating a controlled position rather than a fall. 2. Frame 2 shows a rapid movement while the person remains upright and near the ground. The velocity is negative, suggesting a quick adjustment or movement, but the upright posture is maintained. 3. Frame 3 returns to stable and slow movement with the person still upright and near the ground, indicating a return to stability. 4. The trajectory is stable throughout the sequence, and there is no significant velocity spike, which typically accompanies a fall. 5. The consistent upright posture and lack of erratic movement suggest the person is intentionally near the ground, possibly sitting or crouching.",
+    "llm_indicators": [
+      "Upright posture maintained throughout",
+      "Stable trajectory",
+      "No significant velocity spike",
+      "Consistent low position near the ground"
+    ],
+    "llm_explanation": "The person maintains an upright posture with stable movement, indicating controlled activity rather than a fall."
+  },
+  {
+    "window_id": "le2i_H01_video_29_adl_w0000",
+    "true_label": "no_fall",
+    "predicted": "no_fall",
+    "confidence": "high",
+    "llm_reasoning": " 1. The person maintains a MEDIUM height throughout all frames, indicating no sudden drop or change in elevation that would suggest a fall. 2. The body remains VERTICAL (upright) in all frames, which is consistent with a stable and controlled posture, not typical of a fall. 3. The movement is described as stable/slow, with no sudden or erratic changes, further suggesting controlled movement. 4. The posture is consistently described as transitioning, which implies a deliberate change in position rather than an uncontrolled fall. 5. The trajectory is stable, indicating no abrupt changes in direction or speed. 6. The max velocity is very low (0.010), and there is no velocity spike, both of which are inconsistent with the dynamics of a fall.",
+    "llm_indicators": [
+      "Consistent MEDIUM height",
+      "VERTICAL (upright) body position",
+      "Stable/slow movement",
+      "No velocity spike",
+      "Stable trajectory"
+    ],
+    "llm_explanation": "The consistent upright posture, stable movement, and lack of sudden changes in velocity or trajectory strongly indicate normal activity rather than a fall."
+  }
+]

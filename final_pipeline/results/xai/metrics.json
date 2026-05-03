@@ -1,0 +1,33 @@
+{
+  "sample_metrics": {
+    "confusion_matrix": {
+      "TP": 12,
+      "TN": 24,
+      "FP": 1,
+      "FN": 13
+    },
+    "fall": {
+      "precision": 0.9231,
+      "recall": 0.48,
+      "f1": 0.6316,
+      "support": 25
+    },
+    "no_fall": {
+      "precision": 0.6486,
+      "recall": 0.96,
+      "f1": 0.7742,
+      "support": 25
+    },
+    "overall": {
+      "accuracy": 0.72,
+      "macro_f1": 0.7029,
+      "total_samples": 50
+    }
+  },
+  "confidence_distribution": {
+    "medium": 5,
+    "high": 37,
+    "low": 8
+  },
+  "sample_size": 50
+}

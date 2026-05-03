@@ -1,8 +1,10 @@
-# Fall Detection - Comprehensive Evaluation Report
+# GenAI Fall Detection - Comprehensive Evaluation Report
 
 ## Executive Summary
 
-This report details the evaluation of multiple GenAI prompting strategies for fall detection using sliding window temporal reasoning on pose estimation data.
+This report presents a complete evaluation of multiple GenAI prompting strategies for fall detection using sliding window temporal reasoning on pose estimation data.
+
+**Key Achievement**: **97.9% video-level fall recall** with Best Prompt (Safety-First) strategy on Val+Test combined dataset.
 
 ---
 
@@ -16,8 +18,7 @@ This report details the evaluation of multiple GenAI prompting strategies for fa
 | GMNCSA24 | 160 | Fall detection dataset from GitHub |
 | **Total** | **419** | Combined multimodal dataset |
 
-### 1.2 Data Splits
-
+### 1.2 Data Splits (After Balancing)
 | Split | Fall Videos | No-Fall Videos | Total Videos | Fall Windows | No-Fall Windows | Total Windows |
 |-------|-------------|----------------|--------------|--------------|-----------------|---------------|
 | **Train** | 111 | 149 | 260 | 660 | 645 | 1,305 |
@@ -52,84 +53,71 @@ This report details the evaluation of multiple GenAI prompting strategies for fa
 
 ---
 
-## 3. Prompting Strategies Evaluated
+## 3. GenAI Techniques Implemented
 
-### 3.1 Data Usage Per Strategy
+### 3.1 Prompting Strategies (4 Required)
+| # | Strategy | Description | Model |
+|---|----------|-------------|-------|
+| 1 | **Zero-Shot** | Direct classification without examples | GPT-4o-mini |
+| 2 | **Few-Shot** | 6 examples (3 fall + 3 no-fall) from training | GPT-4o-mini |
+| 3 | **Chain-of-Thought** | Step-by-step reasoning before decision | GPT-4o-mini |
+| 4 | **Self-Consistency** | 5 samples with majority voting | GPT-4o-mini |
 
-| Strategy | Training Examples | Evaluation Data | Model |
-|----------|-------------------|-----------------|-------|
-| Zero-Shot | 0 | Test (272 windows, 57 videos) | GPT-4o-mini |
-| Few-Shot | 6 (from train) | Test (272 windows, 57 videos) | GPT-4o-mini |
-| Chain-of-Thought | 0 | Test (272 windows, 57 videos) | GPT-4o-mini |
-| Self-Consistency | 0 (5 samples/window) | Test (272 windows, 57 videos) | GPT-4o-mini |
-| Enhanced Few-Shot | 8 (from train) | Test (272 windows, 57 videos) | GPT-4o |
-| Enhanced v2 | 6 (from train) | Test (272 windows, 57 videos) | GPT-4o |
-| **Best Prompt (Safety)** | 0 | Test (272 windows, 57 videos) | GPT-4o |
-| **RAG** | 1,305 KB entries | Val+Test (577 windows, 115 videos) | GPT-4o |
+### 3.2 RAG Pipeline
+| Component | Details |
+|-----------|---------|
+| **Knowledge Base** | 1,305 training windows embedded |
+| **Embedding Model** | text-embedding-3-small |
+| **Retrieval** | Top-4 similar (balanced 2 fall + 2 no-fall) |
+| **Similarity** | Cosine similarity |
+| **Classification** | GPT-4o with retrieved context |
 
-### 3.2 Strategy Descriptions
+### 3.3 Fine-Tuning (LoRA)
+| Component | Details |
+|-----------|---------|
+| **Base Model** | gpt-4o-mini-2024-07-18 |
+| **Training Data** | 1,305 windows from training set |
+| **Status** | Validating files (OpenAI processing) |
 
-#### Zero-Shot Prompting
-- **Approach**: Direct classification without examples
-- **Prompt**: Basic fall detection instructions
-- **Aggregation**: Majority voting at video level
-
-#### Few-Shot Prompting  
-- **Approach**: 3 fall + 3 no-fall examples from training set
-- **Example Selection**: Random from middle of fall videos
-- **Aggregation**: Majority voting
-
-#### Chain-of-Thought (CoT)
-- **Approach**: Step-by-step reasoning before decision
-- **Steps**: Position analysis → Motion analysis → Posture progression → Decision
-- **Aggregation**: Majority voting
-
-#### Self-Consistency
-- **Approach**: 5 samples per window with temperature=0.7
-- **Decision**: Majority vote across 5 samples
-- **Aggregation**: Majority voting at video level
-
-#### Enhanced Few-Shot (GPT-4o)
-- **Approach**: Rich textual descriptions instead of raw numbers
-- **Model**: GPT-4o (more capable)
-- **Examples**: 4 fall + 4 no-fall with detailed explanations
-
-#### Best Prompt (Safety-First)
-- **Approach**: Prioritize recall over precision
-- **Threshold**: 25% fall windows → video classified as fall
-- **Design**: Explicit safety-critical framing
-
-#### RAG (Retrieval-Augmented Generation)
-- **Approach**: Build knowledge base from training data using embeddings
-- **Knowledge Base**: 1,305 training windows embedded with `text-embedding-3-small`
-- **Retrieval**: Top-4 similar examples (balanced 2 fall + 2 no-fall) using cosine similarity
-- **Model**: GPT-4o with retrieved examples as context
-- **Aggregation**: 25% threshold at video level
+### 3.4 Explainable AI (XAI)
+| Component | Details |
+|-----------|---------|
+| **Feature Interpretation** | Converts pose data to human-readable text |
+| **Reasoning** | Step-by-step LLM analysis |
+| **Confidence** | HIGH/MEDIUM/LOW with explanation |
+| **Output** | Full reasoning trace for each prediction |
 
 ---
 
-## 4. Results Summary
+## 4. Evaluation Results
 
 ### 4.1 Test Set Results (272 windows, 57 videos)
 
-| Strategy | Window Acc | Window Recall | Video Acc | Video Recall | Video F1 |
-|----------|------------|---------------|-----------|--------------|----------|
-| Zero-Shot | 65.4% | 22.9% | 66.7% | 20.8% | 0.561 |
-| Few-Shot | 60.7% | 48.3% | 66.7% | 58.3% | 0.656 |
-| Chain-of-Thought | 60.5% | 39.1% | 66.7% | 29.2% | 0.595 |
-| Self-Consistency | 66.2% | 45.8% | 70.2% | 41.7% | 0.660 |
-| Enhanced (GPT-4o) | 73.9% | 55.1% | 75.4% | 41.7% | 0.707 |
-| Enhanced v2 | 69.9% | 84.8% | 68.4% | 87.5% | 0.683 |
-| **Best Prompt** | 67.3% | **92.4%** | 57.9% | **95.8%** | 0.556 |
+| Strategy | Window Acc | Window Recall | Video Acc | Video Recall |
+|----------|------------|---------------|-----------|--------------|
+| Zero-Shot | 65.4% | 22.9% | 66.7% | 20.8% |
+| Few-Shot | 60.7% | 48.3% | 66.7% | 58.3% |
+| Chain-of-Thought | 60.5% | 39.1% | 66.7% | 29.2% |
+| Self-Consistency | 66.2% | 45.8% | 70.2% | 41.7% |
+| Enhanced (GPT-4o) | 73.9% | 55.1% | 75.4% | 41.7% |
+| **Best Prompt** | 67.3% | **92.4%** | 57.9% | **95.8%** |
 
-### 4.2 RAG Results (Val+Test: 577 windows, 115 videos)
+### 4.2 Val+Test Combined Results (577 windows, 115 videos)
 
-| Level | Accuracy | Fall Recall | Fall Precision | No-Fall Recall | Macro F1 |
-|-------|----------|-------------|----------------|----------------|----------|
-| **Window** | 71.4% | 64.8% | 73.4% | 77.7% | 71.2% |
-| **Video** | 67.8% | **85.4%** | 57.8% | 55.2% | 67.8% |
+| Strategy | Window Acc | Window Recall | Video Acc | Video Recall |
+|----------|------------|---------------|-----------|--------------|
+| **RAG Pipeline** | 71.4% | 64.8% | 67.8% | **85.4%** |
+| **Best Prompt** | ~68% | ~81% | ~58% | **97.9%** |
 
-**RAG Confusion Matrix (Video-Level)**:
+### 4.3 Best Prompt Confusion Matrix (Val+Test Video-Level)
+```
+                 Predicted
+                 FALL    NO_FALL
+  Actual FALL      47       1      (97.9% recall - only 1 miss!)
+  Actual NO_FALL   47      20      (29.9% specificity)
+```
+
+### 4.4 RAG Pipeline Confusion Matrix (Val+Test Video-Level)
 ```
                  Predicted
                  FALL    NO_FALL
@@ -137,167 +125,164 @@ This report details the evaluation of multiple GenAI prompting strategies for fa
   Actual NO_FALL   30      37      (55.2% specificity)
 ```
 
-- **41 out of 48 fall videos detected** using RAG
-- Retrieval-based approach provides explainable context
+---
 
-### 4.3 Key Findings
+## 5. XAI Explanations
 
-1. **Highest Accuracy**: Enhanced Few-Shot (GPT-4o) at 75.4% video accuracy
-2. **Highest Recall**: Best Prompt (Safety) at 97.9% video recall (Val+Test)
-3. **Best RAG Performance**: 85.4% video recall with explainable retrieval
-4. **Best Balanced**: RAG at 67.8% accuracy, 85.4% recall
+### 5.1 Sample Evaluation (50 windows)
+| Metric | Value |
+|--------|-------|
+| Accuracy | 72.0% |
+| Fall Recall | 48.0% |
+| Confidence Distribution | High: 74%, Medium: 10%, Low: 16% |
 
-### 4.4 Accuracy vs Recall Trade-off
+### 5.2 Explanation Structure
+```
+============================================================
+FALL DETECTION ANALYSIS
+============================================================
 
+### Frame-by-Frame Analysis ###
+  Frame 1: Person is at MEDIUM height, Body is VERTICAL (upright)
+  Frame 2: Person is LOW (near ground), Body is HORIZONTAL [ON_GROUND]
+  Frame 3: Person is LOW, Body is HORIZONTAL, Posture: fallen
+
+### FALL Indicators Detected ###
+  [!] Frame 2: Low position (hip_y=0.78)
+  [!] Frame 2: Horizontal body (angle=32°)
+  [!] Frame 2: Person on ground
+  [!] Frame 3: Rapid descent detected
+
+### Decision Reasoning ###
+  Fall indicators: 4
+  Normal indicators: 1
+
+  DECISION: FALL DETECTED
+  Confidence: 90.0%
+  Reason: Multiple strong fall indicators detected
+============================================================
+```
+
+---
+
+## 6. Technique Comparison
+
+### 6.1 Accuracy vs Recall Trade-off
 ```
 High Recall (Safety-Critical):
-  Best Prompt → 97.9% recall, 58.3% accuracy (Val+Test)
-  Enhanced v2 → 87.5% recall, 68.4% accuracy
+  Best Prompt  → 97.9% recall, 58.3% accuracy
+  RAG Pipeline → 85.4% recall, 67.8% accuracy
 
 High Accuracy:
-  Enhanced (GPT-4o) → 75.4% accuracy, 41.7% recall
-  Self-Consistency → 70.2% accuracy, 41.7% recall
+  Enhanced GPT-4o → 75.4% accuracy, 41.7% recall
 
-Balanced with RAG:
-  RAG Pipeline → 85.4% recall, 67.8% accuracy (with explainable retrieval)
+Balanced:
+  RAG Pipeline → Best balance with explainability
+```
+
+### 6.2 Summary Comparison Table
+
+| Strategy | Video Recall | Video Accuracy | Key Advantage |
+|----------|--------------|----------------|---------------|
+| Zero-Shot | 20.8% | 66.7% | Baseline, no examples needed |
+| Few-Shot | 58.3% | 66.7% | Simple, uses examples |
+| CoT | 29.2% | 66.7% | Interpretable reasoning |
+| Self-Consistency | 41.7% | 70.2% | Robust via voting |
+| Enhanced GPT-4o | 41.7% | **75.4%** | Highest accuracy |
+| **RAG** | **85.4%** | 67.8% | Explainable + balanced |
+| **Best Prompt** | **97.9%** | 58.3% | **Highest recall** |
+
+---
+
+## 7. RAG Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    RAG Fall Detection                        │
+├─────────────────────────────────────────────────────────────┤
+│  KNOWLEDGE BASE (Training Data)                              │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │  1,305 windows → Feature Text → Embeddings          │    │
+│  │  Balanced: 660 fall + 645 no-fall examples          │    │
+│  └─────────────────────────────────────────────────────┘    │
+├─────────────────────────────────────────────────────────────┤
+│  INFERENCE                                                   │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │  Query Window → Embedding → Cosine Similarity       │    │
+│  │  Retrieve Top-4 Similar (2 fall + 2 no-fall)        │    │
+│  │  Build RAG Prompt with Retrieved Examples           │    │
+│  │  GPT-4o Classification with Context                 │    │
+│  └─────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 5. Video-Level Aggregation
+## 8. Conclusions
 
-### 5.1 Aggregation Strategies Tested
-| Strategy | Description | Best Use Case |
-|----------|-------------|---------------|
-| Majority (>50%) | Standard voting | Balanced |
-| Any | Any fall window = fall | Maximum recall |
-| Threshold 20% | ≥20% fall windows = fall | High recall |
-| Threshold 25% | ≥25% fall windows = fall | Good recall |
-| Consecutive 2 | 2+ consecutive falls = fall | Reduce false positives |
+### 8.1 For Safety-Critical Applications (Elderly Care)
+- **Recommended**: Best Prompt (Safety-First) with 25% threshold
+- **Result**: 97.9% fall recall (misses only 1 in 48 falls)
+- **Trade-off**: More false alarms, but acceptable for safety
 
-### 5.2 Best Configuration
-- **Best Recall**: Threshold 20-25% with Safety prompt → 95.8% recall
-- **Best Accuracy**: Majority voting with Enhanced prompt → 75.4% accuracy
-
----
-
-## 6. Model Comparison
-
-| Model | Cost | Speed | Best Accuracy | Best Recall |
-|-------|------|-------|---------------|-------------|
-| GPT-4o-mini | Low | Fast | 70.2% | 45.8% |
-| GPT-4o | High | Slower | 75.4% | 95.8% |
-
-**Recommendation**: GPT-4o for production (better reasoning capability)
-
----
-
-## 7. Conclusions
-
-### 7.1 For Safety-Critical Applications (Elderly Care)
-- **Use**: Best Prompt (Safety-First) with 25% threshold
-- **Result**: 97.9% fall recall (miss only 1 in 48 falls on Val+Test)
-- **Trade-off**: More false alarms acceptable
-
-### 7.2 For Balanced Applications with Explainability
-- **Use**: RAG Pipeline with semantic retrieval
+### 8.2 For Balanced Applications with Explainability
+- **Recommended**: RAG Pipeline
 - **Result**: 85.4% recall, 67.8% accuracy
-- **Trade-off**: Good balance with explainable similar cases
+- **Advantage**: Explains decisions via similar cases
 
-### 7.3 For Highest Accuracy
-- **Use**: Enhanced Few-Shot with GPT-4o
-- **Result**: 75.4% accuracy, 41.7% recall
-- **Trade-off**: Some falls may be missed
+### 8.3 For Highest Accuracy
+- **Recommended**: Enhanced Few-Shot with GPT-4o
+- **Result**: 75.4% accuracy
+- **Trade-off**: Some falls may be missed (41.7% recall)
 
-### 7.4 Key Insights
-1. **Prompt design matters**: Safety-first framing dramatically improves recall
-2. **Rich descriptions help**: Converting numbers to text improves LLM understanding
-3. **RAG provides explainability**: Retrieved similar cases explain decisions
-4. **Aggregation threshold is key**: Lower thresholds catch more falls
+### 8.4 Key Insights
+1. **Prompt design matters**: Safety-first framing improves recall dramatically
+2. **RAG provides explainability**: Retrieved similar cases explain decisions
+3. **Rich text descriptions help**: Converting numbers to natural language improves LLM understanding
+4. **Aggregation threshold is key**: Lower thresholds (25%) catch more falls
 5. **GPT-4o outperforms GPT-4o-mini**: Worth the extra cost for safety applications
 
 ---
 
-## 8. Validation + Test Combined Results
+## 9. Project Completion Status
 
-### 8.1 Best Prompt Strategy on Val + Test (577 windows, 115 videos)
-
-| Split | Windows | Videos | Window Recall | Video Recall | Video Accuracy |
-|-------|---------|--------|---------------|--------------|----------------|
-| Validation | 305 | 58 | 71.2% | **100%** | 58.6% |
-| Test | 272 | 57 | 92.4% | 95.8% | 57.9% |
-| **Combined** | **577** | **115** | **80.9%** | **97.9%** | **58.3%** |
-
-### 8.2 Combined Confusion Matrix (Video-Level)
-
-```
-                 Predicted
-                 FALL    NO_FALL
-  Actual FALL      47       1      (97.9% recall)
-  Actual NO_FALL   47      20      (29.9% specificity)
-```
-
-### 8.3 Key Result
-- **47 out of 48 fall videos detected** (97.9% recall)
-- Only **1 fall missed** across entire Val+Test set
-- For safety-critical elderly monitoring: **This is excellent performance**
+| Requirement | Status | Details |
+|-------------|--------|---------|
+| 4 Prompting Strategies | ✅ Complete | Zero-Shot, Few-Shot, CoT, Self-Consistency |
+| RAG Pipeline | ✅ Complete | 1,305 examples, semantic retrieval |
+| LoRA Fine-Tuning | ⏳ Processing | Job submitted, validating files |
+| Explainable AI | ✅ Complete | XAI with reasoning traces |
+| Data Pipeline | ✅ Complete | 419 videos, 1,882 windows |
+| Evaluation | ✅ Complete | All techniques on Test, key ones on Val+Test |
+| Documentation | ✅ Complete | README, Proposal, Architecture, Report |
 
 ---
 
-## 9. RAG Pipeline Details
+## 10. Files and Scripts
 
-### 9.1 Architecture
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   RAG Fall Detection                        │
-├─────────────────────────────────────────────────────────────┤
-│  KNOWLEDGE BASE (Training Data)                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │  1,305 windows → Feature Extraction → Text          │   │
-│  │  Text → OpenAI text-embedding-3-small → Embeddings  │   │
-│  │  Balanced: 660 fall + 645 no-fall examples          │   │
-│  └─────────────────────────────────────────────────────┘   │
-├─────────────────────────────────────────────────────────────┤
-│  INFERENCE                                                  │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │  Query Window → Embedding → Cosine Similarity       │   │
-│  │  Retrieve Top-4 Similar (2 fall + 2 no-fall)        │   │
-│  │  Build RAG Prompt with Retrieved Examples           │   │
-│  │  GPT-4o Classification with Context                 │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+### 10.1 Main Scripts
+| Script | Purpose |
+|--------|---------|
+| `balanced_pipeline.py` | Data processing and window generation |
+| `zero_shot.py` | Zero-shot baseline |
+| `few_shot.py` | Few-shot with examples |
+| `chain_of_thought.py` | CoT reasoning |
+| `self_consistency.py` | Multi-sample voting |
+| `rag_fall_detection.py` | RAG pipeline |
+| `lora_finetune.py` | LoRA fine-tuning |
+| `xai_explanations.py` | Explainable AI |
+| `best_prompt.py` | Safety-first prompting |
 
-### 9.2 Benefits of RAG
-1. **Explainable**: Shows similar cases that informed the decision
-2. **Dynamic**: Retrieves relevant examples for each query
-3. **Balanced**: Ensures both fall and no-fall examples in context
-4. **Scalable**: Knowledge base can be updated with new data
-
----
-
-## 10. Pending Evaluations
-
-- [x] Validation + Test combined evaluation ✓
-- [x] RAG pipeline ✓
-- [ ] LoRA fine-tuning (job submitted, validating files)
-- [ ] XAI explanations (reasoning extraction)
-
----
-
-## 11. Summary Comparison Table
-
-| Strategy | Approach | Video Recall | Video Accuracy | Key Advantage |
-|----------|----------|--------------|----------------|---------------|
-| Zero-Shot | No examples | 20.8% | 66.7% | Baseline |
-| Few-Shot | Static examples | 58.3% | 66.7% | Simple |
-| CoT | Step reasoning | 29.2% | 66.7% | Interpretable |
-| Self-Consistency | Multiple samples | 41.7% | 70.2% | Robust |
-| Enhanced (GPT-4o) | Rich text | 41.7% | **75.4%** | Highest accuracy |
-| **RAG** | Semantic retrieval | **85.4%** | 67.8% | Explainable + balanced |
-| **Best Prompt** | Safety-first | **97.9%** | 58.3% | Highest recall |
+### 10.2 Data Files
+| Directory | Contents |
+|-----------|----------|
+| `data/windows/` | 1,882 sliding window JSONs |
+| `data/metadata/` | Ground truth labels |
+| `data/manifests/` | Video manifests |
+| `data/poses/` | Extracted pose features |
 
 ---
 
 *Report generated: May 2, 2026*
 *Project: GenAI-Based Multimodal Fall Detection using Sliding Window Temporal Reasoning*
+*Repository: https://github.com/Ramreddy2748/Gen_AI_Project*
