@@ -1,0 +1,60 @@
+{
+  "window_level": {
+    "confusion_matrix": {
+      "TP": 60,
+      "TN": 110,
+      "FP": 44,
+      "FN": 58
+    },
+    "fall": {
+      "precision": 0.5769,
+      "recall": 0.5085,
+      "f1": 0.5405,
+      "support": 118
+    },
+    "no_fall": {
+      "precision": 0.6548,
+      "recall": 0.7143,
+      "f1": 0.6832,
+      "support": 154
+    },
+    "overall": {
+      "accuracy": 0.625,
+      "macro_f1": 0.6119,
+      "total_samples": 272
+    }
+  },
+  "video_level": {
+    "confusion_matrix": {
+      "TP": 15,
+      "TN": 22,
+      "FP": 11,
+      "FN": 9
+    },
+    "fall": {
+      "precision": 0.5769,
+      "recall": 0.625,
+      "f1": 0.6,
+      "support": 24
+    },
+    "no_fall": {
+      "precision": 0.7097,
+      "recall": 0.6667,
+      "f1": 0.6875,
+      "support": 33
+    },
+    "overall": {
+      "accuracy": 0.6491,
+      "macro_f1": 0.6438,
+      "total_samples": 57
+    }
+  },
+  "config": {
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com",
+    "split": "test",
+    "num_examples": 6,
+    "aggregation": "majority"
+  }
+}
