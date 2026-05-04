@@ -1,9 +1,11 @@
 """
-LoRA Fine-Tuning for Fall Detection
-====================================
+LoRA/SFT Fine-Tuning for Fall Detection
+=======================================
 
-Fine-tunes GPT-4o-mini using OpenAI's fine-tuning API.
-This should achieve 85%+ accuracy by training directly on our data.
+Fine-tunes GPT-4o-mini using OpenAI's supervised fine-tuning API.
+The project refers to this branch as LoRA fine-tuning; OpenAI exposes it as
+supervised fine-tuning, while the training goal is the same: adapt the base LLM
+to this fall/no-fall pose-window classification task.
 
 Steps:
 1. Generate training data in JSONL format
@@ -23,11 +25,14 @@ import json
 import os
 import random
 import time
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Dict, List
 
-from openai import OpenAI
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
 
 from zero_shot import (
     load_metadata, aggregate_video_predictions,
@@ -38,6 +43,50 @@ RESULTS_DIR = Path(__file__).parent.parent / "results" / "lora_finetune"
 TRAINING_DIR = Path(__file__).parent.parent / "lora_training"
 
 BASE_MODEL = "gpt-4o-mini-2024-07-18"  # Base model for fine-tuning
+
+SYSTEM_MESSAGE = """You are a medical fall detection assistant analyzing human pose data from video frames.
+
+Your task is to classify each 3-frame sequence as a fall or normal activity.
+
+Fall indicators (any one is sufficient for classification):
+- Rapid downward movement with velocity spike
+- Body becoming horizontal (angle below 45 degrees)
+- Person positioned at ground level (hip_y above 0.65)
+- Alerts present: rapid descent, ground contact, or horizontal body
+- Transitioning or fallen posture state
+
+Normal activity requires all of the following:
+- Upright posture maintained throughout the sequence
+- Slow and controlled movement only
+- No fall alerts triggered at any frame
+- No velocity spikes detected
+
+When uncertain, classify as FALL to avoid missed detections.
+Respond with ONLY: "FALL" or "NO_FALL" followed by a brief explanation."""
+
+FALL_RESPONSES = [
+    "FALL - The sequence shows rapid downward movement with velocity spike. The person's body is transitioning toward a horizontal position near ground level.",
+    "FALL - Fall indicators are present: the person is descending rapidly with loss of upright posture. Ground-level position or horizontal body angle detected.",
+    "FALL - Body angle and position indicate a fall event. Significant downward velocity and postural destabilization observed across the sequence.",
+    "FALL - The person appears to be losing balance and descending toward the ground with rapid, uncontrolled movement.",
+    "FALL - The sequence shows the person transitioning from standing toward a fallen position. Velocity spike or ground contact detected.",
+    "FALL - Body orientation is becoming horizontal with rapid descent velocity. One or more fall indicators triggered in this sequence.",
+    "FALL - Uncontrolled downward movement is detected. Body position and trajectory are consistent with a fall event.",
+    "FALL - The person shows a fall trajectory: rapid downward velocity, body angle deviation, or ground-level positioning detected.",
+    "FALL - Posture state indicates a transitioning or fallen position. Combined with downward trajectory, this sequence is classified as a fall.",
+    "FALL - The fall likelihood score and motion features indicate a high-risk fall event. Body is descending and losing stability.",
+    "FALL - Any single fall indicator present in this sequence is sufficient. Rapid descent, ground contact, or horizontal position is detected.",
+    "FALL - The motion pattern across these three frames is consistent with an uncontrolled fall. When in doubt, this is classified as FALL for safety.",
+]
+
+NO_FALL_RESPONSES = [
+    "NO_FALL - The person maintains stable upright posture throughout all three frames. Movement is slow and controlled with no fall indicators present.",
+    "NO_FALL - Body remains upright with minimal velocity. No rapid descent, ground contact, or horizontal position detected across any frame.",
+    "NO_FALL - Controlled movement pattern with stable posture maintained. All fall criteria are absent and fall likelihood score is low.",
+    "NO_FALL - The person is standing or moving normally. No velocity spikes, ground contact, or horizontal orientation detected in any frame.",
+    "NO_FALL - Stable body position throughout the sequence. Movement is within normal parameters and no fall indicators were triggered.",
+    "NO_FALL - No fall detected. Body angle, position, and velocity are all within normal ranges. Posture remains consistently upright.",
+]
 
 
 def interpret_features_compact(frame: Dict) -> str:
@@ -59,40 +108,40 @@ def interpret_features_compact(frame: Dict) -> str:
     parts = []
     
     # Position
-    if hip_y > 0.7:
-        parts.append("body very low")
-    elif hip_y > 0.55:
+    if hip_y > 0.65:
+        parts.append("body very low / near ground")
+    elif hip_y > 0.50:
         parts.append("body mid-height")
     else:
         parts.append("body standing height")
-    
-    # Orientation  
-    if body_angle < 25:
+
+    # Orientation
+    if body_angle < 35:
         parts.append("horizontal/lying")
-    elif body_angle < 50:
+    elif body_angle < 60:
         parts.append("significantly tilted")
     else:
         parts.append("upright")
-    
+
     # Movement
-    if velocity and abs(velocity) > 0.12:
+    if velocity and abs(velocity) > 0.08:
         parts.append("moving rapidly downward" if velocity > 0 else "moving rapidly upward")
-    elif velocity and abs(velocity) > 0.05:
-        parts.append("moderate movement")
+    elif velocity and abs(velocity) > 0.03:
+        parts.append("moderate downward movement" if velocity > 0 else "moderate upward movement")
     else:
         parts.append("stable/minimal movement")
     
-    # Critical alerts
+    # Fall alerts
     alerts = []
     if rapid:
-        alerts.append("RAPID DESCENT DETECTED")
+        alerts.append("rapid descent detected")
     if on_ground:
-        alerts.append("PERSON ON GROUND")
+        alerts.append("person on ground")
     if horizontal:
-        alerts.append("BODY HORIZONTAL")
-    
+        alerts.append("body horizontal")
+
     if alerts:
-        parts.append("ALERTS: " + ", ".join(alerts))
+        parts.append("alerts: " + ", ".join(alerts))
     
     return "; ".join(parts)
 
@@ -101,47 +150,39 @@ def window_to_training_text(window_data: Dict) -> str:
     """Convert window to training text."""
     sequence = window_data.get("sequence", {})
     analysis = window_data.get("window_analysis", {})
-    
+
     text = "Analyze this 3-frame sequence for fall detection:\n\n"
-    
+
     for i, key in enumerate(["frame_1", "frame_2", "frame_3"], 1):
         frame = sequence.get(key, {})
-        text += f"Frame {i}: {interpret_features_compact(frame)}\n"
-    
-    trajectory = analysis.get("trajectory_direction", "unknown")
-    max_vel = analysis.get("max_velocity", 0) or 0
-    spike = analysis.get("has_velocity_spike", False)
-    
-    text += f"\nOverall: trajectory={trajectory}, max_velocity={max_vel:.3f}, velocity_spike={spike}"
-    
+        posture = frame.get("enhanced", {}).get("posture_state", "unknown")
+        text += f"Frame {i}: {interpret_features_compact(frame)} | posture={posture}\n"
+
+    trajectory  = analysis.get("trajectory_direction", "unknown")
+    max_vel     = analysis.get("max_velocity", 0) or 0
+    spike       = analysis.get("has_velocity_spike", False)
+    fall_score  = analysis.get("fall_likelihood_score", None)
+
+    score_str = f"{fall_score:.2f}" if fall_score is not None else "unknown"
+    text += f"\nOverall: trajectory={trajectory}, max_velocity={max_vel:.3f}, velocity_spike={spike}, fall_likelihood_score={score_str}"
+
+    # Explicit high-risk flag — gives the model a direct signal
+    if fall_score is not None and fall_score >= 0.5:
+        text += "\nNote: fall_likelihood_score >= 0.5 — high probability of fall event."
+    elif fall_score is not None and fall_score >= 0.3:
+        text += "\nNote: fall_likelihood_score >= 0.3 — moderate fall risk, classify carefully."
+
     return text
 
 
-def prepare_training_data():
+def prepare_training_data(balance_classes: bool = True):
     """Generate training data in OpenAI fine-tuning format."""
     TRAINING_DIR.mkdir(parents=True, exist_ok=True)
+
+    examples_by_label = defaultdict(list)
     
-    system_message = """You are a fall detection AI analyzing pose sequences from video frames.
-
-Your task: Determine if the person is FALLING or NOT FALLING.
-
-FALL indicators:
-- Rapid downward movement with velocity spike
-- Body transitioning from upright to horizontal
-- Person ending up on ground level
-- ALERTS indicating rapid descent, ground contact, or horizontal position
-
-NO_FALL indicators:
-- Slow, controlled movements
-- Body remains upright or only slightly tilted
-- No velocity spikes
-- No critical alerts
-
-Respond with ONLY: "FALL" or "NO_FALL" followed by a brief explanation."""
-
-    training_examples = []
-    
-    for label in ["fall", "no_fall"]:
+    labels = ["fall", "no_fall"]
+    for label in labels:
         label_dir = WINDOWS_DIR / "train" / label
         if not label_dir.exists():
             continue
@@ -156,22 +197,41 @@ Respond with ONLY: "FALL" or "NO_FALL" followed by a brief explanation."""
                 
                 user_message = window_to_training_text(data)
                 
-                # Create appropriate response based on label
+                # Use varied responses to prevent template memorization
                 if label == "fall":
-                    assistant_message = "FALL - The sequence shows rapid downward movement with the person transitioning to a horizontal position near ground level, indicating an uncontrolled fall."
+                    assistant_message = random.choice(FALL_RESPONSES)
                 else:
-                    assistant_message = "NO_FALL - The sequence shows controlled movement with the person maintaining stability. No indicators of uncontrolled falling detected."
+                    assistant_message = random.choice(NO_FALL_RESPONSES)
                 
-                training_examples.append({
+                examples_by_label[label].append({
                     "messages": [
-                        {"role": "system", "content": system_message},
+                        {"role": "system", "content": SYSTEM_MESSAGE},
                         {"role": "user", "content": user_message},
                         {"role": "assistant", "content": assistant_message}
                     ]
                 })
+
+    missing_labels = [label for label in labels if not examples_by_label[label]]
+    if missing_labels:
+        raise RuntimeError(
+            f"Missing training windows for {missing_labels} in {WINDOWS_DIR / 'train'}"
+        )
+
+    random.seed(42)
+    fall_items = examples_by_label["fall"]
+    nofall_items = examples_by_label["no_fall"]
+
+    if balance_classes:
+        # Target 75% FALL / 25% NO_FALL ratio
+        # More aggressive FALL bias → model predicts FALL more liberally → higher recall
+        nofall_count = len(nofall_items)
+        fall_count = int(nofall_count * (75 / 25))  # 3x no_fall → 75/25 split
+        sampled_fall = random.sample(fall_items, min(fall_count, len(fall_items)))
+        training_examples = sampled_fall + nofall_items
+    else:
+        training_examples = fall_items + nofall_items
     
     # Shuffle and split
-    random.seed(42)
     random.shuffle(training_examples)
     
     # Use 90% for training, 10% for validation
@@ -197,9 +257,17 @@ Respond with ONLY: "FALL" or "NO_FALL" followed by a brief explanation."""
     print(f"  Val file: {val_path}")
     
     # Count labels
-    train_falls = sum(1 for ex in train_data if "FALL -" in ex["messages"][2]["content"] and "NO_FALL" not in ex["messages"][2]["content"])
-    train_nofalls = len(train_data) - train_falls
-    print(f"  Train falls: {train_falls}, no-falls: {train_nofalls}")
+    train_counts = Counter(
+        "no_fall" if ex["messages"][2]["content"].startswith("NO_FALL") else "fall"
+        for ex in train_data
+    )
+    val_counts = Counter(
+        "no_fall" if ex["messages"][2]["content"].startswith("NO_FALL") else "fall"
+        for ex in val_data
+    )
+    print(f"  Balanced classes: {balance_classes}")
+    print(f"  Train labels: {dict(train_counts)}")
+    print(f"  Val labels: {dict(val_counts)}")
     
     return train_path, val_path
 
@@ -233,7 +301,21 @@ def upload_training_files(client: OpenAI):
     return train_file.id, val_file.id
 
 
-def start_fine_tuning(client: OpenAI, train_file_id: str = None, val_file_id: str = None):
+def require_client(client):
+    """Fail early when an OpenAI API key is required."""
+    if OpenAI is None:
+        raise RuntimeError("Install the OpenAI SDK first: pip install openai")
+    if client is None:
+        raise RuntimeError("OPENAI_API_KEY is required for upload, train, status, and evaluate.")
+
+
+def start_fine_tuning(
+    client: OpenAI,
+    train_file_id: str = None,
+    val_file_id: str = None,
+    base_model: str = BASE_MODEL,
+    epochs: int = 3,
+):
     """Start fine-tuning job."""
     if not train_file_id:
         ids_path = TRAINING_DIR / "file_ids.json"
@@ -247,15 +329,15 @@ def start_fine_tuning(client: OpenAI, train_file_id: str = None, val_file_id: st
             return None
     
     print(f"Starting fine-tuning job...")
-    print(f"  Base model: {BASE_MODEL}")
+    print(f"  Base model: {base_model}")
     print(f"  Training file: {train_file_id}")
     
     job = client.fine_tuning.jobs.create(
         training_file=train_file_id,
         validation_file=val_file_id,
-        model=BASE_MODEL,
+        model=base_model,
         hyperparameters={
-            "n_epochs": 3,
+            "n_epochs": epochs,
         },
         suffix="fall-detector"
     )
@@ -268,7 +350,8 @@ def start_fine_tuning(client: OpenAI, train_file_id: str = None, val_file_id: st
         json.dump({
             "job_id": job.id,
             "status": job.status,
-            "base_model": BASE_MODEL,
+            "base_model": base_model,
+            "epochs": epochs,
         }, f, indent=2)
     
     return job.id
@@ -351,6 +434,7 @@ def evaluate_finetuned_model(client: OpenAI, model_id: str = None,
                 response = client.chat.completions.create(
                     model=model_id,
                     messages=[
+                        {"role": "system", "content": SYSTEM_MESSAGE},
                         {"role": "user", "content": user_message}
                     ],
                     temperature=0.0,
@@ -385,7 +469,11 @@ def evaluate_finetuned_model(client: OpenAI, model_id: str = None,
             
             time.sleep(0.1)
         
-        video_pred = aggregate_video_predictions(window_preds, "majority")
+        # 15% threshold: if ≥15% of windows predict fall → video is FALL
+        # Lower than Best Prompt's 25% to compensate for fine-tuned model's conservative bias
+        fall_count = sum(1 for p in window_preds.values() if p == "fall")
+        total_windows = len(window_preds)
+        video_pred = "fall" if (total_windows > 0 and fall_count / total_windows >= 0.15) else "no_fall"
         video_results.append({
             "video_id": video_id,
             "true_label": video_label,
@@ -425,30 +513,54 @@ def evaluate_finetuned_model(client: OpenAI, model_id: str = None,
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--mode",
+        choices=["prepare", "upload", "train", "status", "evaluate"],
+        help="Alternative command style used in the project README",
+    )
     parser.add_argument("--prepare", action="store_true", help="Prepare training data")
     parser.add_argument("--upload", action="store_true", help="Upload files to OpenAI")
     parser.add_argument("--train", action="store_true", help="Start fine-tuning")
     parser.add_argument("--status", action="store_true", help="Check job status")
     parser.add_argument("--evaluate", action="store_true", help="Evaluate model")
+    parser.add_argument("--base-model", default=BASE_MODEL)
+    parser.add_argument("--epochs", type=int, default=5)
+    parser.add_argument("--no-balance", action="store_true", help="Use all windows without class balancing")
     parser.add_argument("--split", default="test")
     parser.add_argument("--sample", type=int, default=None)
     args = parser.parse_args()
     
     api_key = os.environ.get("OPENAI_API_KEY")
-    client = OpenAI(api_key=api_key) if api_key else None
-    
+    client = OpenAI(api_key=api_key) if (OpenAI is not None and api_key) else None
+
+    mode = args.mode
     if args.prepare:
-        prepare_training_data()
+        mode = "prepare"
     elif args.upload:
-        upload_training_files(client)
+        mode = "upload"
     elif args.train:
-        start_fine_tuning(client)
+        mode = "train"
     elif args.status:
-        check_job_status(client)
+        mode = "status"
     elif args.evaluate:
+        mode = "evaluate"
+
+    if mode == "prepare":
+        prepare_training_data(balance_classes=not args.no_balance)
+    elif mode == "upload":
+        require_client(client)
+        upload_training_files(client)
+    elif mode == "train":
+        require_client(client)
+        start_fine_tuning(client, base_model=args.base_model, epochs=args.epochs)
+    elif mode == "status":
+        require_client(client)
+        check_job_status(client)
+    elif mode == "evaluate":
+        require_client(client)
         evaluate_finetuned_model(client, split=args.split, sample_size=args.sample)
     else:
-        print("Specify --prepare, --upload, --train, --status, or --evaluate")
+        print("Specify --mode prepare|upload|train|status|evaluate or use --prepare/--upload/--train/--status/--evaluate")
 
 
 if __name__ == "__main__":

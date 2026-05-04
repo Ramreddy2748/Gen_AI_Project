@@ -1,0 +1,53 @@
+{
+  "window_level": {
+    "confusion_matrix": {
+      "TP": 481,
+      "TN": 70,
+      "FP": 84,
+      "FN": 57
+    },
+    "fall": {
+      "precision": 0.8513,
+      "recall": 0.8941,
+      "f1": 0.8722,
+      "support": 538
+    },
+    "no_fall": {
+      "precision": 0.5512,
+      "recall": 0.4545,
+      "f1": 0.4982,
+      "support": 154
+    },
+    "overall": {
+      "accuracy": 0.7962,
+      "macro_f1": 0.6852,
+      "total_samples": 692
+    }
+  },
+  "video_level": {
+    "confusion_matrix": {
+      "TP": 30,
+      "TN": 4,
+      "FP": 29,
+      "FN": 2
+    },
+    "fall": {
+      "precision": 0.5085,
+      "recall": 0.9375,
+      "f1": 0.6593,
+      "support": 32
+    },
+    "no_fall": {
+      "precision": 0.6667,
+      "recall": 0.1212,
+      "f1": 0.2051,
+      "support": 33
+    },
+    "overall": {
+      "accuracy": 0.5231,
+      "macro_f1": 0.4322,
+      "total_samples": 65
+    }
+  },
+  "model": "ft:gpt-4o-mini-2024-07-18:personal:fall-detector:DbqMLEX2"
+}

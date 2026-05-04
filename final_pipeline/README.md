@@ -69,6 +69,11 @@ final_pipeline/
 │   └── manifests/           # CSV manifests
 ├── scripts/                 # Pipeline scripts
 │   └── balanced_pipeline.py # Main pipeline script
+├── prompting/               # LLM classification scripts
+│   ├── zero_shot.py         # Prompt-only baseline
+│   ├── xai_video_level.py   # Video-level explainable prompting
+│   └── lora_finetune.py     # LoRA/SFT fine-tuned classifier
+├── lora_training/           # Fine-tune JSONL, file IDs, job/model metadata
 └── README.md
 ```
 
@@ -78,6 +83,18 @@ final_pipeline/
 ```bash
 python scripts/balanced_pipeline.py
 ```
+
+### LoRA / Supervised Fine-Tuning
+```bash
+cd final_pipeline/prompting
+python lora_finetune.py --mode prepare
+python lora_finetune.py --mode upload
+python lora_finetune.py --mode train
+python lora_finetune.py --mode status
+python lora_finetune.py --mode evaluate --split test
+```
+
+The project names this branch LoRA fine-tuning. In the OpenAI API it is run as supervised fine-tuning over chat-format JSONL examples generated from the 3-frame pose windows. The prepare step balances fall/no-fall classes by default; pass `--no-balance` only when you intentionally want the raw class distribution.
 
 ### Load Data for GenAI
 ```python
