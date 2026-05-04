@@ -25,7 +25,10 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Any
 import random
 
-from openai import OpenAI
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
 
 # =============================================================================
 # CONFIGURATION
@@ -33,7 +36,9 @@ from openai import OpenAI
 
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
-WINDOWS_DIR = DATA_DIR / "windows_balanced"
+BALANCED_WINDOWS_DIR = DATA_DIR / "windows_balanced"
+RAW_WINDOWS_DIR = DATA_DIR / "windows"
+WINDOWS_DIR = BALANCED_WINDOWS_DIR if BALANCED_WINDOWS_DIR.exists() else RAW_WINDOWS_DIR
 RESULTS_DIR = PROJECT_ROOT / "results" / "zero_shot"
 
 # Model configuration
@@ -90,11 +95,27 @@ def create_metadata_file() -> Path:
     return metadata_path
 
 
+def metadata_needs_refresh(metadata_path: Path) -> bool:
+    """Refresh metadata when paths point to an unavailable checkout."""
+    if not metadata_path.exists():
+        return True
+
+    with open(metadata_path, "r") as f:
+        reader = csv.DictReader(f)
+        first_row = next(reader, None)
+
+    if not first_row:
+        return True
+
+    window_path = Path(first_row.get("window_path", ""))
+    return not window_path.exists()
+
+
 def load_metadata(split: str = None) -> Dict[str, Dict]:
     """Load metadata, optionally filtered by split."""
     metadata_path = DATA_DIR / "metadata" / "ground_truth.csv"
     
-    if not metadata_path.exists():
+    if metadata_needs_refresh(metadata_path):
         create_metadata_file()
     
     metadata = {}
@@ -382,6 +403,8 @@ def run_zero_shot_evaluation(split: str = "test", sample_size: int = None,
     
     # Initialize OpenAI client
     api_key = os.environ.get("OPENAI_API_KEY")
+    if OpenAI is None:
+        raise RuntimeError("Install the OpenAI SDK first: pip install openai")
     if not api_key:
         raise ValueError("OPENAI_API_KEY environment variable not set")
     
