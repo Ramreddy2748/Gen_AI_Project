@@ -1,0 +1,308 @@
+[
+  {
+    "name": "baseline_ratio_0.25",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 28,
+      "TN": 5,
+      "fall_precision": 0.5172,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6667,
+      "no_fall_precision": 0.7143,
+      "no_fall_recall": 0.1515,
+      "no_fall_f1": 0.25,
+      "accuracy": 0.5385,
+      "macro_f1": 0.4583,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.10",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 31,
+      "TN": 2,
+      "fall_precision": 0.4918,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6452,
+      "no_fall_precision": 0.5,
+      "no_fall_recall": 0.0606,
+      "no_fall_f1": 0.1081,
+      "accuracy": 0.4923,
+      "macro_f1": 0.3766,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.15",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 29,
+      "TN": 4,
+      "fall_precision": 0.5085,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6593,
+      "no_fall_precision": 0.6667,
+      "no_fall_recall": 0.1212,
+      "no_fall_f1": 0.2051,
+      "accuracy": 0.5231,
+      "macro_f1": 0.4322,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.20",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 28,
+      "TN": 5,
+      "fall_precision": 0.5172,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6667,
+      "no_fall_precision": 0.7143,
+      "no_fall_recall": 0.1515,
+      "no_fall_f1": 0.25,
+      "accuracy": 0.5385,
+      "macro_f1": 0.4583,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.25",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 28,
+      "TN": 5,
+      "fall_precision": 0.5172,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6667,
+      "no_fall_precision": 0.7143,
+      "no_fall_recall": 0.1515,
+      "no_fall_f1": 0.25,
+      "accuracy": 0.5385,
+      "macro_f1": 0.4583,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.30",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 27,
+      "TN": 6,
+      "fall_precision": 0.5263,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6742,
+      "no_fall_precision": 0.75,
+      "no_fall_recall": 0.1818,
+      "no_fall_f1": 0.2927,
+      "accuracy": 0.5538,
+      "macro_f1": 0.4834,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.35",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 24,
+      "TN": 9,
+      "fall_precision": 0.5556,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6977,
+      "no_fall_precision": 0.8182,
+      "no_fall_recall": 0.2727,
+      "no_fall_f1": 0.4091,
+      "accuracy": 0.6,
+      "macro_f1": 0.5534,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.40",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 24,
+      "TN": 9,
+      "fall_precision": 0.5556,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6977,
+      "no_fall_precision": 0.8182,
+      "no_fall_recall": 0.2727,
+      "no_fall_f1": 0.4091,
+      "accuracy": 0.6,
+      "macro_f1": 0.5534,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.50",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 21,
+      "TN": 12,
+      "fall_precision": 0.5882,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.7229,
+      "no_fall_precision": 0.8571,
+      "no_fall_recall": 0.3636,
+      "no_fall_f1": 0.5106,
+      "accuracy": 0.6462,
+      "macro_f1": 0.6168,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "ratio_0.60",
+    "metrics": {
+      "TP": 29,
+      "FN": 3,
+      "FP": 16,
+      "TN": 17,
+      "fall_precision": 0.6444,
+      "fall_recall": 0.9062,
+      "fall_f1": 0.7532,
+      "no_fall_precision": 0.85,
+      "no_fall_recall": 0.5152,
+      "no_fall_f1": 0.6415,
+      "accuracy": 0.7077,
+      "macro_f1": 0.6974,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "consecutive_k2",
+    "metrics": {
+      "TP": 26,
+      "FN": 6,
+      "FP": 19,
+      "TN": 14,
+      "fall_precision": 0.5778,
+      "fall_recall": 0.8125,
+      "fall_f1": 0.6753,
+      "no_fall_precision": 0.7,
+      "no_fall_recall": 0.4242,
+      "no_fall_f1": 0.5283,
+      "accuracy": 0.6154,
+      "macro_f1": 0.6018,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "consecutive_k3",
+    "metrics": {
+      "TP": 26,
+      "FN": 6,
+      "FP": 12,
+      "TN": 21,
+      "fall_precision": 0.6842,
+      "fall_recall": 0.8125,
+      "fall_f1": 0.7429,
+      "no_fall_precision": 0.7778,
+      "no_fall_recall": 0.6364,
+      "no_fall_f1": 0.7,
+      "accuracy": 0.7231,
+      "macro_f1": 0.7214,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "consecutive_k4",
+    "metrics": {
+      "TP": 26,
+      "FN": 6,
+      "FP": 6,
+      "TN": 27,
+      "fall_precision": 0.8125,
+      "fall_recall": 0.8125,
+      "fall_f1": 0.8125,
+      "no_fall_precision": 0.8182,
+      "no_fall_recall": 0.8182,
+      "no_fall_f1": 0.8182,
+      "accuracy": 0.8154,
+      "macro_f1": 0.8153,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "end_state_min1",
+    "metrics": {
+      "TP": 19,
+      "FN": 13,
+      "FP": 11,
+      "TN": 22,
+      "fall_precision": 0.6333,
+      "fall_recall": 0.5938,
+      "fall_f1": 0.6129,
+      "no_fall_precision": 0.6286,
+      "no_fall_recall": 0.6667,
+      "no_fall_f1": 0.6471,
+      "accuracy": 0.6308,
+      "macro_f1": 0.63,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "consecutive_k2_and_end",
+    "metrics": {
+      "TP": 15,
+      "FN": 17,
+      "FP": 7,
+      "TN": 26,
+      "fall_precision": 0.6818,
+      "fall_recall": 0.4688,
+      "fall_f1": 0.5556,
+      "no_fall_precision": 0.6047,
+      "no_fall_recall": 0.7879,
+      "no_fall_f1": 0.6842,
+      "accuracy": 0.6308,
+      "macro_f1": 0.6199,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "consecutive_k3_and_end",
+    "metrics": {
+      "TP": 15,
+      "FN": 17,
+      "FP": 6,
+      "TN": 27,
+      "fall_precision": 0.7143,
+      "fall_recall": 0.4688,
+      "fall_f1": 0.566,
+      "no_fall_precision": 0.6136,
+      "no_fall_recall": 0.8182,
+      "no_fall_f1": 0.7013,
+      "accuracy": 0.6462,
+      "macro_f1": 0.6337,
+      "n_videos": 65
+    }
+  },
+  {
+    "name": "any_fall_window",
+    "metrics": {
+      "TP": 30,
+      "FN": 2,
+      "FP": 31,
+      "TN": 2,
+      "fall_precision": 0.4918,
+      "fall_recall": 0.9375,
+      "fall_f1": 0.6452,
+      "no_fall_precision": 0.5,
+      "no_fall_recall": 0.0606,
+      "no_fall_f1": 0.1081,
+      "accuracy": 0.4923,
+      "macro_f1": 0.3766,
+      "n_videos": 65
+    }
+  }
+]

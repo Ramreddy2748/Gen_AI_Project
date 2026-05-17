@@ -1,0 +1,62 @@
+{
+  "gmncsa24": {
+    "TP": 10,
+    "FN": 0,
+    "FP": 4,
+    "TN": 9,
+    "fall_precision": 0.7143,
+    "fall_recall": 1.0,
+    "fall_f1": 0.8333,
+    "no_fall_precision": 1.0,
+    "no_fall_recall": 0.6923,
+    "no_fall_f1": 0.8182,
+    "accuracy": 0.8261,
+    "macro_f1": 0.8258,
+    "n_videos": 23
+  },
+  "le2i": {
+    "TP": 7,
+    "FN": 1,
+    "FP": 9,
+    "TN": 3,
+    "fall_precision": 0.4375,
+    "fall_recall": 0.875,
+    "fall_f1": 0.5833,
+    "no_fall_precision": 0.75,
+    "no_fall_recall": 0.25,
+    "no_fall_f1": 0.375,
+    "accuracy": 0.5,
+    "macro_f1": 0.4792,
+    "n_videos": 20
+  },
+  "urfd": {
+    "TP": 6,
+    "FN": 0,
+    "FP": 6,
+    "TN": 2,
+    "fall_precision": 0.5,
+    "fall_recall": 1.0,
+    "fall_f1": 0.6667,
+    "no_fall_precision": 1.0,
+    "no_fall_recall": 0.25,
+    "no_fall_f1": 0.4,
+    "accuracy": 0.5714,
+    "macro_f1": 0.5333,
+    "n_videos": 14
+  },
+  "overall": {
+    "TP": 23,
+    "FN": 1,
+    "FP": 19,
+    "TN": 14,
+    "fall_precision": 0.5476,
+    "fall_recall": 0.9583,
+    "fall_f1": 0.697,
+    "no_fall_precision": 0.9333,
+    "no_fall_recall": 0.4242,
+    "no_fall_f1": 0.5833,
+    "accuracy": 0.6491,
+    "macro_f1": 0.6402,
+    "n_videos": 57
+  }
+}

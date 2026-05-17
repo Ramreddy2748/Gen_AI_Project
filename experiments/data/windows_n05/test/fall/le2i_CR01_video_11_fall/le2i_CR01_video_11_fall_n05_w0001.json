@@ -1,0 +1,190 @@
+{
+  "window_id": "le2i_CR01_video_11_fall_n05_w0001",
+  "video_id": "le2i_CR01_video_11_fall",
+  "dataset": "le2i",
+  "label": "fall",
+  "window_size": 5,
+  "stride": 1,
+  "window_index": 1,
+  "sequence": {
+    "frame_1": {
+      "frame_index": 5,
+      "frame_name": "frame_000005.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/test/fall/le2i_CR01_video_11_fall/frame_000005.jpg",
+      "timestamp_seconds": 0.2,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.472874,
+        "nose_y": 0.503495,
+        "shoulder_x": 0.522761,
+        "shoulder_y": 0.505797,
+        "hip_x": 0.674719,
+        "hip_y": 0.54278,
+        "torso_vertical_diff": 0.036983,
+        "body_center_y": 0.524289,
+        "body_angle_degrees": 13.68
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.069384,
+        "velocity_shoulder_y": 0.694548,
+        "velocity_magnitude": 0.698005,
+        "acceleration_hip_y": 0.416304,
+        "acceleration_magnitude": 0.416304,
+        "jerk_hip_y": 2.497824,
+        "angular_velocity_deg": -249.78,
+        "torso_collapse_rate": 0.625164,
+        "posture_state": "transitioning",
+        "is_rapid_descent": false,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_2": {
+      "frame_index": 10,
+      "frame_name": "frame_000010.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/test/fall/le2i_CR01_video_11_fall/frame_000010.jpg",
+      "timestamp_seconds": 0.4,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.391162,
+        "nose_y": 0.696575,
+        "shoulder_x": 0.440136,
+        "shoulder_y": 0.653968,
+        "hip_x": 0.585027,
+        "hip_y": 0.636822,
+        "torso_vertical_diff": 0.017146,
+        "body_center_y": 0.645395,
+        "body_angle_degrees": 6.75
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.564252,
+        "velocity_shoulder_y": 0.889026,
+        "velocity_magnitude": 1.052971,
+        "acceleration_hip_y": 2.969208,
+        "acceleration_magnitude": 2.969208,
+        "jerk_hip_y": 15.317424,
+        "angular_velocity_deg": -41.58,
+        "torso_collapse_rate": 0.119022,
+        "posture_state": "transitioning",
+        "is_rapid_descent": true,
+        "is_on_ground": false,
+        "is_horizontal": true,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_3": {
+      "frame_index": 15,
+      "frame_name": "frame_000015.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/test/fall/le2i_CR01_video_11_fall/frame_000015.jpg",
+      "timestamp_seconds": 0.6,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.373222,
+        "nose_y": 0.800668,
+        "shoulder_x": 0.393879,
+        "shoulder_y": 0.724707,
+        "hip_x": 0.518776,
+        "hip_y": 0.714493,
+        "torso_vertical_diff": 0.010214,
+        "body_center_y": 0.7196,
+        "body_angle_degrees": 4.68
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.466026,
+        "velocity_shoulder_y": 0.424434,
+        "velocity_magnitude": 0.630337,
+        "acceleration_hip_y": -0.589356,
+        "acceleration_magnitude": 0.589356,
+        "jerk_hip_y": -21.351384,
+        "angular_velocity_deg": -12.42,
+        "torso_collapse_rate": 0.041592,
+        "posture_state": "fallen",
+        "is_rapid_descent": true,
+        "is_on_ground": true,
+        "is_horizontal": true,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_4": {
+      "frame_index": 20,
+      "frame_name": "frame_000020.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/test/fall/le2i_CR01_video_11_fall/frame_000020.jpg",
+      "timestamp_seconds": 0.8,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.366645,
+        "nose_y": 0.810877,
+        "shoulder_x": 0.392243,
+        "shoulder_y": 0.742124,
+        "hip_x": 0.530648,
+        "hip_y": 0.720207,
+        "torso_vertical_diff": 0.021918,
+        "body_center_y": 0.731166,
+        "body_angle_degrees": 9.0
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.034284,
+        "velocity_shoulder_y": 0.104502,
+        "velocity_magnitude": 0.109982,
+        "acceleration_hip_y": -2.590452,
+        "acceleration_magnitude": 2.590452,
+        "jerk_hip_y": -12.006576,
+        "angular_velocity_deg": 25.92,
+        "torso_collapse_rate": -0.070224,
+        "posture_state": "fallen",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": true,
+        "is_high_acceleration": true
+      }
+    },
+    "frame_5": {
+      "frame_index": 25,
+      "frame_name": "frame_000025.jpg",
+      "frame_path": "/Users/abhishekkumar/Downloads/Gen AI assignments/Final_Project/Gen_AI_Project/data/balanced/frames/test/fall/le2i_CR01_video_11_fall/frame_000025.jpg",
+      "timestamp_seconds": 1.0,
+      "pose_detected": true,
+      "features": {
+        "nose_x": 0.365918,
+        "nose_y": 0.82086,
+        "shoulder_x": 0.395104,
+        "shoulder_y": 0.758054,
+        "hip_x": 0.540972,
+        "hip_y": 0.735746,
+        "torso_vertical_diff": 0.022308,
+        "body_center_y": 0.7469,
+        "body_angle_degrees": 8.69
+      },
+      "enhanced": {
+        "velocity_hip_y": 0.093234,
+        "velocity_shoulder_y": 0.09558,
+        "velocity_magnitude": 0.133522,
+        "acceleration_hip_y": 0.3537,
+        "acceleration_magnitude": 0.3537,
+        "jerk_hip_y": 17.664912,
+        "angular_velocity_deg": -1.86,
+        "torso_collapse_rate": -0.00234,
+        "posture_state": "fallen",
+        "is_rapid_descent": false,
+        "is_on_ground": true,
+        "is_horizontal": true,
+        "is_high_acceleration": true
+      }
+    }
+  },
+  "window_analysis": {
+    "pose_detection_count": 5,
+    "pose_detection_rate": 1.0,
+    "hip_delta": 0.192966,
+    "max_velocity": 1.052971,
+    "max_jerk": 21.351384,
+    "max_angular_velocity": 249.78,
+    "trajectory_direction": "descending",
+    "has_velocity_spike": true,
+    "start_posture": "transitioning",
+    "end_posture": "fallen",
+    "end_is_horizontal": true,
+    "end_is_on_ground": true
+  }
+}
