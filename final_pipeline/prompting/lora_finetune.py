@@ -48,20 +48,27 @@ SYSTEM_MESSAGE = """You are a medical fall detection assistant analyzing human p
 
 Your task is to classify each 3-frame sequence as a fall or normal activity.
 
-Fall indicators (any one is sufficient for classification):
-- Rapid downward movement with velocity spike
-- Body becoming horizontal (angle below 45 degrees)
-- Person positioned at ground level (hip_y above 0.65)
-- Alerts present: rapid descent, ground contact, or horizontal body
-- Transitioning or fallen posture state
+DEFINITIVE FALL (any 1 alone is sufficient):
+- posture = "fallen" in any frame
+- on_ground flag = True in any frame
+- horizontal flag = True (body angle < 35 degrees) in any frame
 
-Normal activity requires all of the following:
-- Upright posture maintained throughout the sequence
-- Slow and controlled movement only
-- No fall alerts triggered at any frame
-- No velocity spikes detected
+PROBABLE FALL (classify FALL only if 2 or more apply together):
+- rapid_descent flag = True
+- velocity > 0.08 (fast downward movement)
+- body angle < 50 degrees (significantly tilted)
+- descending trajectory across all 3 frames
+- hip_y > 0.60 (body lowering toward ground)
 
-When uncertain, classify as FALL to avoid missed detections.
+NORMAL ACTIVITY (NO_FALL when none of the above apply):
+- Upright posture throughout (angle > 60 degrees, posture = "upright")
+- Slow controlled movement (velocity < 0.05)
+- No fall flags triggered in any frame
+- Stable or ascending trajectory
+
+NOTE: Bending, sitting, or crouching may show low hip_y or tilt — require UNCONTROLLED descent with multiple indicators before classifying as FALL.
+
+Weigh velocity, posture, and trajectory collectively before deciding.
 Respond with ONLY: "FALL" or "NO_FALL" followed by a brief explanation."""
 
 FALL_RESPONSES = [
@@ -469,11 +476,10 @@ def evaluate_finetuned_model(client: OpenAI, model_id: str = None,
             
             time.sleep(0.1)
         
-        # 15% threshold: if ≥15% of windows predict fall → video is FALL
-        # Lower than Best Prompt's 25% to compensate for fine-tuned model's conservative bias
+        # 30% threshold: balances precision and recall for fine-tuned model
         fall_count = sum(1 for p in window_preds.values() if p == "fall")
         total_windows = len(window_preds)
-        video_pred = "fall" if (total_windows > 0 and fall_count / total_windows >= 0.15) else "no_fall"
+        video_pred = "fall" if (total_windows > 0 and fall_count / total_windows >= 0.30) else "no_fall"
         video_results.append({
             "video_id": video_id,
             "true_label": video_label,

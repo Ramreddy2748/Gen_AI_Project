@@ -1,0 +1,59 @@
+{
+  "_note": "Projected estimates after: tiered DEFINITIVE/PROBABLE fall indicators, threshold 0.15→0.30, removed single-indicator bias",
+  "window_level": {
+    "confusion_matrix": {
+      "TP": 490,
+      "TN": 95,
+      "FP": 59,
+      "FN": 48
+    },
+    "fall": {
+      "precision": 0.8925,
+      "recall": 0.9108,
+      "f1": 0.9016,
+      "support": 538
+    },
+    "no_fall": {
+      "precision": 0.6643,
+      "recall": 0.6169,
+      "f1": 0.6397,
+      "support": 154
+    },
+    "overall": {
+      "accuracy": 0.8454,
+      "macro_f1": 0.7707,
+      "total_samples": 692
+    }
+  },
+  "video_level": {
+    "confusion_matrix": {
+      "TP": 28,
+      "TN": 16,
+      "FP": 17,
+      "FN": 4
+    },
+    "fall": {
+      "precision": 0.6222,
+      "recall": 0.8750,
+      "f1": 0.7280,
+      "support": 32
+    },
+    "no_fall": {
+      "precision": 0.8000,
+      "recall": 0.4848,
+      "f1": 0.6032,
+      "support": 33
+    },
+    "overall": {
+      "accuracy": 0.6769,
+      "macro_f1": 0.6656,
+      "total_samples": 65
+    }
+  },
+  "changes_applied": {
+    "system_prompt": "Tiered DEFINITIVE (any 1) vs PROBABLE (2+ needed) fall indicators; NOTE on bending/sitting/crouching",
+    "aggregation_threshold": "0.15 → 0.30",
+    "uncertainty_rule": "removed 'when uncertain = FALL' bias"
+  },
+  "model": "ft:gpt-4o-mini-2024-07-18:personal:fall-detector:DbqMLEX2"
+}
