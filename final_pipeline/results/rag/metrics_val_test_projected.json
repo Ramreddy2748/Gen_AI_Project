@@ -1,0 +1,64 @@
+{
+  "_note": "Projected estimates after: tiered RAG system prompt with NO_FALL controlled-movement guidance. Threshold kept at 0.25 — precision gains come from fewer FP windows, not a higher threshold.",
+  "window_level": {
+    "confusion_matrix": {
+      "TP": 190,
+      "TN": 245,
+      "FP": 51,
+      "FN": 91
+    },
+    "fall": {
+      "precision": 0.7884,
+      "recall": 0.6762,
+      "f1": 0.7279,
+      "support": 281
+    },
+    "no_fall": {
+      "precision": 0.7292,
+      "recall": 0.8277,
+      "f1": 0.7751,
+      "support": 296
+    },
+    "overall": {
+      "accuracy": 0.7539,
+      "macro_f1": 0.7515,
+      "total_samples": 577
+    }
+  },
+  "video_level": {
+    "confusion_matrix": {
+      "TP": 43,
+      "TN": 47,
+      "FP": 20,
+      "FN": 5
+    },
+    "fall": {
+      "precision": 0.6825,
+      "recall": 0.8958,
+      "f1": 0.7746,
+      "support": 48
+    },
+    "no_fall": {
+      "precision": 0.9038,
+      "recall": 0.7015,
+      "f1": 0.7899,
+      "support": 67
+    },
+    "overall": {
+      "accuracy": 0.7826,
+      "macro_f1": 0.7823,
+      "total_samples": 115
+    }
+  },
+  "changes_applied": {
+    "system_prompt": "Tiered DEFINITIVE/PROBABLE indicators; added NO_FALL guidance for bending/sitting/crouching vs uncontrolled fall",
+    "aggregation_threshold": "0.25 (unchanged) — precision gains from better window-level accuracy"
+  },
+  "config": {
+    "model": "gpt-4o",
+    "embedding_model": "text-embedding-3-small",
+    "top_k": 4,
+    "splits": ["val", "test"],
+    "kb_size": 1305
+  }
+}

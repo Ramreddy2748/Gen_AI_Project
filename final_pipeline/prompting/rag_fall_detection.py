@@ -250,8 +250,18 @@ I will provide:
 
 Use the similar cases to understand patterns, then classify the new case.
 
-FALL indicators: rapid descent, horizontal body, on ground, velocity spike, fallen posture
-NO_FALL indicators: upright posture, stable movement, vertical body orientation
+DEFINITIVE FALL (any 1 alone is sufficient):
+- posture = "fallen", on_ground = True, or horizontal body (angle < 35 degrees)
+
+PROBABLE FALL (need 2+ together):
+- rapid_descent + velocity spike + descending trajectory + body angle < 50 degrees
+
+NO_FALL (controlled movements — look for these):
+- Bending or sitting: slow descent, velocity stays low, body returns upright
+- Crouching: controlled, posture stays "transitioning" not "fallen"
+- Upright posture with stable or ascending trajectory
+
+Compare the new case against retrieved examples carefully. If it closely resembles a NO_FALL case, prefer NO_FALL. Only classify as FALL when multiple strong indicators are present or a definitive indicator is triggered.
 
 Respond with ONLY: FALL or NO_FALL"""
 
@@ -387,7 +397,7 @@ def run_rag_evaluation(splits: List[str] = ["val", "test"],
             
             time.sleep(0.15)
         
-        # Aggregate with 25% threshold (safety-oriented)
+        # Aggregate with 25% threshold (tiered prompt reduces FP at window level)
         fall_count = sum(1 for p in window_preds.values() if p == "fall")
         video_pred = "fall" if fall_count / len(window_preds) >= 0.25 else "no_fall"
         

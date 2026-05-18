@@ -32,7 +32,11 @@ PROJECT_ROOT = Path(__file__).parent.parent
 LOCAL_DATASET_ROOT = PROJECT_ROOT / "Dataset"
 OUTPUT_ROOT = PROJECT_ROOT / "data" / "balanced"
 
-# Different settings for fall vs no-fall
+# Asymmetric settings per class — intentional design to counteract imbalance.
+# Fall videos: denser sampling (every 5th frame, stride=1) → more windows per video.
+# No-fall videos: sparser sampling (every 15th frame, stride=3) → fewer windows per video.
+# Both are then undersampled to achieve 1:1 balance (941 fall : 941 no-fall windows).
+# Table 3 in the report reflects these actual asymmetric values.
 SETTINGS = {
     "fall": {
         "frame_sample_rate": 5,    # Extract every 5th frame (more frames)

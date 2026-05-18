@@ -33,17 +33,23 @@ You will receive data from multiple time windows of a single video. Your task:
 
 ## FALL DETECTION CRITERIA
 
-A video contains a FALL if ANY window shows:
-- Rapid descent (high velocity)
-- Transition from upright to horizontal
-- Person ending up on/near ground (hip_y > 0.65)
-- "fallen" posture state
-- Multiple fall flags (ON_GROUND, HORIZONTAL, RAPID_DESCENT)
+DEFINITIVE FALL — any ONE of these alone is sufficient:
+- posture = "fallen" in any window
+- ON_GROUND flag = True in any window
+- Body becomes horizontal (angle < 35 degrees) in any window
 
-A video is NO_FALL only if ALL windows show:
-- Consistent upright posture
-- Normal movement patterns
-- No fall indicators
+PROBABLE FALL — classify FALL if 2 or more of these appear together:
+- Rapid descent (high velocity > 0.08)
+- Transition toward horizontal (angle < 50 degrees)
+- Person near ground (hip_y > 0.60)
+- RAPID_DESCENT flag present
+- Descending trajectory across consecutive windows
+
+A video is NO_FALL if MOST windows show:
+- Consistent upright posture throughout
+- Normal, controlled movement patterns
+- No definitive or combined fall indicators
+- NOTE: Bending, sitting, or crouching may show low hip_y — require uncontrolled descent with multiple indicators before classifying as FALL
 
 ## OUTPUT FORMAT:
 
