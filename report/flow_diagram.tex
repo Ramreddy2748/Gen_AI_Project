@@ -1,0 +1,220 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, fit, backgrounds, shadows.blur}
+
+% Define colors
+\definecolor{datacolor}{RGB}{52, 152, 219}      % Blue - Data sources
+\definecolor{processcolor}{RGB}{46, 204, 113}   % Green - Processing
+\definecolor{featurecolor}{RGB}{155, 89, 182}   % Purple - Features
+\definecolor{llmcolor}{RGB}{230, 126, 34}       % Orange - LLM
+\definecolor{outputcolor}{RGB}{231, 76, 60}     % Red - Output
+\definecolor{aggcolor}{RGB}{241, 196, 15}       % Yellow - Aggregation
+\definecolor{bglight}{RGB}{248, 249, 250}       % Light gray background
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=0.8cm and 1.2cm,
+    >={Stealth[length=2.5mm]},
+    % Node styles
+    dataset/.style={
+        rectangle, rounded corners=3pt, 
+        minimum width=2.2cm, minimum height=0.8cm,
+        fill=datacolor!20, draw=datacolor, line width=1pt,
+        font=\small\sffamily, align=center,
+        blur shadow={shadow blur steps=5, shadow xshift=0.5mm, shadow yshift=-0.5mm}
+    },
+    process/.style={
+        rectangle, rounded corners=5pt,
+        minimum width=2.8cm, minimum height=1cm,
+        fill=processcolor!20, draw=processcolor, line width=1pt,
+        font=\small\sffamily, align=center,
+        blur shadow={shadow blur steps=5, shadow xshift=0.5mm, shadow yshift=-0.5mm}
+    },
+    feature/.style={
+        rectangle, rounded corners=3pt,
+        minimum width=2.5cm, minimum height=0.7cm,
+        fill=featurecolor!15, draw=featurecolor, line width=0.8pt,
+        font=\scriptsize\sffamily, align=center
+    },
+    llmnode/.style={
+        rectangle, rounded corners=8pt,
+        minimum width=3cm, minimum height=1.2cm,
+        fill=llmcolor!20, draw=llmcolor, line width=1.5pt,
+        font=\small\sffamily\bfseries, align=center,
+        blur shadow={shadow blur steps=5, shadow xshift=0.5mm, shadow yshift=-0.5mm}
+    },
+    strategy/.style={
+        rectangle, rounded corners=3pt,
+        minimum width=2cm, minimum height=0.6cm,
+        fill=llmcolor!10, draw=llmcolor!70, line width=0.8pt,
+        font=\scriptsize\sffamily, align=center
+    },
+    aggregation/.style={
+        diamond, aspect=2,
+        minimum width=2.5cm, minimum height=1.2cm,
+        fill=aggcolor!25, draw=aggcolor!80!black, line width=1pt,
+        font=\small\sffamily, align=center,
+        blur shadow={shadow blur steps=5, shadow xshift=0.5mm, shadow yshift=-0.5mm}
+    },
+    output/.style={
+        rectangle, rounded corners=8pt,
+        minimum width=2.5cm, minimum height=1cm,
+        fill=outputcolor!20, draw=outputcolor, line width=1.5pt,
+        font=\small\sffamily\bfseries, align=center,
+        blur shadow={shadow blur steps=5, shadow xshift=0.5mm, shadow yshift=-0.5mm}
+    },
+    window/.style={
+        rectangle, rounded corners=3pt,
+        minimum width=1.8cm, minimum height=0.6cm,
+        fill=processcolor!10, draw=processcolor!70, line width=0.8pt,
+        font=\scriptsize\sffamily, align=center
+    },
+    label/.style={
+        font=\scriptsize\sffamily\itshape, text=gray!70!black
+    },
+    arrow/.style={
+        ->, line width=1pt, draw=gray!60
+    },
+    thickarrow/.style={
+        ->, line width=1.5pt, draw=gray!70
+    },
+    groupbox/.style={
+        rectangle, rounded corners=8pt, draw=gray!40, 
+        line width=1pt, dashed, fill=bglight
+    }
+]
+
+% ===== ROW 1: Data Sources =====
+\node[dataset] (urfd) {URFD\\(70 videos)};
+\node[dataset, right=0.5cm of urfd] (le2i) {Le2i\\(189 videos)};
+\node[dataset, right=0.5cm of le2i] (gmncsa) {GMNCSA24\\(160 videos)};
+
+% Data source group label
+\node[above=0.3cm of le2i, font=\small\sffamily\bfseries, text=datacolor!80!black] {Data Sources (419 Videos)};
+
+% ===== Merge arrow =====
+\coordinate (merge1) at ($(le2i.south)+(0,-0.6)$);
+\draw[arrow] (urfd.south) -- (urfd.south |- merge1) -- (merge1);
+\draw[arrow] (le2i.south) -- (merge1);
+\draw[arrow] (gmncsa.south) -- (gmncsa.south |- merge1) -- (merge1);
+
+% ===== ROW 2: Video Processing =====
+\node[process, below=1.2cm of le2i] (videoprocess) {Video Processing\\{\scriptsize Frame extraction}};
+\draw[thickarrow] (merge1) -- (videoprocess);
+
+% ===== ROW 3: Pose Extraction =====
+\node[process, below=0.8cm of videoprocess] (pose) {Pose Extraction\\{\scriptsize MediaPipe Lite}};
+\draw[thickarrow] (videoprocess) -- (pose);
+
+% Pose output details
+\node[feature, right=1.5cm of pose] (landmarks) {33 Keypoints\\per frame};
+\draw[arrow, dashed] (pose) -- (landmarks);
+
+% ===== ROW 4: Feature Engineering =====
+\node[process, below=0.8cm of pose] (features) {Feature Engineering};
+\draw[thickarrow] (pose) -- (features);
+
+% Feature details - arranged in 2 columns
+\node[feature, left=1.2cm of features, yshift=0.4cm] (f1) {Position Features\\hip\_y, shoulder\_y};
+\node[feature, left=1.2cm of features, yshift=-0.4cm] (f2) {Motion Features\\velocity, accel};
+\node[feature, right=1.2cm of features, yshift=0.4cm] (f3) {Posture States\\upright/fallen};
+\node[feature, right=1.2cm of features, yshift=-0.4cm] (f4) {Boolean Flags\\is\_rapid\_descent};
+
+\draw[arrow, dashed] (features) -- (f1);
+\draw[arrow, dashed] (features) -- (f2);
+\draw[arrow, dashed] (features) -- (f3);
+\draw[arrow, dashed] (features) -- (f4);
+
+% ===== ROW 5: Sliding Window =====
+\node[process, below=1cm of features] (sliding) {Sliding Window\\{\scriptsize 3 frames, stride 2}};
+\draw[thickarrow] (features) -- (sliding);
+
+% Window visualization
+\node[window, right=1.8cm of sliding, yshift=0.4cm] (w1) {Window 1\\[F1, F2, F3]};
+\node[window, right=1.8cm of sliding, yshift=-0.4cm] (w2) {Window 2\\[F3, F4, F5]};
+\node[right=0.1cm of w2, font=\scriptsize] {...};
+
+\draw[arrow, dashed] (sliding) -- (w1.west);
+\draw[arrow, dashed] (sliding) -- (w2.west);
+
+% Stats
+\node[label, left=1.5cm of sliding] {1,882 balanced\\windows};
+
+% ===== ROW 6: LLM Classification =====
+\node[llmnode, below=1.2cm of sliding] (llm) {LLM Classification\\GPT-4o / GPT-4o-mini};
+\draw[thickarrow] (sliding) -- (llm);
+
+% Prompting strategies - arranged in grid
+\node[strategy, left=2.5cm of llm, yshift=0.8cm] (s1) {Zero-Shot};
+\node[strategy, left=2.5cm of llm, yshift=0cm] (s2) {Few-Shot};
+\node[strategy, left=2.5cm of llm, yshift=-0.8cm] (s3) {Chain-of-Thought};
+
+\node[strategy, left=0.8cm of llm, yshift=0.8cm] (s4) {Self-Consistency};
+\node[strategy, left=0.8cm of llm, yshift=0cm] (s5) {Safety-First};
+\node[strategy, left=0.8cm of llm, yshift=-0.8cm] (s6) {RAG};
+
+\node[strategy, right=0.8cm of llm, yshift=0.8cm] (s7) {LoRA Fine-tune};
+\node[strategy, right=0.8cm of llm, yshift=0cm] (s8) {Confidence};
+\node[strategy, right=0.8cm of llm, yshift=-0.8cm] (s9) {Two-Stage};
+
+% Group box for strategies
+\begin{scope}[on background layer]
+\node[groupbox, fit=(s1)(s3)(s7)(s9), inner sep=8pt] (stratbox) {};
+\end{scope}
+\node[above=0.1cm of stratbox.north, font=\scriptsize\sffamily\bfseries, text=llmcolor!80!black] {11 Prompting Strategies};
+
+% ===== ROW 7: Window Predictions =====
+\node[process, below=1.2cm of llm, minimum width=4cm] (windowpred) {Window-Level Predictions\\{\scriptsize FALL / NO\_FALL per window}};
+\draw[thickarrow] (llm) -- (windowpred);
+
+% ===== ROW 8: Aggregation =====
+\node[aggregation, below=1cm of windowpred] (agg) {Aggregation\\Rules};
+\draw[thickarrow] (windowpred) -- (agg);
+
+% Aggregation rules
+\node[feature, left=2cm of agg, yshift=0.3cm, fill=aggcolor!10, draw=aggcolor!60] (a1) {Ratio Threshold};
+\node[feature, left=2cm of agg, yshift=-0.3cm, fill=aggcolor!10, draw=aggcolor!60] (a2) {Consecutive-K};
+\node[feature, right=2cm of agg, yshift=0.3cm, fill=aggcolor!10, draw=aggcolor!60] (a3) {End-State};
+\node[feature, right=2cm of agg, yshift=-0.3cm, fill=aggcolor!10, draw=aggcolor!60] (a4) {Confidence Sum};
+
+\draw[arrow, dashed] (a1) -- (agg);
+\draw[arrow, dashed] (a2) -- (agg);
+\draw[arrow, dashed] (a3) -- (agg);
+\draw[arrow, dashed] (a4) -- (agg);
+
+% ===== ROW 9: Final Output =====
+\node[output, below=1cm of agg] (videopred) {Video-Level\\Prediction};
+\draw[thickarrow] (agg) -- (videopred);
+
+% Final outputs
+\node[output, below left=0.8cm and 0.5cm of videopred, fill=green!15, draw=green!60!black] (fall) {FALL};
+\node[output, below right=0.8cm and 0.5cm of videopred, fill=blue!15, draw=blue!60!black] (nofall) {NO\_FALL};
+
+\draw[arrow] (videopred) -- (fall);
+\draw[arrow] (videopred) -- (nofall);
+
+% ===== Metrics box =====
+\node[rectangle, rounded corners=5pt, draw=outputcolor!60, fill=outputcolor!5, 
+      minimum width=4cm, minimum height=1.5cm, 
+      below=0.5cm of $(fall)!0.5!(nofall)$, 
+      font=\scriptsize\sffamily, align=center] (metrics) {
+    \textbf{Evaluation Metrics}\\[2pt]
+    Recall: 66.7\% -- 95.8\%\\
+    Precision: 50\% -- 100\%\\
+    Macro F1: 0.556 -- 0.846
+};
+
+\draw[arrow, dashed, gray] (fall) -- (metrics);
+\draw[arrow, dashed, gray] (nofall) -- (metrics);
+
+% ===== Stage labels on right side =====
+\node[label, right=4cm of videoprocess] (l1) {\textbf{Stage 1:} Data Collection};
+\node[label, right=4cm of pose] (l2) {\textbf{Stage 2:} Pose Extraction};
+\node[label, right=4cm of features] (l3) {\textbf{Stage 3:} Feature Engineering};
+\node[label, right=4cm of sliding] (l4) {\textbf{Stage 4:} Temporal Windows};
+\node[label, right=4cm of llm] (l5) {\textbf{Stage 5:} GenAI Classification};
+\node[label, right=4cm of agg] (l6) {\textbf{Stage 6:} Aggregation};
+
+\end{tikzpicture}
+\end{document}
