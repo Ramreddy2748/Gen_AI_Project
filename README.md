@@ -96,8 +96,40 @@ Gen_AI_Project/
 |---------|--------|-------------|
 | URFD | 70 | University of Rochester Fall Detection |
 | Le2i | 189 | Laboratoire Electronique, Informatique et Image |
-| GMNCSA24 | 160 | Fall detection from GitHub |
+| GMNCSA24 | 160 | Fall detection from GitHub/HuggingFace |
 | **Total** | **419** | Combined multimodal dataset |
+
+### Dataset Download Links
+
+**Note:** Datasets are not included in this repository due to size (1.1GB). Please download from the original sources:
+
+1. **URFD (UR Fall Detection)**
+   - Download: http://fenix.ur.edu.pl/~mkepski/ds/uf.html
+   - Place in: `Dataset/URFD/`
+
+2. **Le2i**
+   - Download: http://le2i.cnrs.fr/Fall-detection-Dataset
+   - Place in: `Dataset/Le2i/`
+
+3. **GMNCSA24**
+   - Download: https://huggingface.co/datasets/GMNCSA/Fall-Detection
+   - Or use: `python final_pipeline/scripts/download_gmncsa24_github.py`
+   - Place in: `Dataset/GMNCSA24/`
+
+### Directory Structure After Download
+```
+Dataset/
+├── URFD/
+│   ├── Fall/           # 30 fall videos
+│   └── ADL/            # 40 ADL videos
+├── Le2i/
+│   ├── Coffee_room/    # Fall & ADL videos
+│   ├── Home_01/
+│   └── Home_02/
+└── GMNCSA24/
+    ├── fall/           # 80 fall videos
+    └── adl/            # 80 ADL videos
+```
 
 ### Data Splits
 
